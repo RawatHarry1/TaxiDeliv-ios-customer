@@ -1,0 +1,42 @@
+{
+  "originHash" : "806400734429b0192dce68c905e7aecf9306a3d298e2234e2b5a195178efb0ad",
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "b6f62758f21a8c03cd64f4009c037cfa580a256e",
+        "version" : "7.9.1"
+      }
+    },
+    {
+      "identity" : "nvactivityindicatorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ninjaprox/NVActivityIndicatorView",
+      "state" : {
+        "revision" : "bcb52371f2259254bac6690f92bb474a61768c47",
+        "version" : "5.1.1"
+      }
+    },
+    {
+      "identity" : "reachability",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tonymillion/Reachability",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8d7cc7be2f6ad0e1d4eee94653388d1fa6d453fc"
+      }
+    },
+    {
+      "identity" : "rskimagecropper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ruslanskorb/RSKImageCropper",
+      "state" : {
+        "revision" : "0cbf9cbb77b6763c80eb4d44673395acf5a8d93c",
+        "version" : "4.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

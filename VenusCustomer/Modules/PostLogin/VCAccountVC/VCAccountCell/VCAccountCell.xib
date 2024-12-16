@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VCAccountCell" rowHeight="82" id="KGk-i7-Jjw" customClass="VCAccountCell" customModule="VenusCustomer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pn-bd-s1y">
+                        <rect key="frame" x="20" y="81" width="307" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Yn4-Oy-gvu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeH-Gd-g9R">
+                        <rect key="frame" x="20" y="16" width="20" height="20"/>
+                        <color key="tintColor" name="buttonSelectedOrange"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4hN-Hs-NSR"/>
+                            <constraint firstAttribute="width" constant="20" id="Wxt-ez-Sqs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-uK-Jfq">
+                        <rect key="frame" x="56" y="16" width="271" height="22.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                        <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7pn-bd-s1y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0TR-3w-XFs"/>
+                    <constraint firstItem="TeH-Gd-g9R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="27W-Ar-yO9"/>
+                    <constraint firstAttribute="trailing" secondItem="w6S-uK-Jfq" secondAttribute="trailing" constant="20" id="Cjo-DL-3Io"/>
+                    <constraint firstItem="w6S-uK-Jfq" firstAttribute="leading" secondItem="TeH-Gd-g9R" secondAttribute="trailing" constant="16" id="Fe8-XI-W09"/>
+                    <constraint firstItem="w6S-uK-Jfq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="MwZ-GW-ohl"/>
+                    <constraint firstItem="TeH-Gd-g9R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Z20-dl-JZO"/>
+                    <constraint firstAttribute="trailing" secondItem="7pn-bd-s1y" secondAttribute="trailing" constant="20" id="sr5-7O-p09"/>
+                    <constraint firstAttribute="bottom" secondItem="7pn-bd-s1y" secondAttribute="bottom" id="vqx-7t-HsQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleImage" destination="TeH-Gd-g9R" id="A0T-Wd-f3F"/>
+                <outlet property="titleLabel" destination="w6S-uK-Jfq" id="EFg-OT-9sM"/>
+            </connections>
+            <point key="canvasLocation" x="-8.3969465648854964" y="33.098591549295776"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="buttonSelectedOrange">
+            <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

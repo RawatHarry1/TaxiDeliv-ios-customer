@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="VCAddPromoCell" customModule="VenusCustomer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XU-Op-tKr">
+                        <rect key="frame" x="16" y="10" width="285" height="64"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eai-OB-Bfy">
+                                <rect key="frame" x="16" y="12" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3dp-t7-ueP"/>
+                                    <constraint firstAttribute="width" constant="40" id="Aw7-Nb-OIH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nXB-d5-4kR">
+                                <rect key="frame" x="68" y="19.333333333333336" width="197" height="25.333333333333336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30% Discount On morning ride." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4W-o4-rmq">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="14"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
+                                        <color key="textColor" red="0.050980392156862744" green="0.086274509803921567" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Promocode: Discount30" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-ok-7pg">
+                                        <rect key="frame" x="0.0" y="14.000000000000004" width="197" height="11.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="8"/>
+                                        <color key="textColor" red="0.61960784313725492" green="0.63529411764705879" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eai-OB-Bfy" secondAttribute="bottom" constant="12" id="Eto-LD-jD5"/>
+                            <constraint firstItem="eai-OB-Bfy" firstAttribute="top" secondItem="9XU-Op-tKr" secondAttribute="top" constant="12" id="bO7-3V-avu"/>
+                            <constraint firstItem="nXB-d5-4kR" firstAttribute="leading" secondItem="eai-OB-Bfy" secondAttribute="trailing" constant="12" id="bih-a0-EHt"/>
+                            <constraint firstItem="eai-OB-Bfy" firstAttribute="leading" secondItem="9XU-Op-tKr" secondAttribute="leading" constant="16" id="jdP-RY-ZIm"/>
+                            <constraint firstAttribute="trailing" secondItem="nXB-d5-4kR" secondAttribute="trailing" constant="20" id="lUx-WP-gbh"/>
+                            <constraint firstItem="nXB-d5-4kR" firstAttribute="centerY" secondItem="9XU-Op-tKr" secondAttribute="centerY" id="s2W-uR-pRV"/>
+                            <constraint firstItem="nXB-d5-4kR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9XU-Op-tKr" secondAttribute="top" constant="12" id="t4A-Y8-bAO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9XU-Op-tKr" secondAttribute="bottom" id="6Ta-Mh-J4m"/>
+                    <constraint firstAttribute="trailing" secondItem="9XU-Op-tKr" secondAttribute="trailing" constant="16" id="OTj-UL-wk7"/>
+                    <constraint firstItem="9XU-Op-tKr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Y8B-9f-Ijr"/>
+                    <constraint firstItem="9XU-Op-tKr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eyp-4i-JoO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="135.1145038167939" y="33.450704225352112"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

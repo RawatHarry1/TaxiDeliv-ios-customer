@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C9DC1DCB-BB6B-4A59-8AD5-4D0539A59EEC"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA74F031-049A-4B9C-9475-0537CED12289"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Socket.IO-Client-Swift/Source/SocketIO/Client/SocketIOClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "connect(withPayload:timeoutAfter:withHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "591C7200-EC3D-48D1-807F-179854C64FAF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/PostLogin/VCHomeVC/VCHomeViewModel/VCHomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "distanceMatrixAPI(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "591C7200-EC3D-48D1-807F-179854C64FAF - 3ba8dd5d86f6820a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Swift.Error&gt;) -&gt; () in VenusCustomer.VCHomeViewModel.distanceMatrixAPI(Swift.String, Swift.String) -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Modules/PostLogin/VCHomeVC/VCHomeViewModel/VCHomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "591C7200-EC3D-48D1-807F-179854C64FAF - 3ba8dd5d86f6826b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Any&gt;, Swift.Error&gt;) -&gt; () in VenusCustomer.VCHomeViewModel.distanceMatrixAPI(Swift.String, Swift.String) -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Modules/PostLogin/VCHomeVC/VCHomeViewModel/VCHomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "getDriverLiveLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - c051c1fcd7a88f0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "E794F245-6A5B-4AFC-ADD8-5FA0477606F4 - 2a32f7d2c9ffbac1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C8821E6-6B24-438E-B903-F31502B65251"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "getDriverLiveLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C8821E6-6B24-438E-B903-F31502B65251 - 2a32f7d2c9ffb939"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "1328">
+               </Location>
+               <Location
+                  uuid = "8C8821E6-6B24-438E-B903-F31502B65251 - 2a32f7d2c9ffb939"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Any&gt;, SocketIO.SocketAckEmitter) -&gt; () in VenusCustomer.VCSocketServices.getDriverLiveLocation() -&gt; ()"
+                  moduleName = "VenusCustomer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appinventiv/Documents/MyProjects/HardCodedWhiteLable_Customer/venus-ios-customer/VenusCustomer/Utility/AppController/VCSocket/VCSocketManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
