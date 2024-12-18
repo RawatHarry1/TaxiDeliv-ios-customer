@@ -68,7 +68,7 @@ class ChooseAppVC: VCBaseVC {
             if let urlStr = details.user_image {
                 self.imgViewProfile.setImage(urlStr)
             }
-            self.lblName.text = details.name ?? ""
+            self.lblName.text = "Hi, \(details.name ?? "")"
         }
     }
     

@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="introFirst" translatesAutoresizingMaskIntoConstraints="NO" id="jLs-eQ-HGV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="introFirst" translatesAutoresizingMaskIntoConstraints="NO" id="jLs-eQ-HGV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                     </imageView>
                 </subviews>
             </view>
@@ -27,7 +27,7 @@
                 <constraint firstAttribute="trailing" secondItem="jLs-eQ-HGV" secondAttribute="trailing" id="3fB-Nu-eRf"/>
                 <constraint firstItem="jLs-eQ-HGV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XSC-ct-NrP"/>
                 <constraint firstItem="jLs-eQ-HGV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qc3-By-njF"/>
-                <constraint firstAttribute="bottom" secondItem="jLs-eQ-HGV" secondAttribute="bottom" id="r3z-mS-ykw"/>
+                <constraint firstAttribute="bottom" secondItem="jLs-eQ-HGV" secondAttribute="bottom" constant="40" id="r3z-mS-ykw"/>
             </constraints>
             <size key="customSize" width="301" height="613"/>
             <connections>

@@ -104,7 +104,7 @@ struct LoginModel : Codable {
     var vehicle_types :[vechleType]?
     var package_details: [packageDetails]?
     var package_types : [String]?
-    
+    var support_ticket_reasons : [String]?
     
     enum CodingKeys: String, CodingKey {
         case referral_code = "referral_code"
@@ -160,6 +160,7 @@ struct LoginModel : Codable {
         case vehicle_types = "vehicle_types"
         case package_details = "package_details"
         case package_types = "package_types"
+        case support_ticket_reasons = "support_ticket_reasons"
     }
 
     init(from decoder: Decoder) throws {
@@ -222,10 +223,12 @@ struct LoginModel : Codable {
         package_details  = try values.decodeIfPresent([packageDetails].self, forKey: .package_details)
         
         package_types  = try values.decodeIfPresent([String].self, forKey: .package_types)
+        support_ticket_reasons = try values.decodeIfPresent([String].self, forKey: .support_ticket_reasons)
     }
 
 
     init() {
+        support_ticket_reasons = nil
         package_types = nil
         package_details = nil
         vehicle_types = nil

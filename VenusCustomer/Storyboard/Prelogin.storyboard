@@ -988,6 +988,7 @@
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-Xm-25q">
                                                 <rect key="frame" x="121.66666666666669" y="88" width="132" height="132"/>
+                                                <color key="tintColor" name="buttonSelectedOrange"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="132" id="0db-Ur-hPT"/>
                                                     <constraint firstAttribute="width" constant="132" id="nh4-KF-VW0"/>
@@ -2003,6 +2004,9 @@
         <designable name="1gU-1c-HX0">
             <size key="intrinsicContentSize" width="61" height="35"/>
         </designable>
+        <designable name="87B-9L-EgJ">
+            <size key="intrinsicContentSize" width="214" height="19.666666666666668"/>
+        </designable>
         <designable name="EN1-0m-6PK">
             <size key="intrinsicContentSize" width="141" height="35"/>
         </designable>
@@ -2058,7 +2062,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

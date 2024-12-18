@@ -79,8 +79,8 @@ struct DataTripHistory : Codable {
     let partner_type : String?
     let pickup_latitude : Double?
     let pickup_longitude : Double?
-    let drop_latitude : Int?
-    let drop_longitude : Int?
+    let drop_latitude : Double?
+    let drop_longitude : Double?
     let currency_symbol : String?
     let is_invoiced : Int?
     let scheduled_ride_pickup_id : Int?
@@ -118,6 +118,14 @@ struct DataTripHistory : Codable {
     let support_number : String?
     let feedback_info : [Feedback_info]?
     let total_rides_as_user : Int?
+    var delivery_packages: [deliveryPackagesD]?
+      
+    
+    
+    
+    
+    
+    
 
     enum CodingKeys: String, CodingKey {
 
@@ -217,6 +225,7 @@ struct DataTripHistory : Codable {
         case feedback_info = "feedback_info"
         case total_rides_as_user = "total_rides_as_user"
         case support_number = "support_number"
+        case delivery_packages = "delivery_packages"
     }
 
     init(from decoder: Decoder) throws {
@@ -278,8 +287,8 @@ struct DataTripHistory : Codable {
         partner_type = try values.decodeIfPresent(String.self, forKey: .partner_type)
         pickup_latitude = try values.decodeIfPresent(Double.self, forKey: .pickup_latitude)
         pickup_longitude = try values.decodeIfPresent(Double.self, forKey: .pickup_longitude)
-        drop_latitude = try values.decodeIfPresent(Int.self, forKey: .drop_latitude)
-        drop_longitude = try values.decodeIfPresent(Int.self, forKey: .drop_longitude)
+        drop_latitude = try values.decodeIfPresent(Double.self, forKey: .drop_latitude)
+        drop_longitude = try values.decodeIfPresent(Double.self, forKey: .drop_longitude)
         currency_symbol = try values.decodeIfPresent(String.self, forKey: .currency_symbol)
         is_invoiced = try values.decodeIfPresent(Int.self, forKey: .is_invoiced)
         scheduled_ride_pickup_id = try values.decodeIfPresent(Int.self, forKey: .scheduled_ride_pickup_id)
@@ -317,6 +326,7 @@ struct DataTripHistory : Codable {
         feedback_info = try values.decodeIfPresent([Feedback_info].self, forKey: .feedback_info)
         total_rides_as_user = try values.decodeIfPresent(Int.self, forKey: .total_rides_as_user)
         support_number = try values.decodeIfPresent(String.self, forKey: .support_number)
+        delivery_packages = try values.decodeIfPresent([deliveryPackagesD].self, forKey: .delivery_packages)
     }
 
 }
@@ -336,4 +346,20 @@ struct Discount : Codable {
         value = try values.decodeIfPresent(Int.self, forKey: .value)
     }
 
+}
+struct deliveryPackagesD: Codable{
+  
+      var package_image_while_drop_off : [String]?
+      var package_type : String?
+      var notes : String?
+      var description : String?
+      var package_images_by_customer : [String]?
+      var package_id : Int?
+      var package_quantity : Int?
+      var not_deliver_reason : String?
+      var package_image_while_pickup: [String]?
+      var package_size : String?
+      var delivery_status : Int?
+      var receiver_name : String?
+    
 }

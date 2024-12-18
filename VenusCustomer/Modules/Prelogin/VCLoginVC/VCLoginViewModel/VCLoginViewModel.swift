@@ -35,7 +35,7 @@ extension VCLoginViewModel {
         if phone == "" {
             error = CustomError(title: "", description: Const_Str.phone_invalid, code: 0)
             return
-        } else if phone.count < 10 || phone.count > 10{
+        } else if phone.count < 8 || phone.count > 10{
             error = CustomError(title: "", description: Const_Str.phone_invalid, code: 0)
             return
         }

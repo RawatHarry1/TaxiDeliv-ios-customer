@@ -19,6 +19,7 @@ struct PackageDetail: Codable {
 
 class AddPackageVC: VCBaseVC , UITextFieldDelegate{
 
+    @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var imgViewPhoto: UIImageView!
     @IBOutlet weak var txtFldPackage: UITextField!
     @IBOutlet weak var txtFldWeight: UITextField!
@@ -49,7 +50,7 @@ class AddPackageVC: VCBaseVC , UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        btnDelete.isHidden = true
         txtFldItem.delegate = self
         txtFldQuantity.delegate = self
         if isEdit == true{
@@ -93,6 +94,12 @@ class AddPackageVC: VCBaseVC , UITextFieldDelegate{
     }
     
    
+    @IBAction func btnDeleteAction(_ sender: Any) {
+        btnDelete.isHidden = true
+        imgViewPhoto.image = nil
+        selectedPhoto = false
+        photo = nil
+    }
     
     @IBAction func btnAddPackageAction(_ sender: Any) {
       
@@ -225,9 +232,9 @@ extension AddPackageVC: UICollectionViewDelegate,UICollectionViewDataSource, UIC
         
         if selectedIndex == indexPath.row{
             cell.baseView.layer.borderColor = UIColor(named: "buttonSelectedOrange")?.cgColor
-            self.txtFldLength.text = "\(obj?.package_length ?? 0)"
-            self.txtFldWidth.text = "\(obj?.package_width ?? 0.0)"
-            self.txtFldHeight.text = "\(obj?.package_height ?? 0)"
+            self.txtFldLength.text = "\(obj?.package_length ?? 0) (In meters)"
+            self.txtFldWidth.text = "\(obj?.package_width ?? 0.0) (In meters)"
+            self.txtFldHeight.text = "\(obj?.package_height ?? 0) (In meters)"
             self.txtFldWeight.text = "\(obj?.package_weight ?? 0)"
             self.size = obj?.package_size ?? ""
             self.idPackage = "\(obj?.package_id ?? 0)"
@@ -289,6 +296,7 @@ extension AddPackageVC: UploadFileAlertDelegates {
             self.imgViewPhoto.image = UIImage(data: dt)
             photo = UIImage(data: dt)!
             selectedPhoto = true
+            btnDelete.isHidden = false
 //            self.data_img = data
 //            self.name_img = name
         }

@@ -13,8 +13,8 @@ class VCAccountCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
   //
   //
-    var images = [VCImageAsset.changePass.asset,VCImageAsset.offers.asset,VCImageAsset.creditCard.asset,VCImageAsset.wallet.asset,VCImageAsset.reffral.asset,  VCImageAsset.faq.asset, VCImageAsset.aboutUs.asset, VCImageAsset.terms.asset, VCImageAsset.logout.asset,VCImageAsset.delete.asset]
-    var titles = ["Change Password", "Offers","Cards","Wallet", "Referral", "FAQ’s", "About app", "Terms & Conditions", "Log Out","Delete Account"]
+    var images = [VCImageAsset.changePass.asset,VCImageAsset.offers.asset,VCImageAsset.creditCard.asset,VCImageAsset.wallet.asset,VCImageAsset.reffral.asset,  VCImageAsset.faq.asset, VCImageAsset.aboutUs.asset, VCImageAsset.terms.asset,VCImageAsset.ticket.asset,VCImageAsset.delete.asset, VCImageAsset.logout.asset]
+    var titles = ["Change Password", "Offers","Cards","Wallet", "Referral", "FAQ’s", "About app", "Terms & Conditions","Raised Tickets","Delete Account", "Log Out"]
 
     override func awakeFromNib() {
         super.awakeFromNib()

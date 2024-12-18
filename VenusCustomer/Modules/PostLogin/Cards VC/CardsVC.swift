@@ -33,6 +33,7 @@ class CardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stripSheet()
+        self.viewStack.addShadowView()
         tblViewCards.register(UINib(nibName: "CardsTblCell", bundle: nil), forCellReuseIdentifier: "CardsTblCell")
         getCardApi()
         tblViewCards.rowHeight = 60
@@ -131,9 +132,9 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.objCardsVM.objGetCardModal?.data?.count ?? 0 > 0{
             lblNoDataFound.isHidden = true
-            viewStack.isHidden = false
+          //  viewStack.isHidden = false
         }else{
-            viewStack.isHidden = true
+           // viewStack.isHidden = true
             lblNoDataFound.isHidden = false
         }
         return self.objCardsVM.objGetCardModal?.data?.count ?? 0

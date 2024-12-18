@@ -108,6 +108,8 @@ struct TripHistoryDetails : Codable {
     let paid_using_stripe : Double?
 //    let customer_fare_per_baggage : Int?
     var discount: [DiscountDataValue]?
+    var delivery_packages: [deliveryPackagesD]?
+    
     enum CodingKeys: String, CodingKey {
 
         case fare = "fare"
@@ -213,6 +215,7 @@ struct TripHistoryDetails : Codable {
 //        case ride_time = "ride_time"
 //        case is_invoiced = "is_invoiced"
         case paid_using_stripe = "paid_using_stripe"
+        case delivery_packages = "delivery_packages"
 //        case customer_fare_per_baggage = "customer_fare_per_baggage"
 //        case trip_total = "trip_total"
     }
@@ -315,10 +318,12 @@ struct TripHistoryDetails : Codable {
 //        is_invoiced = try values.decodeIfPresent(Int.self, forKey: .is_invoiced)
         paid_using_stripe = try values.decodeIfPresent(Double.self, forKey: .paid_using_stripe)
         discount = try values.decodeIfPresent([DiscountDataValue].self, forKey: .discount)
+        delivery_packages = try values.decodeIfPresent([deliveryPackagesD].self, forKey: .delivery_packages)
 //        customer_fare_per_baggage = try values.decodeIfPresent(Int.self, forKey: .customer_fare_per_baggage)
     }
 
     init() {
+        delivery_packages = nil
        fare = nil
        net_customer_tax = nil
        fare_discount = nil

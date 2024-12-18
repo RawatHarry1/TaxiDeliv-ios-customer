@@ -49,6 +49,8 @@ extension WebServices {
         case deleteAccount = "/removeAccount"
         case add_money_via_stripe = "/add_money_via_stripe"
         case uploadPhoto = "/upload_file_customer"
+        case generate_ticket = "/generate_ticket"
+        case list_support_tickets = "/list_support_tickets"
         // MARK: - API url path
         var path: String {
             return sharedAppDelegate.appEnvironment.baseURL + rawValue

@@ -221,6 +221,7 @@
 		20F551412AE51986000180A7 /* VCRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F551402AE51986000180A7 /* VCRouters.swift */; };
 		ADDBAA657D1C1FAAD71AE765 /* Pods_VenusCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */; };
 		CF1198ED2C1C51DF00BDA023 /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1198EC2C1C51DF00BDA023 /* CalenderVC.swift */; };
+		CF120DA62D08101A00505440 /* RaiseTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120DA52D08101A00505440 /* RaiseTicketVC.swift */; };
 		CF17E35A2CEDE61B008A1D58 /* MTSlideToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17E3592CEDE61B008A1D58 /* MTSlideToOpenView.swift */; };
 		CF1DCE052C22E84A00F07D1A /* WalletHistoryModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DCE042C22E84900F07D1A /* WalletHistoryModal.swift */; };
 		CF1DCE072C22E93000F07D1A /* WalletHistoryViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DCE062C22E93000F07D1A /* WalletHistoryViewModal.swift */; };
@@ -251,7 +252,13 @@
 		CF772C522C197C4600448459 /* AddressViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF772C512C197C4600448459 /* AddressViewModal.swift */; };
 		CF772C542C197DA100448459 /* AddAddressModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF772C532C197DA000448459 /* AddAddressModal.swift */; };
 		CF772C562C19C25700448459 /* AddressTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF772C552C19C25700448459 /* AddressTblCell.swift */; };
+		CF7BBA782D08241800790443 /* RaiseTicketVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BBA772D08241800790443 /* RaiseTicketVM.swift */; };
+		CF7BBA7B2D083B7F00790443 /* TicketListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BBA7A2D083B7F00790443 /* TicketListVC.swift */; };
+		CF7BBA7D2D083BA200790443 /* TicketTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BBA7C2D083BA200790443 /* TicketTblCell.swift */; };
+		CF7BBA7F2D0844E400790443 /* TicketListModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7BBA7E2D0844E400790443 /* TicketListModal.swift */; };
 		CF81FE2F2CC7B0D300ABE41A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF81FE2E2CC7B0D300ABE41A /* GoogleService-Info.plist */; };
+		CF82A8282CFB132400B7407A /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82A8272CFB132400B7407A /* ImageViewerVC.swift */; };
+		CF883E722CF9BDFB0098D8A6 /* CollectionViewCellCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF883E712CF9BDFB0098D8A6 /* CollectionViewCellCustomer.swift */; };
 		CF8A2A1A2CBFBEF700137006 /* HomeBannerCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A2A192CBFBEF700137006 /* HomeBannerCollCell.swift */; };
 		CF8A2A1C2CBFC70600137006 /* DeliveryHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A2A1B2CBFC70600137006 /* DeliveryHomeVC.swift */; };
 		CF8D51492C620B870065D007 /* VersionUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8D51482C620B870065D007 /* VersionUpdateVC.swift */; };
@@ -496,6 +503,7 @@
 		6CC4E873175BC6CD297503EA /* Pods-VenusCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenusCustomer.debug.xcconfig"; path = "Target Support Files/Pods-VenusCustomer/Pods-VenusCustomer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenusCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1198EC2C1C51DF00BDA023 /* CalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
+		CF120DA52D08101A00505440 /* RaiseTicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseTicketVC.swift; sourceTree = "<group>"; };
 		CF17E3592CEDE61B008A1D58 /* MTSlideToOpenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSlideToOpenView.swift; sourceTree = "<group>"; };
 		CF1DCE042C22E84900F07D1A /* WalletHistoryModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletHistoryModal.swift; sourceTree = "<group>"; };
 		CF1DCE062C22E93000F07D1A /* WalletHistoryViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHistoryViewModal.swift; sourceTree = "<group>"; };
@@ -526,7 +534,13 @@
 		CF772C512C197C4600448459 /* AddressViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModal.swift; sourceTree = "<group>"; };
 		CF772C532C197DA000448459 /* AddAddressModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddressModal.swift; sourceTree = "<group>"; };
 		CF772C552C19C25700448459 /* AddressTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTblCell.swift; sourceTree = "<group>"; };
+		CF7BBA772D08241800790443 /* RaiseTicketVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseTicketVM.swift; sourceTree = "<group>"; };
+		CF7BBA7A2D083B7F00790443 /* TicketListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListVC.swift; sourceTree = "<group>"; };
+		CF7BBA7C2D083BA200790443 /* TicketTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTblCell.swift; sourceTree = "<group>"; };
+		CF7BBA7E2D0844E400790443 /* TicketListModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListModal.swift; sourceTree = "<group>"; };
 		CF81FE2E2CC7B0D300ABE41A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF82A8272CFB132400B7407A /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
+		CF883E712CF9BDFB0098D8A6 /* CollectionViewCellCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCustomer.swift; sourceTree = "<group>"; };
 		CF8A2A192CBFBEF700137006 /* HomeBannerCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollCell.swift; sourceTree = "<group>"; };
 		CF8A2A1B2CBFC70600137006 /* DeliveryHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryHomeVC.swift; sourceTree = "<group>"; };
 		CF8D51482C620B870065D007 /* VersionUpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionUpdateVC.swift; sourceTree = "<group>"; };
@@ -738,6 +752,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6BCB2D2A5DD496005651E8 /* VCTripDetailVC.swift */,
+				CF883E712CF9BDFB0098D8A6 /* CollectionViewCellCustomer.swift */,
 				CFC1B27A2C48D0DA00D34B76 /* Ride Modal */,
 			);
 			path = VCTripDetailVC;
@@ -1301,6 +1316,9 @@
 		0C9CC28B2A4DD1BB007CD755 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CF7BBA792D083B6400790443 /* Ticket List VC */,
+				CF120DA42D08100700505440 /* Raise Ticket VC */,
+				CF82A8262CFB130B00B7407A /* ImageViewerVC */,
 				CF56AF0B2CDB2A1E00AEF540 /* Add Package VC */,
 				CF56AEFF2CD9EFBE00AEF540 /* PackageListVC */,
 				CF56AF032CD9EFBF00AEF540 /* PackageVC */,
@@ -1798,6 +1816,15 @@
 			path = VCRouters;
 			sourceTree = "<group>";
 		};
+		CF120DA42D08100700505440 /* Raise Ticket VC */ = {
+			isa = PBXGroup;
+			children = (
+				CF120DA52D08101A00505440 /* RaiseTicketVC.swift */,
+				CF7BBA772D08241800790443 /* RaiseTicketVM.swift */,
+			);
+			path = "Raise Ticket VC";
+			sourceTree = "<group>";
+		};
 		CF1DCE0D2C24544600F07D1A /* PromoCode Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1896,6 +1923,24 @@
 				CF772C512C197C4600448459 /* AddressViewModal.swift */,
 			);
 			path = "Address ViewModal";
+			sourceTree = "<group>";
+		};
+		CF7BBA792D083B6400790443 /* Ticket List VC */ = {
+			isa = PBXGroup;
+			children = (
+				CF7BBA7A2D083B7F00790443 /* TicketListVC.swift */,
+				CF7BBA7E2D0844E400790443 /* TicketListModal.swift */,
+				CF7BBA7C2D083BA200790443 /* TicketTblCell.swift */,
+			);
+			path = "Ticket List VC";
+			sourceTree = "<group>";
+		};
+		CF82A8262CFB130B00B7407A /* ImageViewerVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF82A8272CFB132400B7407A /* ImageViewerVC.swift */,
+			);
+			path = ImageViewerVC;
 			sourceTree = "<group>";
 		};
 		CF8D51472C620B710065D007 /* VersionUpdateVC */ = {
@@ -2185,6 +2230,7 @@
 				CFFC45942C60998B008F5121 /* CardsVC.swift in Sources */,
 				0CC958452B82C2C600717A92 /* LogHelper.swift in Sources */,
 				0C583FB52B0575210097813A /* VCTripHistoryViewModel.swift in Sources */,
+				CF7BBA782D08241800790443 /* RaiseTicketVM.swift in Sources */,
 				20E481952AE1A4B700C317B5 /* VCAPIKeys.swift in Sources */,
 				CFB70FF92CDB327E00EECACC /* PackageCollectionCell.swift in Sources */,
 				0C684F3C2A5F2C2E00197733 /* VCOffersCollectionCell.swift in Sources */,
@@ -2285,6 +2331,7 @@
 				0C91E54A2A8E04F100AFFD07 /* SIIntroCollectionCell.swift in Sources */,
 				CF7615A02C61F6AF00D05904 /* ReferralVC.swift in Sources */,
 				0C9CC2382A4DCFBF007CD755 /* IQToolbar.swift in Sources */,
+				CF883E722CF9BDFB0098D8A6 /* CollectionViewCellCustomer.swift in Sources */,
 				20F551142AE426C7000180A7 /* VCLoginViewModel.swift in Sources */,
 				CF3C92122C4651BE00F9D0EF /* chatCollectionCell.swift in Sources */,
 				20E481932AE1A4B700C317B5 /* Webservices+Login.swift in Sources */,
@@ -2294,6 +2341,7 @@
 				201C9D5F2B000E4900C9F99D /* Webservices+Rides.swift in Sources */,
 				0CB9D06B2B06BF320015C82D /* VCHomeViewModel.swift in Sources */,
 				0C9CC1E62A4D5BF8007CD755 /* AppDelegate.swift in Sources */,
+				CF7BBA7D2D083BA200790443 /* TicketTblCell.swift in Sources */,
 				CF3C92092C4637FA00F9D0EF /* ChatModal.swift in Sources */,
 				20F5511C2AE42D50000180A7 /* LocationTracker.swift in Sources */,
 				0C9CC2D22A4DD1BB007CD755 /* VCOtpVC.swift in Sources */,
@@ -2302,6 +2350,7 @@
 				CF772C522C197C4600448459 /* AddressViewModal.swift in Sources */,
 				CFBC44F92C60E56700BF2379 /* GetCardsModal.swift in Sources */,
 				CF1DCE052C22E84A00F07D1A /* WalletHistoryModal.swift in Sources */,
+				CF7BBA7B2D083B7F00790443 /* TicketListVC.swift in Sources */,
 				0C91E5512A8E0A7600AFFD07 /* VDView.swift in Sources */,
 				0C9CC23B2A4DCFBF007CD755 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				20C9E1FC2AFAAB0600901498 /* Webservices+GoogleApi.swift in Sources */,
@@ -2327,9 +2376,12 @@
 				CF56AF062CD9EFBF00AEF540 /* TrackOrderVc.swift in Sources */,
 				CF9E70112C9D831C00FD145A /* GoodsTblCell.swift in Sources */,
 				0CF0C8592A4EB75A003AE7F2 /* VCNotificationCell.swift in Sources */,
+				CF82A8282CFB132400B7407A /* ImageViewerVC.swift in Sources */,
 				201C9D6D2B02005400C9F99D /* Fare_structure.swift in Sources */,
 				CFC7FDD82C9AE9B60026A5EA /* ChooseAppVC.swift in Sources */,
+				CF7BBA7F2D0844E400790443 /* TicketListModal.swift in Sources */,
 				203D13A02AE7166600227502 /* UIIMage_Extension.swift in Sources */,
+				CF120DA62D08101A00505440 /* RaiseTicketVC.swift in Sources */,
 				20E481992AE1A55600C317B5 /* AppSetupEnums.swift in Sources */,
 				CFB70FFB2CDB574600EECACC /* UplodPhotoModal.swift in Sources */,
 				20F5511A2AE42916000180A7 /* StringConstant.swift in Sources */,

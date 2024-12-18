@@ -10,7 +10,9 @@ import UIKit
 class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     
     
+    @IBOutlet weak var lblDeliveryDetails: UILabel!
     
+    @IBOutlet weak var lblVechecle: UILabel!
     @IBOutlet weak var slideView: MTSlideToOpenView!
     @IBOutlet weak var txtFldPromocode: UITextField!
     @IBOutlet weak var lblLine: UILabel!
@@ -118,14 +120,20 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
             self.viewNotes.isHidden = false
            viewPackageDetail.isHidden = true
            seatsLbl.text = "\(selectedRegions?.max_people ?? 0) seats"
+           etaLbl.text = "\(selectedRegions?.eta ?? 0) min away"
+           lblVechecle.text = selectedRegions?.region_name ?? ""
            imgViewKgIcon.image = UIImage(named: "userPlaceHolder")
-           
+           lblDeliveryDetails.text = "Ride Details"
+          
         }else{
             viewDelivery.isHidden = false
             viewNotes.isHidden = true
             viewPackageDetail.isHidden = false
-            seatsLbl.text = "\(selectedRegions?.max_people ?? 0) Kg"
+            seatsLbl.text = "\(selectedRegions?.max_people ?? 0) "
             imgViewKgIcon.image = UIImage(named: "kg")
+            etaLbl.text = "\(selectedRegions?.eta ?? 0) min away"
+            lblVechecle.text = selectedRegions?.region_name ?? ""
+            lblDeliveryDetails.text = "Delivery Details"
         }
         callBack()
         getLocation()
@@ -144,14 +152,20 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     func slideViewfunc(){
         slideView.sliderViewTopDistance = 0
         slideView.sliderCornerRadius = 30
+        
         slideView.thumnailImageView.backgroundColor  = .white
         slideView.draggedView.backgroundColor =  UIColor(named: "buttonSelectedOrange")
         slideView.backgroundColor = UIColor(named: "buttonSelectedOrange")
         slideView.delegate = self
         slideView.thumbnailViewStartingDistance = 0
-        slideView.labelText = "Swipe to Pay | \(selectedRegions?.region_fare?.currency ?? "") \(selectedRegions?.region_fare?.original_fare ?? 0)"
+        slideView.labelText = "Confirm Booking"
        // slideView.thumbnailViewTopDistance
-        slideView.thumnailImageView.image = #imageLiteral(resourceName: "greenArrow").imageFlippedForRightToLeftLayoutDirection()
+        slideView.thumnailImageView.image = #imageLiteral(resourceName: "right-arrow").imageFlippedForRightToLeftLayoutDirection()
+        slideView.thumnailImageView.tintColor =  UIColor(named: "buttonSelectedOrange")
+        slideView.thumnailImageView.size = CGSize(width: 40, height: 40)
+        slideView.thumbnailViewStartingDistance = 5
+        slideView.thumbnailViewTopDistance = 5
+        
     }
     
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
@@ -542,6 +556,7 @@ extension ReviewDetailsVC{
         viewModel.scheduleRequestRideApi(jsonAtt)
     }
 }
+
 extension ReviewDetailsVC{
     
     func convertToJSON(packageDetails: [PackageDetail]) -> String? {

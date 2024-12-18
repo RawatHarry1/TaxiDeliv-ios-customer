@@ -17,7 +17,7 @@ var isNotificationReceivedForMessage = false
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window:UIWindow?
-    var appEnvironment: AppEnvironment = .production
+    var appEnvironment: AppEnvironment = .stage
     var isFromNotification = false
     var backgroundTask: UIBackgroundTaskIdentifier = .invalid
    

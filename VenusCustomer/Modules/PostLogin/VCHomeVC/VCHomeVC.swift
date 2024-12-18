@@ -120,11 +120,13 @@ class VCHomeVC: VCBaseVC {
                 self.lblRide.text = "Ride"
                 imgViewRide.image = UIImage(named: "NowRide")
                 imgViewSchedule.image = UIImage(named: "calRide")
+                self.tabBarController?.tabBar.items?[1].title = "Trips"
             }else{
                 
                 imgViewRide.image = UIImage(named: "NowDel")
                 imgViewSchedule.image = UIImage(named: "calDel")
                 self.lblRide.text = "Now"
+                self.tabBarController?.tabBar.items?[1].title = "Deliveries"
             }
             setHomeVC()
             
@@ -133,11 +135,15 @@ class VCHomeVC: VCBaseVC {
             imgViewRide.image = UIImage(named: "NowDel")
             imgViewSchedule.image = UIImage(named: "calDel")
             self.lblRide.text = "Now"
+            self.tabBarController?.tabBar.items?[2].title = "Deliveries"
+           
         }else{
             requestRideType = 1
             self.lblRide.text = "Ride"
             imgViewRide.image = UIImage(named: "NowRide")
             imgViewSchedule.image = UIImage(named: "calRide")
+            self.tabBarController?.tabBar.items?[2].title = "Trips"
+           
         }
     }
     
@@ -181,6 +187,7 @@ class VCHomeVC: VCBaseVC {
         self.tabBarController?.tabBar.items?[0].selectedImage = VCImageAsset.back.asset?.withRenderingMode(.alwaysTemplate)
         self.tabBarController?.tabBar.items?[0].title = "Back"
         self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
         
      //   removeSpecificTab()
 
