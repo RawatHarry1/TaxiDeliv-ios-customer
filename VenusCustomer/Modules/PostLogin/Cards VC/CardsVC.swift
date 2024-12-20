@@ -32,6 +32,7 @@ class CardsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.definesPresentationContext = true
         self.stripSheet()
         self.viewStack.addShadowView()
         tblViewCards.register(UINib(nibName: "CardsTblCell", bundle: nil), forCellReuseIdentifier: "CardsTblCell")
@@ -42,6 +43,7 @@ class CardsVC: UIViewController {
     
     func getCardApi(){
         objCardsVM.getCardApi {
+           
             self.tblViewCards.reloadData()
         }
     }
@@ -66,14 +68,18 @@ class CardsVC: UIViewController {
     }
     
     func confirmCardApi(){
-        
         self.objCardsVM.confirmCard(clientSecret: UserModel.currentUser.login?.stripeCredentials?.client_secret ?? "", id: self.setUpIntentID) {
+            if self.comesFromAccount == true{
+                Proxy.shared.displayStatusCodeAlert("Your Card has been added. Now can start your trip.", title: "Congrats")
+            }
             self.getCardApi()
+            
         }
     }
     
     @IBAction func btnBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
     
     func configurePaymentSheet() {
@@ -90,9 +96,10 @@ class CardsVC: UIViewController {
     
     func presentPaymentSheet() {
         self.paymentSheet?.present(from: self) { paymentResult in
-            // Handle the payment result
+           
             switch paymentResult {
             case .completed:
+             
                 print("Your order is confirmed")
                 self.confirmCardApi()
             case .canceled:
@@ -162,8 +169,11 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
             if selectedIndex == indexPath.row{
                 cell.imgViewRadio.image = UIImage(named: "radioSelected")
                 if comesFromAccount == false{
+                    self.dismiss(animated: true) {
+                        self.didPressSelecrCard!(obj!)
+                    }
                     self.navigationController?.popViewController(animated: true)
-                    self.didPressSelecrCard!(obj!)
+                    
                    
                 }
             }else{
@@ -188,9 +198,7 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
            // Create a configuration with the delete action
            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
            configuration.performsFirstActionWithFullSwipe = true // Optional: Enable full swipe to trigger the action
-           
            return configuration
-       
    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -205,3 +213,4 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
         }
     }
 }
+

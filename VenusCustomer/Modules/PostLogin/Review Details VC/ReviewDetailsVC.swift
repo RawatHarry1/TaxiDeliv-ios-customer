@@ -349,6 +349,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         let vc = CardsVC.create()
         vc.comesFromAccount = false
         vc.emptyObj = self.objSelecrCard
+        vc.modalPresentationStyle = .overFullScreen
         vc.didPressSelecrCard = { selectedCardData in
             self.lblCardDetails.text = "Selected Card: **** \(selectedCardData.last_4 ?? "")"
             self.lblCardDetails.isHidden = false
@@ -358,7 +359,8 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
             self.btnRadioPayByCard.setImage(UIImage(named: "radioSelected"), for: .normal)
             self.btnRadio.setImage(UIImage(named: "radio"), for: .normal)
         }
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true)
+       // self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btnBackAction(_ sender: Any) {

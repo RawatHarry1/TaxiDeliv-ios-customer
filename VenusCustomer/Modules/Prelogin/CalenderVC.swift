@@ -212,6 +212,7 @@ extension CalenderVC{
                dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ssZ"
                print("Selected DateTime (UTC): \(dateFormatter.string(from: combinedDate))")
                utcDate = dateFormatter.string(from: combinedDate)
+               print("UTC is => " ,utcDate)
            }
        }
 }
