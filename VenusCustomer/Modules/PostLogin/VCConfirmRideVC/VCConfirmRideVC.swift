@@ -65,8 +65,6 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
     var objOperationAvalablity : operator_availablityy?
     private var viewModel = VCRideVehiclesListViewModel()
     var selectedIntGoods = -1
-    var loadedPackageDetails: [PackageDetail]?
-   
     //  To create ViewModel
     static func create() -> VCConfirmRideVC {
         let obj = VCConfirmRideVC.instantiate(fromAppStoryboard: .ride)
@@ -84,12 +82,11 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
             btnPromo.isHidden = true
             lblPromocode.text = "Applied: \(codeTitle)"
         }
+        self.lblCardDetails.isHidden = true
+        self.btnChange.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(handleViewControllerDismissed), name: .viewControllerDismissed, object: nil)
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        
-        self.lblCardDetails.isHidden = true
-        self.btnChange.isHidden = true
         self.btnRadio.setImage(UIImage(named: "radioSelected"), for: .normal)
         print(selectedRegions!)
         notesTF.textContainerInset = UIEdgeInsets.zero
@@ -175,8 +172,6 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
         baseView.roundCorner([.topLeft, .topRight], radius: 32)
         backView.roundCorner([.topRight, .bottomRight], radius: 28)
     }
-    
-
     
     @IBAction func btnRemoveAction(_ sender: Any) {
         removePromoCodeAlert()
@@ -308,7 +303,7 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
     }
     
     func scheduleAlert(){
-        let alert = UIAlertController(title: "Smart App", message: "Your ride has been scheduled successfully!!", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Venus Taxi", message: "Your ride has been scheduled successfully!!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
             self.removeFromParentVC()
             self.dismiss(animated: true)
@@ -336,34 +331,17 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
             "coupon_to_apply": codeID,
             "promo_to_apply": "\(promoCodeID)",
             "customer_base_fare": "\(selectedRegions?.region_fare?.original_fare ?? 0.0)",
+            "request_ride_type": self.objOperationAvalablity?.id ?? 0
             
+           
         ]
-        
-        if ClientModel.currentClientData.enabled_service! == 3{
-            att["request_ride_type"] = self.objOperationAvalablity?.id ?? 0
-        }else if ClientModel.currentClientData.enabled_service! == 2{
-            att["request_ride_type"] = 2
-        }else{
-            att["request_ride_type"] = 1
-          
-        }
         
         if self.objOperationAvalablity?.id == 1{
             att["customerNote"] = notesTF.text ?? ""
         }else{
             att["recipient_name"] = self.txtFldReceiverName.text ?? ""
             att["recipient_phone_no"] = self.txtFldMobileNumber.text ?? ""
-            
-            if let json = convertToJSON(packageDetails: loadedPackageDetails!) {
-                
-                if let jsonObject = convertJSONStringToJSON(jsonString: json) {
-                    print("Converted JSON Object: \(jsonObject)")
-                    att["package_details"] = jsonObject
-                } else {
-                    print("Failed to convert JSON string.")
-                }
-            }
-           // att["customerNote"] = self.txtFldGoods.text ?? ""
+            att["customerNote"] = self.txtFldGoods.text ?? ""
         }
         
        
@@ -395,34 +373,12 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
             "request_ride_type": self.objOperationAvalablity?.id ?? 0
         ]
         
-        if ClientModel.currentClientData.enabled_service! == 3{
-            att["request_ride_type"] = self.objOperationAvalablity?.id ?? 0
-        }else if ClientModel.currentClientData.enabled_service! == 2{
-            att["request_ride_type"] = 2
-        }else{
-            att["request_ride_type"] = 1
-          
-        }
-        
         if self.objOperationAvalablity?.id == 1{
             att["customerNote"] = notesTF.text ?? ""
         }else{
             att["recipient_name"] = self.txtFldReceiverName.text ?? ""
             att["recipient_phone_no"] = self.txtFldMobileNumber.text ?? ""
-            
-            
-            
-            
-            if let json = convertToJSON(packageDetails: loadedPackageDetails!) {
-                
-                if let jsonObject = convertJSONStringToJSON(jsonString: json) {
-                    print("Converted JSON Object: \(jsonObject)")
-                    att["package_details"] = jsonObject
-                } else {
-                    print("Failed to convert JSON string.")
-                }
-            }
-           
+            att["customerNote"] = self.txtFldGoods.text ?? ""
         }
         
         if objSelecrCard != nil{
@@ -459,11 +415,9 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
                     SKToast.show(withMessage: "Please enter Receiver's name.")
                 }else if txtFldMobileNumber.text?.trimTrailingWhitespace() == ""{
                     SKToast.show(withMessage: "Please enter Receiver's mobile number.")
-                }
-//                else if txtFldGoods.text?.trimTrailingWhitespace() == ""{
-//                    SKToast.show(withMessage: "Please select Goods type.")
-//                }
-                else{
+                }else if txtFldGoods.text?.trimTrailingWhitespace() == ""{
+                    SKToast.show(withMessage: "Please select Goods type.")
+                }else{
                     scheduleRequest()
                 }
             }
@@ -476,11 +430,9 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
                     SKToast.show(withMessage: "Please enter Receiver's name.")
                 }else if txtFldMobileNumber.text?.trimTrailingWhitespace() == ""{
                     SKToast.show(withMessage: "Please enter Receiver's mobile number.")
-                }
-//                else if txtFldGoods.text?.trimTrailingWhitespace() == ""{
-//                    SKToast.show(withMessage: "Please select Goods type.")
-//                }
-                else{
+                }else if txtFldGoods.text?.trimTrailingWhitespace() == ""{
+                    SKToast.show(withMessage: "Please select Goods type.")
+                }else{
                     requestRide()
                 }
             }
@@ -500,38 +452,6 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
         self.btnRadio.setImage(UIImage(named: "radioSelected"), for: .normal)
         self.btnRadioPayByCard.setImage(UIImage(named: "radio"), for: .normal)
     }
-    
-    func convertToJSON(packageDetails: [PackageDetail]) -> String? {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        
-        do {
-            
-            let jsonData = try encoder.encode(packageDetails)
-            let jsonString = String(data: jsonData, encoding: .utf8)
-            return jsonString
-        } catch {
-            print("Error encoding data: \(error)")
-            return nil
-        }
-    }
-    
-    func convertJSONStringToJSON(jsonString: String) -> Any? {
-        // Convert the JSON string to Data
-        if let jsonData = jsonString.data(using: .utf8) {
-            do {
-                // Deserialize JSON data into a Swift object (Dictionary or Array)
-                let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-                return jsonObject
-            } catch {
-                print("Error deserializing JSON: \(error)")
-                return nil
-            }
-        }
-        return nil
-    }
-
-
 }
 
 

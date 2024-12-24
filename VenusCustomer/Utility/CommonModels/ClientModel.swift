@@ -24,7 +24,6 @@ struct ClientModel : Codable {
     let walk_through_title : String?
     let walk_through_desc: String?
     let operator_availablity : [operator_availablityy]?
-    let enabled_service : Int?
     
 
     // MARK: - Parameters
@@ -53,7 +52,6 @@ struct ClientModel : Codable {
         case walk_through_title = "walk_through_title"
         case walk_through_desc = "walk_through_desc"
         case operator_availablity = "operator_availablity"
-        case enabled_service = "enabled_service"
     }
 
     init(from decoder: Decoder) throws {
@@ -76,7 +74,6 @@ struct ClientModel : Codable {
         walk_through_desc = try values.decodeIfPresent(String.self, forKey: .walk_through_desc)
         city_list = try values.decodeIfPresent([City_list].self, forKey: .city_list)
         operator_availablity = try values.decodeIfPresent([operator_availablityy].self, forKey: .operator_availablity)
-        enabled_service = try values.decodeIfPresent(Int.self, forKey: .enabled_service)
     }
 
     init() {
@@ -97,7 +94,6 @@ struct ClientModel : Codable {
         walk_through_title = nil
         walk_through_desc = nil
         operator_availablity = nil
-        enabled_service = nil
     }
 
     // MARK: - Custom Functions

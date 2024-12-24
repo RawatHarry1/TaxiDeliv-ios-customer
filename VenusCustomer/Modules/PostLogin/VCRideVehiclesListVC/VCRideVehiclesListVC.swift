@@ -22,7 +22,7 @@ class VCRideVehiclesListVC: VCBaseVC {
     
     // MARK: -> Variables
     var initialPosition: CGPoint = .zero
-    var onConfirm:((Int,Regions,etaData,operator_availablityy, String) -> Void)?
+    var onConfirm:((Int,Regions,etaData,operator_availablityy) -> Void)?
     var regions: [Regions]?
     var selectedRegions: Regions?
     var pickUpPlace : GooglePlacesModel?
@@ -33,7 +33,6 @@ class VCRideVehiclesListVC: VCBaseVC {
     var apiTimer: Timer?
     
     var objOperator_availablity : operator_availablityy?
-   // var loadedPackageDetails: [PackageDetail]?
     private var viewModel = VCRideVehiclesListViewModel()
     private var viewModelPoly = VCHomeViewModel()
     private var viewModelFind = VCScheduleViewModel()
@@ -255,7 +254,7 @@ class VCRideVehiclesListVC: VCBaseVC {
                     self.view.setNeedsLayout()
                     self.view.layoutIfNeeded()
                 }, completion: nil)
-                self.onConfirm?(1, self.selectedRegions!, self.customerETA!, self.objOperator_availablity!,"")
+                self.onConfirm?(1, self.selectedRegions!, self.customerETA!, self.objOperator_availablity!)
             }
 //            self.requestRide()
         }

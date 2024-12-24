@@ -30,5 +30,11 @@
 		<string>location</string>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Venus Taxi wants to access your location.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Venus Taxi wants to access your location.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Venus Taxi wants to access your Camera.</string>
 </dict>
 </plist>

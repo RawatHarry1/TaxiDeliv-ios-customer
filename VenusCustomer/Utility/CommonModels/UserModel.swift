@@ -101,10 +101,9 @@ struct LoginModel : Codable {
     var popup : popupData?
     var banner :[bannerData]?
     var user_image : String?
-    var vehicle_types :[vechleType]?
-    var package_details: [packageDetails]?
-    var package_types : [String]?
-    var support_ticket_reasons : [String]?
+    
+    
+    
     
     enum CodingKeys: String, CodingKey {
         case referral_code = "referral_code"
@@ -157,10 +156,6 @@ struct LoginModel : Codable {
         case popup = "popup"
         case banner = "banner"
         case user_image = "user_image"
-        case vehicle_types = "vehicle_types"
-        case package_details = "package_details"
-        case package_types = "package_types"
-        case support_ticket_reasons = "support_ticket_reasons"
     }
 
     init(from decoder: Decoder) throws {
@@ -219,19 +214,10 @@ struct LoginModel : Codable {
         popup = try values.decodeIfPresent(popupData.self, forKey: .popup)
         banner = try values.decodeIfPresent([bannerData].self, forKey: .banner)
         user_image = try values.decodeIfPresent(String.self, forKey: .user_image)
-        vehicle_types = try values.decodeIfPresent([vechleType].self, forKey: .vehicle_types)
-        package_details  = try values.decodeIfPresent([packageDetails].self, forKey: .package_details)
-        
-        package_types  = try values.decodeIfPresent([String].self, forKey: .package_types)
-        support_ticket_reasons = try values.decodeIfPresent([String].self, forKey: .support_ticket_reasons)
     }
 
 
     init() {
-        support_ticket_reasons = nil
-        package_types = nil
-        package_details = nil
-        vehicle_types = nil
         registration_steps = nil
         date_format = nil
         vehicle_type = nil
@@ -517,22 +503,4 @@ struct bannerData:Codable{
     var action_url : String?
     var banner_image : String?
     var banner_text : String?
-}
-struct vechleType: Codable{
-    var images : String?
-    var region_id : Int?
-    var region_name : String?
-    var vehicle_type: Int?
-}
-struct packageDetails:Codable{
-    
-    var package_3d_image: String?
-    var package_description : String?
-    var package_height: Int?
-    var package_id : Int?
-    var package_length: Int?
-    var package_size : String?
-    var package_size_units : String?
-    var package_weight : Double?
-    var package_width: Double?
 }

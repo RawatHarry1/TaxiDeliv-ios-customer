@@ -53,7 +53,7 @@ class UploadFileAlert: NSObject {
 
         }))
 
-        vc.present(alertController, animated: true, completion: nil)
+        vc.navigationController?.present(alertController, animated: true, completion: nil)
 
     }
 

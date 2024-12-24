@@ -109,6 +109,7 @@ extension VCTripHistoryVC : UITableViewDelegate , UITableViewDataSource  {
             return trips.count
            
         }
+       
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -132,6 +133,7 @@ extension VCTripHistoryVC : UITableViewDelegate , UITableViewDataSource  {
             cell.didPressCancel = {
                
                 self.CancelScheduleApi(id: "\(self.viewModel.tripSchedule[indexPath.row].pickup_id ?? 0)")
+               
             }
             return cell
         }
@@ -150,5 +152,6 @@ extension VCTripHistoryVC : UITableViewDelegate , UITableViewDataSource  {
         }else{
             
         }
+       
     }
 }

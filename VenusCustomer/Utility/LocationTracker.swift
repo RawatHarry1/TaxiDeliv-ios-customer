@@ -74,8 +74,6 @@ class LocationTracker: NSObject {
 
     func enableLocationServices() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = kCLDistanceFilterNone
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -83,10 +81,8 @@ class LocationTracker: NSObject {
             printDebug("Fail permission to get current location of user")
         case .authorizedWhenInUse:
             enableMyWhenInUseFeatures()
-            locationManager.startUpdatingLocation()
         case .authorizedAlways:
             enableMyAlwaysFeatures()
-            locationManager.startUpdatingLocation()
         @unknown default:
             break
         }

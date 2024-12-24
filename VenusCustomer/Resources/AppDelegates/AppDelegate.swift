@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        GMSServices.provideAPIKey(ClientModel.currentClientData.google_map_keys ?? "AIzaSyByqSAa9MeiTS4DfPkO8VtuP-2PumjwK7Q") //AIzaSyA12Rbcs3mWSpYuJkkSODZameeQRmlXR4U
-        GMSPlacesClient.provideAPIKey(ClientModel.currentClientData.google_map_keys ?? "AIzaSyByqSAa9MeiTS4DfPkO8VtuP-2PumjwK7Q")
+        GMSServices.provideAPIKey(googleAPIKey ?? "AIzaSyByqSAa9MeiTS4DfPkO8VtuP-2PumjwK7Q") //AIzaSyA12Rbcs3mWSpYuJkkSODZameeQRmlXR4U
+        GMSPlacesClient.provideAPIKey(googleAPIKey ?? "AIzaSyByqSAa9MeiTS4DfPkO8VtuP-2PumjwK7Q")
         LocationTracker.shared.checkLocationEnableStatus()
         if LocationTracker.shared.isLocationPermissionGranted() {
             LocationTracker.shared.enableLocationServices()

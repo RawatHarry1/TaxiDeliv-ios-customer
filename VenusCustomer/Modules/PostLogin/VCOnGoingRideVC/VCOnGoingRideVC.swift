@@ -28,7 +28,6 @@ class VCOnGoingRideVC: VCBaseVC {
     var selectedRegions: Regions?
     var customerETA : etaData?
     var objOperator_availablity : operator_availablityy?
-    var loadedPackageDetails: [PackageDetail]?
     //  To create ViewModel
     static func create() -> VCOnGoingRideVC {
         let obj = VCOnGoingRideVC.instantiate(fromAppStoryboard: .ride)
@@ -52,104 +51,60 @@ class VCOnGoingRideVC: VCBaseVC {
         vc.pickUpLocation = self.pickUpLocation
         vc.customerETA = self.customerETA
         vc.objOperator_availablity = self.objOperator_availablity
-       // vc.loadedPackageDetails = self.loadedPackageDetails
-        vc.onConfirm = { value,selectedRegions,customerEta,obj_perator_availablityy, str in
-            
-            if self.objOperator_availablity?.id == 1{
-               // let confirmVC = self.storyboard?.instantiateViewController(identifier: "PackageListVc") as! PackageListVc
-                
-                let confirmVC = ReviewDetailsVC.create()
-                confirmVC.selectedRegions = vc.selectedRegions
-                confirmVC.dropPlace = self.dropPlace
-                confirmVC.dropLocation = self.dropLocation
-                confirmVC.pickUpPlace = self.pickUpPlace
-                confirmVC.pickUpLocation = self.pickUpLocation
-                confirmVC.pickupLoc = self.pickupLoc
-                confirmVC.dropoffLoc = self.dropoffLoc
-                confirmVC.utcDate = self.utcDate
-                confirmVC.isSechdule = self.isSechdule
-                confirmVC.selectedRegions = selectedRegions
-                confirmVC.customerETA = customerEta
-                confirmVC.objOperator_availablity = obj_perator_availablityy
-               // confirmVC.loadedPackageDetails = loadedPackageDetails
-                confirmVC.modalPresentationStyle = .overFullScreen
-                confirmVC.onConfirm = { (status, rideDetails) in
-                    vc.removeFromParentVC()
-                    let cancelPopupVC = VCCancelPopUpVC.create()
-                    cancelPopupVC.rideRequestDetails = rideDetails
-                    cancelPopupVC.pickUpLocation = self.pickUpLocation
-                    cancelPopupVC.dropLocation = self.dropLocation
-                    cancelPopupVC.modalPresentationStyle = .overFullScreen
-                    cancelPopupVC.onConfirm = { value in
-                        let vc = VCCancelRideVC.create()
-                        vc.modalPresentationStyle = .overFullScreen
-                        vc.onConfirm = { value in
-                            if value == 1  {
-                                let cancelReasonVC = VCCancelReasonVC.create()
-                                cancelReasonVC.rideRequestDetails = cancelPopupVC.rideRequestDetails
-                                self.navigationController?.pushViewController(cancelReasonVC, animated: true)
-                            }
+        vc.onConfirm = { value,selectedRegions,customerEta,obj_perator_availablityy in
+            let confirmVC = VCConfirmRideVC.create()
+            confirmVC.selectedRegions = vc.selectedRegions
+            confirmVC.dropPlace = self.dropPlace
+            confirmVC.dropLocation = self.dropLocation
+            confirmVC.pickUpPlace = self.pickUpPlace
+            confirmVC.pickUpLocation = self.pickUpLocation
+            confirmVC.pickUpLoc = self.pickupLoc
+            confirmVC.dropOffLoc = self.dropoffLoc
+            confirmVC.utcDate = self.utcDate
+            confirmVC.isSechdule = self.isSechdule
+            confirmVC.selectedRegions = selectedRegions
+            confirmVC.customerETA = customerEta
+            confirmVC.objOperationAvalablity = obj_perator_availablityy
+            //confirmVC.c
+            confirmVC.modalPresentationStyle = .overFullScreen
+            confirmVC.onConfirm = { (status, rideDetails) in
+                vc.removeFromParentVC()
+                let cancelPopupVC = VCCancelPopUpVC.create()
+                cancelPopupVC.rideRequestDetails = rideDetails
+                cancelPopupVC.modalPresentationStyle = .overFullScreen
+                cancelPopupVC.onConfirm = { value in
+                    let vc = VCCancelRideVC.create()
+                    vc.modalPresentationStyle = .overFullScreen
+                    vc.onConfirm = { value in
+                        if value == 1  {
+                            let cancelReasonVC = VCCancelReasonVC.create()
+                            cancelReasonVC.rideRequestDetails = cancelPopupVC.rideRequestDetails
+                            self.navigationController?.pushViewController(cancelReasonVC, animated: true)
                         }
-                        self.navigationController?.present(vc, animated: true)
-
                     }
-                    self.backView.isHidden = true
-                    self.addViewToSelf(cancelPopupVC)
-
+                    self.navigationController?.present(vc, animated: true)
+//                    self.navigationController?.pushViewController(VCRideStatusVC.create(), animated: true)
                 }
-
-                self.backView.isHidden = false
-                  self.addViewToSelf(confirmVC)
-            }else{
-                let confirmVC = self.storyboard?.instantiateViewController(identifier: "PackageListVc") as! PackageListVc
-                confirmVC.selectedRegions = vc.selectedRegions
-                confirmVC.dropPlace = self.dropPlace
-                confirmVC.dropLocation = self.dropLocation
-                confirmVC.pickUpPlace = self.pickUpPlace
-                confirmVC.pickUpLocation = self.pickUpLocation
-                confirmVC.pickupLoc = self.pickupLoc
-                confirmVC.dropoffLoc = self.dropoffLoc
-                confirmVC.utcDate = self.utcDate
-                confirmVC.isSechdule = self.isSechdule
-                confirmVC.selectedRegions = selectedRegions
-                confirmVC.customerETA = customerEta
-                confirmVC.objOperator_availablity = obj_perator_availablityy
-               // confirmVC.loadedPackageDetails = loadedPackageDetails
-                confirmVC.modalPresentationStyle = .overFullScreen
-                self.backView.isHidden = false
-                  self.addViewToSelf(confirmVC)
-//                confirmVC.onConfirm = { (status, rideDetails) in
-//                    vc.removeFromParentVC()
-//                    let cancelPopupVC = VCCancelPopUpVC.create()
-//                    cancelPopupVC.rideRequestDetails = rideDetails
-//                    cancelPopupVC.modalPresentationStyle = .overFullScreen
-//                    cancelPopupVC.onConfirm = { value in
-//                        let vc = VCCancelRideVC.create()
-//                        vc.modalPresentationStyle = .overFullScreen
-//                        vc.onConfirm = { value in
-//                            if value == 1  {
-//                                let cancelReasonVC = VCCancelReasonVC.create()
-//                                cancelReasonVC.rideRequestDetails = cancelPopupVC.rideRequestDetails
-//                                self.navigationController?.pushViewController(cancelReasonVC, animated: true)
-//                            }
-//                        }
-//                        self.navigationController?.present(vc, animated: true)
-//
-//                    }
-//                    self.backView.isHidden = true
-//                    self.addViewToSelf(cancelPopupVC)
-//
-//                }
-
-              
+                self.backView.isHidden = true
+                self.addViewToSelf(cancelPopupVC)
+//                self.navigationController?.present(vc, animated: true)
             }
-           
-
+//            self.navigationController?.present(vc, animated: true)
+//            confirmVC.view.frame = self.view.bounds
+//            self.tabBarController?.tabBar.isHidden = true
+//            self.view.addSubview(confirmVC.view)
+//            self.addChild(confirmVC)
+//            confirmVC.didMove(toParent: self)
+            self.backView.isHidden = false
+              self.addViewToSelf(confirmVC)
+//            self.view.bringSubviewToFront(self.backView)
 
         }
 
         addViewToSelf(vc)
         self.view.bringSubviewToFront(backView)
+//        vc.modalPresentationStyle = .overFullScreen
+//        self.navigationController?.present(vc, animated: true)
     }
 
     override func viewDidLayoutSubviews() {

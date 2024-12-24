@@ -8,13 +8,9 @@
 import UIKit
 import GoogleMaps
 import PDFKit
-class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
+class VCTripDetailVC: VCBaseVC {
 
     // MARK: -> Outlets
-    
-    @IBOutlet weak var viewProductDetail: UIView!
-    @IBOutlet weak var heightConstant: NSLayoutConstraint!
-    @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var dashedView: UIView!
     @IBOutlet weak var pickUpTimeLbl: UILabel!
     @IBOutlet weak var pickupAddressLbl: UILabel!
@@ -49,9 +45,6 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     var selectedTripDetails: TripHistoryDetails?
     var angagementID = ""
     var driverId = ""
-    var delivery_packages: [deliveryPackagesD]?
-    var isHideDetail = false
-    
     //  To create ViewModel
     static func create() -> VCTripDetailVC {
         let obj = VCTripDetailVC.instantiate(fromAppStoryboard: .postLogin)
@@ -66,14 +59,6 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     }
 
     override func initialSetup() {
-        if requestRideType == 1{
-          
-            viewProductDetail.isHidden = true
-        }else if requestRideType == 2{
-            viewProductDetail.isHidden = false
-        }else{
-            viewProductDetail.isHidden = true
-        }
         dashedView.addDashedSmallBorder()
         guard let trip = selectedTrip else {return}
         viewModel.getTripDetails(trip)
@@ -136,8 +121,7 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     func getTripSummaryApi(){
         viewModel.tripSummaryApi(urlSting: "\(angagementID)&driverId=\(driverId)") {
             print()
-            self.delivery_packages = self.viewModel.objGetTripSummaryModal?.data?.delivery_packages
-            self.tblView.reloadData()
+            
             
         }
     }
@@ -147,12 +131,7 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     }
     
    
-    @IBAction func btnRaiseTicketAction(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
-        vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
+
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -174,16 +153,6 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
              }
     }
     
-    @IBAction func btnPackageDetailAction(_ sender: Any) {
-        if isHideDetail == false{
-            isHideDetail = true
-            tblView.isHidden = true
-        }else{
-            isHideDetail = false
-            tblView.isHidden = false
-        }
-        
-    }
     
     
     @IBAction func btnRateDriver(_ sender: UIButton) {
@@ -198,37 +167,6 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
         self.present(vc, animated: true)
     }
     
-}
-
-extension VCTripDetailVC: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delivery_packages?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PackageDetailTblCell", for: indexPath) as! PackageDetailTblCell
-        let obj = delivery_packages?[indexPath.row]
-        cell.delivery_packages = obj
-        cell.lblSize.text = obj?.package_size ?? ""
-        cell.lblQuantity.text = "\(obj?.package_quantity ?? 0)"
-        cell.lblPackageType.text = obj?.package_type ?? ""
-        cell.delegate = self
-        return cell
-    }
-    
-    func didSelectItem(url: String) {
-        // Navigate to a new view controller
-        let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "ImageViewerVC") as! ImageViewerVC
-        detailVC.url = url
-        detailVC.modalPresentationStyle = .overFullScreen
-        self.present(detailVC, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.heightConstant.constant = self.tblView.contentSize.height
-        }
-    }
 }
 extension VCTripDetailVC {
 

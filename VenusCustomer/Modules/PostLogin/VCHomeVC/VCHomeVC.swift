@@ -20,13 +20,13 @@ class VCHomeVC: VCBaseVC {
     @IBOutlet weak var mapBaseView: UIView!
     @IBOutlet weak var createRideView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
-    // @IBOutlet weak var offersCollectionView: UICollectionView!
+   // @IBOutlet weak var offersCollectionView: UICollectionView!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var txtFldLoc: UITextField!
     
     @IBOutlet weak var lblRide: UILabel!
-    // @IBOutlet weak var lblNow: UILabel!
-    //  @IBOutlet weak var btnNow: UIButton!
+   // @IBOutlet weak var lblNow: UILabel!
+  //  @IBOutlet weak var btnNow: UIButton!
     
     @IBOutlet weak var imgViewProfile: UIImageView!
     @IBOutlet weak var imgViewRide: UIImageView!
@@ -34,7 +34,7 @@ class VCHomeVC: VCBaseVC {
     @IBOutlet weak var lblCurrentLoc: UILabel!
     @IBOutlet weak var imgViewSchedule: UIImageView!
     
-    //  @IBOutlet weak var lblRide: UILabel!
+  //  @IBOutlet weak var lblRide: UILabel!
     
     
     // MARK: - Variables
@@ -44,7 +44,7 @@ class VCHomeVC: VCBaseVC {
     lazy var fpc = FloatingPanelController()
     private var dropPlace: GooglePlacesModel?
     private var dropLocation: GeometryFromPlaceID?
-    
+
     private var markerDriver: GMSMarker?
     var currentGMSPath: GMSPath?
     var completeGmsPath : GMSPath?
@@ -56,10 +56,10 @@ class VCHomeVC: VCBaseVC {
     var utcDate = ""
     var isSechdule = false
     var markerUser : GMSMarker?
-    //    var infoWindowETA : MarkerInfoView?
+//    var infoWindowETA : MarkerInfoView?
     var requestedPathCoordinates : CLLocationCoordinate2D?
     private var isScheduleViewVisible = false
-    
+
     // Update Nearby drivers variables
     private var timerToRefreshNearbyDriver: Timer?
     private let timerIntervalToRefersh: TimeInterval = 60.0
@@ -70,7 +70,7 @@ class VCHomeVC: VCBaseVC {
     deinit {
         stopTimer()
     }
-    
+
     //  To create ViewModel
     private var viewModel = VCHomeViewModel()
     var commingFrom = 1
@@ -79,7 +79,7 @@ class VCHomeVC: VCBaseVC {
         let obj = VCHomeVC.instantiate(fromAppStoryboard: .ride)
         return obj
     }
-    
+
     override func initialSetup() {
         
         DispatchQueue.main.async {
@@ -90,61 +90,37 @@ class VCHomeVC: VCBaseVC {
                 print(error)
             }
         }
+       
         
         
-        
-        
+
         checkLocationPermission()
+        if self.objOperator_availablity?.id == 1{
+            self.lblRide.text = "Ride"
+            imgViewRide.image = UIImage(named: "NowRide")
+            imgViewSchedule.image = UIImage(named: "calRide")
+        }else{
+            imgViewRide.image = UIImage(named: "NowDel")
+            imgViewSchedule.image = UIImage(named: "calDel")
+            self.lblRide.text = "Now"
+        }
         
-        
-        
+       setHomeVC()
         if isNotificationReceivedForMessage == true{
             NotificationCenter.default.post(name: .newMessage, object: nil, userInfo: nil)
         }
-        // mapBaseView.addShadowView()
+       // mapBaseView.addShadowView()
         createRideView.addShadowView()
-        
+   
         callbacks()
         addObservers()
         self.startTimerToRefreshNearbyDrivers()
         self.resetMapToDefaultState()
-        
+
         if LocationTracker.shared.isCurrentLocationAvailable {
-            
+           
         }
         animationReferral()
-        
-        if ClientModel.currentClientData.enabled_service! == 3{
-            if self.objOperator_availablity?.id == 1{
-               
-                self.lblRide.text = "Ride"
-                imgViewRide.image = UIImage(named: "NowRide")
-                imgViewSchedule.image = UIImage(named: "calRide")
-                self.tabBarController?.tabBar.items?[1].title = "Trips"
-            }else{
-                
-                imgViewRide.image = UIImage(named: "NowDel")
-                imgViewSchedule.image = UIImage(named: "calDel")
-                self.lblRide.text = "Now"
-                self.tabBarController?.tabBar.items?[1].title = "Deliveries"
-            }
-            setHomeVC()
-            
-        }else if ClientModel.currentClientData.enabled_service! == 2{
-            requestRideType = 2
-            imgViewRide.image = UIImage(named: "NowDel")
-            imgViewSchedule.image = UIImage(named: "calDel")
-            self.lblRide.text = "Now"
-            self.tabBarController?.tabBar.items?[2].title = "Deliveries"
-           
-        }else{
-            requestRideType = 1
-            self.lblRide.text = "Ride"
-            imgViewRide.image = UIImage(named: "NowRide")
-            imgViewSchedule.image = UIImage(named: "calRide")
-            self.tabBarController?.tabBar.items?[2].title = "Trips"
-           
-        }
     }
     
     func animationReferral(){
@@ -187,7 +163,6 @@ class VCHomeVC: VCBaseVC {
         self.tabBarController?.tabBar.items?[0].selectedImage = VCImageAsset.back.asset?.withRenderingMode(.alwaysTemplate)
         self.tabBarController?.tabBar.items?[0].title = "Back"
         self.tabBarController?.tabBar.items?[0].imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        
         
      //   removeSpecificTab()
 
@@ -364,44 +339,20 @@ class VCHomeVC: VCBaseVC {
             if self.pickUpLocation == nil{
                 self.pickUpLocation = placeId
             }
-            
-          //  if self.objOperator_availablity?.id == 1{
-                let vc = VCOnGoingRideVC.create()
-                vc.dropPlace = self.dropPlace
-                vc.dropLocation = self.dropLocation
-                vc.pickUpPlace = self.pickUpPlace
-                vc.pickUpLocation = self.pickUpLocation
-                vc.regions = findDriverData.regions
-                vc.pickupLoc = loc
-                vc.dropoffLoc = self.dropOffLoc
-                vc.isSechdule = self.isSechdule
-                vc.utcDate = self.utcDate
-                vc.customerETA = findDriverData.customerETA
-                vc.objOperator_availablity = objOperator_availablity
-              
-                self.navigationController?.pushViewController(vc, animated: true)
-//            }else{
-//               
-//                let vc = self.storyboard?.instantiateViewController(identifier: "TrackOrderVc") as! TrackOrderVc
-//                vc.dropPlace = self.dropPlace
-//                vc.dropLocation = self.dropLocation
-//                vc.pickUpPlace = self.pickUpPlace
-//                vc.pickUpLocation = self.pickUpLocation
-//                vc.regions = findDriverData.regions
-//                vc.pickupLoc = loc
-//                vc.dropoffLoc = self.dropOffLoc
-//                vc.isSechdule = self.isSechdule
-//                vc.utcDate = self.utcDate
-//                vc.customerETA = findDriverData.customerETA
-//                vc.objOperator_availablity = objOperator_availablity
-//                self.navigationController?.pushViewController(vc, animated: true)
-//            }
-            
-            
-            
-            
-            
-           
+            let vc = VCOnGoingRideVC.create()
+            vc.dropPlace = self.dropPlace
+            vc.dropLocation = self.dropLocation
+            vc.pickUpPlace = self.pickUpPlace
+            vc.pickUpLocation = self.pickUpLocation
+            vc.regions = findDriverData.regions
+            vc.pickupLoc = loc
+            vc.dropoffLoc = self.dropOffLoc
+            vc.isSechdule = self.isSechdule
+            vc.utcDate = self.utcDate
+            vc.customerETA = findDriverData.customerETA
+            vc.objOperator_availablity = objOperator_availablity
+          
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         scheduleVC.openAddAddress = { address in
@@ -588,7 +539,7 @@ extension VCHomeVC{
 extension VCHomeVC{
     
     func getDetailedAddressFromLatLon(latitude: Double, longitude: Double, completion: @escaping (String?) -> Void) {
-        let apiKey = ClientModel.currentClientData.google_map_keys
+        let apiKey = googleAPIKey
         let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(apiKey ?? "")")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

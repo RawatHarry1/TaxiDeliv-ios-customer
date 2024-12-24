@@ -376,7 +376,7 @@ extension VCPickUpDropVC{
    
 
     func getDetailedAddressFromLatLon(latitude: Double, longitude: Double, completion: @escaping (String?) -> Void) {
-        let apiKey = ClientModel.currentClientData.google_map_keys
+        let apiKey = googleAPIKey
         let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(apiKey ?? "")")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

@@ -60,7 +60,6 @@ enum VCImageAsset: String {
     case changePass
     case faq
     case terms
-    case ticket
     case message
     case pass
     case accountTab

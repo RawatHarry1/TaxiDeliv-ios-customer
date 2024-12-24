@@ -29,7 +29,7 @@ class ChooseAppVC: VCBaseVC {
     var markerUser : GMSMarker?
     var imgArr = [UIImage(named: "car"), UIImage(named: "courier")]
     var titleArr = ["TAXI BOOKING","PICKUP & DELIVERY"]
-    var selectedIndex = 0
+    var selectedIndex = -1
     var  operator_availablity : operator_availablityy?
     var navigate = false
     var banner :[bannerData]?
@@ -48,7 +48,7 @@ class ChooseAppVC: VCBaseVC {
     }
     
     override func viewDidLoad() {
-       
+        
         callBacks()
         accountViewModel.getAccountDetail()
         imgViewProfile.setImage(withUrl: UserModel.currentUser.login?.user_image ?? "") { status, image in}
@@ -68,7 +68,7 @@ class ChooseAppVC: VCBaseVC {
             if let urlStr = details.user_image {
                 self.imgViewProfile.setImage(urlStr)
             }
-            self.lblName.text = "Hi, \(details.name ?? "")"
+            self.lblName.text = details.name ?? ""
         }
     }
     
@@ -90,7 +90,7 @@ class ChooseAppVC: VCBaseVC {
      }
     
     override func getCurrentLocation(lat: CLLocationDegrees,long:CLLocationDegrees){
-       
+        
         let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: long)
         addMarkerToPosition(coordinates)
         getDetailedAddressFromLatLon(latitude: lat, longitude: long) { address in
@@ -336,7 +336,7 @@ extension ChooseAppVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
 extension ChooseAppVC{
     
     func getDetailedAddressFromLatLon(latitude: Double, longitude: Double, completion: @escaping (String?) -> Void) {
-        let apiKey = ClientModel.currentClientData.google_map_keys
+        let apiKey = googleAPIKey
         let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(apiKey ?? "")")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in

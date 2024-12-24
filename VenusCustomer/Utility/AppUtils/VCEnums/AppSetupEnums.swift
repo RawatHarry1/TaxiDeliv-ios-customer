@@ -40,7 +40,7 @@ enum AppEnvironment: String {
         case .dev: return "https://dev-rides.venustaxi.in"
         case .qa: return "https://43.204.229.91:4012"
         case .stage: return "https://chuki-rides-api.venustaxi.in"
-        case .production: return "https://super-app-rides-api.venustaxi.in"
+        case .production: return "https://super-app-rides-api.venustaxi.in:4012"
         }
     }
     

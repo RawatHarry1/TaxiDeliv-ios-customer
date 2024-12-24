@@ -23,14 +23,7 @@ class VCTabbarVC: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
-       if ClientModel.currentClientData.enabled_service! == 1{
-           enableService1()
-        }else if ClientModel.currentClientData.enabled_service! == 2{
-            enableService1()
-        }else{
-            configureVC()
-        }
+        configureVC()
         
         tabBar.tintColor = hexStringToUIColor(hex: "#003C6E")
     }
@@ -42,11 +35,7 @@ class VCTabbarVC: UITabBarController {
     func configureVC() {
        
        // self.viewControllers = [setChooseApp(),setHomeVC(),setDeliveryHomeVC(), setTripsVC(), setAccountVC()]
-        self.viewControllers = [setChooseAppVC(),setServicesVC(), setTripsVC(),  setNotificationVC() , setAccountVC()]
-    }
-    
-    func enableService1(){
-        self.viewControllers = [setHomeVC(), setTripsVC(),  setNotificationVC() , setAccountVC()]
+        self.viewControllers = [setHomeVC(),setServicesVC(), setTripsVC(),  setNotificationVC() , setAccountVC()]
     }
     
     func navigateToHome(){
@@ -70,19 +59,19 @@ class VCTabbarVC: UITabBarController {
 //        return nav
 //    }
 //    
-    func setHomeVC() -> UINavigationController{
-        let vc = VCHomeVC.create()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.isNavigationBarHidden = true
-        let item = UITabBarItem()
-        item.imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        item.title = "Ride"
-        item.image = VCImageAsset.rideUnselected.asset?.withRenderingMode(.alwaysOriginal)
-        item.selectedImage = VCImageAsset.rideSelected.asset?.withRenderingMode(.alwaysTemplate)
-        
-        nav.tabBarItem = item
-        return nav
-    }
+//    func setHomeVC() -> UINavigationController{
+//        let vc = VCHomeVC.create()
+//        let nav = UINavigationController(rootViewController: vc)
+//        nav.isNavigationBarHidden = true
+//        let item = UITabBarItem()
+//        item.imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+//        item.title = "Ride"
+//        item.image = VCImageAsset.rideUnselected.asset?.withRenderingMode(.alwaysOriginal)
+//        item.selectedImage = VCImageAsset.rideSelected.asset?.withRenderingMode(.alwaysTemplate)
+//        
+//        nav.tabBarItem = item
+//        return nav
+//    }
 //    
 //    func setDeliveryHomeVC() -> UINavigationController{
 //        let vc = DeliveryHomeVC.create()
@@ -148,7 +137,7 @@ extension VCTabbarVC{
     
 
     
-    func setChooseAppVC() -> UINavigationController{
+    func setHomeVC() -> UINavigationController{
         let vc = ChooseAppVC.create()
         let nav = UINavigationController(rootViewController: vc)
         nav.isNavigationBarHidden = true

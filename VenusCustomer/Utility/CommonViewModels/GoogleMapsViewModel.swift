@@ -76,7 +76,7 @@ extension GoogleMapsViewModel {
             var arr = [String:Any]()
             arr["fields"] = "geometry"
             arr["place_id"] = placeID
-            arr["key"] = ClientModel.currentClientData.google_map_keys
+            arr["key"] = googleAPIKey
             return arr
         }
         WebServices.getGooglePlacesDetails(parameters: params) { (result) in

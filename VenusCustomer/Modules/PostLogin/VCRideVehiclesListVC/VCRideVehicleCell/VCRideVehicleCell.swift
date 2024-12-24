@@ -58,8 +58,7 @@ class VCRideVehicleCell: UITableViewCell {
         }
 
         if isSelected {
-            baseView.layer.borderColor = UIColor(named: "buttonSelectedOrange")?.cgColor
-            baseView.layer.borderWidth = 1
+            baseView.addShadowView()
         } else {
             baseView.addShadowView(radius: 0, color: .clear)
         }

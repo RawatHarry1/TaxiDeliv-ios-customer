@@ -14,9 +14,6 @@ import SocketIO
 class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
    
 
-    @IBOutlet weak var iconLocation: UIImageView!
-    @IBOutlet weak var lblDestination: UILabel!
-    @IBOutlet weak var lblPickup: UILabel!
     @IBOutlet weak var viewDot: UIView!
     @IBOutlet weak var btnSOS: UIButton!
     @IBOutlet weak var baseView: UIView!
@@ -55,7 +52,6 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
     var travelledGmsPath : GMSPath?
     var completePolyline : GMSPolyline?
     var travelledPolyline : GMSPolyline?
-    var destinationAddress = ""
 //    var infoWindowETA : MarkerInfoView?
     var requestedPathCoordinates : CLLocationCoordinate2D?
     var polyLinePath = ""
@@ -550,7 +546,6 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             modelLbl.text = tripDetails.model_name ?? ""
 
             pickLocationLbl.text = tripDetails.pickup_address ?? ""
-            destinationAddress = tripDetails.drop_address ?? ""
             btnETA.text = "\(tripDetails.dry_eta ?? "0") min"
             distanceLbl.text = tripDetails.estimated_distance ?? ""
             timeLbl.text = "\(tripDetails.dry_eta ?? "0")" + " mins"
@@ -572,32 +567,24 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
                 rideDetailsSV.isHidden = false
                 pickLocationView.isHidden = false
                 status = 1
-                lblPickup.isHidden = true
 //                mapView.clear()
 //
 //
 
             }else if tripDetails.status == 2{
                 status = 2
-                iconLocation.isHidden = true
-                lblPickup.isHidden = false
-                lblDestination.isHidden = false
-                rideDetailsSV.isHidden = true
-                pickLocationView.isHidden = false
-                viewArrived.isHidden = false
-                rideStatusLbl.text = "Volt ride initiated."
-                descLbl.text = destinationAddress
-            }else if tripDetails.status == 14{
-                status = 14
-                lblDestination.isHidden = true
-                lblPickup.isHidden = true
                 rideDetailsSV.isHidden = true
                 pickLocationView.isHidden = true
                 viewArrived.isHidden = false
                 rideStatusLbl.text = "Volt ride initiated."
-                descLbl.text = "Your Driver has Arrived. \nPlease begain trip within 5 minutes."
-                descLbl.numberOfLines = 2
-                descLbl.lineBreakMode = .byWordWrapping
+                descLbl.text = "Your ride is in progress."
+            }else if tripDetails.status == 14{
+                status = 14
+                rideDetailsSV.isHidden = true
+                pickLocationView.isHidden = true
+                viewArrived.isHidden = false
+                rideStatusLbl.text = "Volt ride initiated."
+                descLbl.text = "Your Driver has Arrived."
             }else {
                 status = 14
                 rideDetailsSV.isHidden = true
@@ -608,14 +595,8 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
 
             if tripDetails.status == 2 {
                 status = 2
-                iconLocation.isHidden = true
-                lblPickup.isHidden = false
-                lblDestination.isHidden = false
-                rideDetailsSV.isHidden = true
-                pickLocationView.isHidden = false
-                viewArrived.isHidden = false
                 rideStatusLbl.text = "Volt ride initiated."
-                descLbl.text = destinationAddress
+                descLbl.text = "Your ride is in progress."
             } else if tripDetails.status == 14 {
                 status = 14
             }
@@ -1256,7 +1237,7 @@ extension FloatingPoint {
 extension VCRideStatusVC{
     
     func getPolylineRoute(from source: String, to destination: String,completion:@escaping (Bool,String,Int,String,String,Int,[Any])->()){
-        let googleKey = ClientModel.currentClientData.google_map_keys
+        let googleKey = googleAPIKey
         getData(url: "https://maps.googleapis.com/maps/api/directions/json?origin=\(source)&destination=\(destination)&sensor=false&mode=driving&key=\(googleKey!)", parameter: nil, header: nil, isLoader: true, msg: "") { (response,status) in
             if let responseDict = response as? [String:Any]{
                 if let routes = responseDict["routes"] as? [Any],

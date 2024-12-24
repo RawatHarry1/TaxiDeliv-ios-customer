@@ -63,6 +63,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZR5-eB-quS" customClass="VDView" customModule="VenusCustomer" customModuleProvider="target">
                                 <rect key="frame" x="16" y="123" width="361" height="140"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walletMask" translatesAutoresizingMaskIntoConstraints="NO" id="Z0y-IY-cDe">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="140"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-6M-he5">
                                         <rect key="frame" x="30" y="128" width="311" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -147,9 +155,13 @@
                                     <constraint firstAttribute="trailing" secondItem="mTM-6M-he5" secondAttribute="trailing" constant="20" symbolic="YES" id="JRm-Eg-wrH"/>
                                     <constraint firstItem="mTM-6M-he5" firstAttribute="leading" secondItem="ZR5-eB-quS" secondAttribute="leading" constant="30" id="Qfb-H6-sQI"/>
                                     <constraint firstItem="M8s-tz-Rwj" firstAttribute="centerY" secondItem="ZR5-eB-quS" secondAttribute="centerY" id="YSE-mT-kUH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z0y-IY-cDe" secondAttribute="bottom" id="Yx4-1a-qFE"/>
+                                    <constraint firstItem="Z0y-IY-cDe" firstAttribute="leading" secondItem="ZR5-eB-quS" secondAttribute="leading" id="dKE-TS-YFf"/>
                                     <constraint firstAttribute="bottom" secondItem="mTM-6M-he5" secondAttribute="bottom" constant="12" id="gTI-tG-mV1"/>
                                     <constraint firstItem="D9p-Ni-8nh" firstAttribute="centerY" secondItem="ZR5-eB-quS" secondAttribute="centerY" multiplier="0.85" id="jo7-mQ-h2d"/>
+                                    <constraint firstItem="Z0y-IY-cDe" firstAttribute="top" secondItem="ZR5-eB-quS" secondAttribute="top" id="pTc-vd-0ie"/>
                                     <constraint firstAttribute="trailing" secondItem="M8s-tz-Rwj" secondAttribute="trailing" constant="16" id="pcY-gW-dOp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z0y-IY-cDe" secondAttribute="trailing" id="xkF-GD-5B8"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -724,11 +736,12 @@
         <image name="roundCloseBlack" width="38.333332061767578" height="38.333332061767578"/>
         <image name="topUpArrowBlack" width="25.333333969116211" height="24"/>
         <image name="topUpWhite" width="25.333333969116211" height="24"/>
+        <image name="walletMask" width="453.33334350585938" height="182.66667175292969"/>
         <namedColor name="buttonSelectedOrange">
             <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="otpBorder">
-            <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89399999380111694" green="0.91399997472763062" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textColorWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

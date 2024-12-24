@@ -106,7 +106,7 @@ extension VCHomeViewModel {
             attribute["mode"] = "driving"
             attribute["destinations"] = "place_id:" + destination
             attribute["origins"] = "place_id:" + origin
-            attribute["key"] = ClientModel.currentClientData.google_map_keys
+            attribute["key"] = googleAPIKey
             return attribute
         }
 
@@ -130,7 +130,7 @@ extension VCHomeViewModel {
             attribute["mode"] = "driving"
             attribute["destination"] = destination
             attribute["origin"] = origin
-            attribute["key"] = ClientModel.currentClientData.google_map_keys
+            attribute["key"] = googleAPIKey
             return attribute
         }
 

@@ -104,7 +104,7 @@ class VCAccountVC: VCBaseVC {
 
 extension VCAccountVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,18 +146,13 @@ extension VCAccountVC : UITableViewDelegate , UITableViewDataSource {
             guard let url = URL(string: ClientModel.currentClientData.terms_of_use_url ?? "") else { return }
             UIApplication.shared.open(url)
             //self.navigationController?.pushViewController(VCTermsVC.create(), animated: true)
-        case 8:
-            print("ticket")
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TicketListVC") as! TicketListVC
-            self.navigationController?.pushViewController(vc, animated: true)
-         case 9:
-            print("delete account")
-            self.deleteAccount()
-        case 10:
+         case 8:
             let vc = VCLogoutVC.create()
             vc.modalPresentationStyle = .overFullScreen
             self.navigationController?.present(vc, animated: true)
-           
+        case 9:
+            print("delete account")
+            self.deleteAccount()
         default:
             break
         }

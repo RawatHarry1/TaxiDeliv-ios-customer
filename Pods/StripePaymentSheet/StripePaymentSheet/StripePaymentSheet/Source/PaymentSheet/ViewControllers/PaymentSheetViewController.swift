@@ -492,12 +492,7 @@ class PaymentSheetViewController: UIViewController {
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
                         self.buyButton.update(state: .succeeded, animated: true) {
                             // Wait a bit before closing the sheet
-                            var comes = true
-                                
-                           
-                                self.delegate?.paymentSheetViewControllerDidFinish(self, result: .completed)
-                            
-                           
+                            self.delegate?.paymentSheetViewControllerDidFinish(self, result: .completed)
                         }
                     }
                 }

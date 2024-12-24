@@ -59,7 +59,7 @@ extension VCSplashVC {
     private func apiClientConfigure() {
         var paramToModifyVehicleDetails: JSONDictionary {
             let param = [
-                "packageName": "com.app.superApp1"//"com.venus.customer",
+                "packageName": "com.venus.customer"//"com.venus.customer",
             ] as [String: Any]
             return param
         }
@@ -105,10 +105,7 @@ extension VCSplashVC {
             case .success( _):
                 let obj = UserModel.currentUser.login?.popup
                 if obj?.download_link == nil || obj?.force_to_version == nil || obj?.is_force == nil || obj?.popup_text == nil{
-
-                        VCRouter.goToSaveUserVC()
-              
-                    
+                    VCRouter.goToSaveUserVC()
                 }else{
                     let vc = self?.storyboard?.instantiateViewController(withIdentifier: "VersionUpdateVC") as! VersionUpdateVC
                     self?.present(vc, animated: true)

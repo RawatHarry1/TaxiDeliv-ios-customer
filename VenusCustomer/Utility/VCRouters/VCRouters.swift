@@ -45,34 +45,9 @@ struct VCRouter {
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
-    
-    static func setRootInTabbar() {
-        // Access the root TabBarController
-        guard let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController else {
-            print("Root is not a UITabBarController")
-            return
-        }
-        
-        // Access the navigation controller at the 0th tab
-        guard let navController = tabBarController.viewControllers?.first as? UINavigationController else {
-            print("No navigation controller found at index 0")
-            return
-        }
-        
-        // Create your new root view controller
-        let newRootViewController = VCHomeVC.create()
-        
-        // Set it as the root of the navigation controller
-        navController.setViewControllers([newRootViewController], animated: false)
-        
-        // Optional: Switch to the 0th tab
-        tabBarController.selectedIndex = 0
-    }
-
 
     static func goToSaveUserVC() {
         let navigationController = UINavigationController(rootViewController: VCTabbarVC.create())
-        
         navigationController.interactivePopGestureRecognizer?.delegate = nil
         navigationController.navigationBar.isHidden = true
         setRoot(viewController: navigationController)

@@ -15,8 +15,6 @@ class VCCancelPopUpVC: VCBaseVC {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet  var progressView: UIProgressView!
     
-    var dropLocation : GeometryFromPlaceID?
-    var pickUpLocation : GeometryFromPlaceID?
     private var viewModelPoly = VCHomeViewModel()
     var onConfirm:((Int) -> Void)?
     var rideRequestDetails: RequestRideData?
@@ -52,19 +50,14 @@ class VCCancelPopUpVC: VCBaseVC {
             self.showPath(polyStr: polyline)
         }
         
-       if status == 0{
+        if status == 0{
             mapView.isHidden = false
             let source = CLLocationCoordinate2D(latitude: objOngoingTripModel?.request_drop_latitude ?? 0.0, longitude: objOngoingTripModel?.request_drop_longitude ?? 0.0)
             let destination = CLLocationCoordinate2D(latitude: objOngoingTripModel?.latitude ?? 0.0, longitude: objOngoingTripModel?.longitude ?? 0.0)
             showMarker(Source: source, Destination: destination)
             
         }else{
-            mapView.isHidden = false
-            let pickupLocation = CLLocationCoordinate2D(latitude: pickUpLocation?.location?.lat ?? 0.0, longitude: pickUpLocation?.location?.lng ?? 0.0)
-            
-            let destination = CLLocationCoordinate2D(latitude: dropLocation?.location?.lat ?? 0.0, longitude:  dropLocation?.location?.lng ?? 0.0)
-            
-            showMarker(Source: pickupLocation , Destination: destination)
+            mapView.isHidden = true
         }
        
        //showMarker(Source: rideRequestDetails?.pickup_location_address, Destination: rideRequestDetails?.drop_location_address ?? "")

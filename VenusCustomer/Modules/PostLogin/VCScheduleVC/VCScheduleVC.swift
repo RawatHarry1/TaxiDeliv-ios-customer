@@ -39,10 +39,9 @@ class VCScheduleVC: VCBaseVC {
 
     var pickUpPlace : GooglePlacesModel?
     var pickUpLocation : GeometryFromPlaceID?
-    var dropLocation : GeometryFromPlaceID?
     var objAddressViewModel: AddressViewModal = AddressViewModal()
     var dropPlace : GooglePlacesModel?
-   
+    var dropLocation : GeometryFromPlaceID?
     var lat = 0.0
     var long = 0.0
     var objGetdata : GetAddData?
@@ -73,7 +72,6 @@ class VCScheduleVC: VCBaseVC {
         NotificationCenter.default.addObserver(self, selector: #selector(handleTextDidChange(notification:)), name: .refresh, object: nil)
        
     }
-    
     @objc func handleTextDidChange(notification: Notification) {
         
         getAddressApi()
@@ -244,14 +242,7 @@ class VCScheduleVC: VCBaseVC {
             return
         }
         
-       // if self.objOperator_availablity?.id == 1{
-            self.viewModel.findDriver(self.pickUpLocation, self.dropLocation, typeID: self.objOperator_availablity?.id ?? 0)
-       // }else{
-           
-       // }
-        
-       
-       //
+        self.viewModel.findDriver(self.pickUpLocation, self.dropLocation, typeID: self.objOperator_availablity?.id ?? 0)
 //        self.dismiss(animated: true) {
 //            self.onConfirm?(self.screenType)
 //        }
@@ -411,7 +402,7 @@ extension VCScheduleVC{
     }
     
     func getDetailedAddressFromLatLon(latitude: Double, longitude: Double, completion: @escaping (String?) -> Void) {
-        let apiKey = ClientModel.currentClientData.google_map_keys
+        let apiKey = googleAPIKey
         let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(latitude),\(longitude)&key=\(apiKey ?? "")")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
