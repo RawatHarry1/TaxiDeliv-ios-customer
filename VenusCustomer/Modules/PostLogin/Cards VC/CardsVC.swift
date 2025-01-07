@@ -33,8 +33,9 @@ class CardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
+        self.viewStack.layer.cornerRadius = 4
         self.stripSheet()
-        self.viewStack.addShadowView()
+        self.viewStack.addShadowView(width : 1.0, height : 1.0,radius: 2.0)
         tblViewCards.register(UINib(nibName: "CardsTblCell", bundle: nil), forCellReuseIdentifier: "CardsTblCell")
         getCardApi()
         tblViewCards.rowHeight = 60
@@ -99,7 +100,6 @@ class CardsVC: UIViewController {
            
             switch paymentResult {
             case .completed:
-             
                 print("Your order is confirmed")
                 self.confirmCardApi()
             case .canceled:

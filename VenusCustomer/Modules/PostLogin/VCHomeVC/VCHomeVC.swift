@@ -14,16 +14,23 @@ import SwiftyGif
 
 class VCHomeVC: VCBaseVC {
     
-    @IBOutlet weak var imngViewGif: UIImageView!
     // MARK: -> Outlets
     @IBOutlet weak var collectionViewBanner: UICollectionView!
     @IBOutlet weak var mapBaseView: UIView!
     @IBOutlet weak var createRideView: UIView!
-    @IBOutlet weak var pageControl: UIPageControl!
+ 
+    @IBOutlet weak var lblRentals: UILabel!
+    @IBOutlet weak var imgRentals: UIImageView!
+    @IBOutlet weak var imgOutStation: UIImageView!
+    @IBOutlet weak var heightPromotionCollView: NSLayoutConstraint!
     // @IBOutlet weak var offersCollectionView: UICollectionView!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var txtFldLoc: UITextField!
-    
+    var timer: Timer?
+    var timerBanner: Timer?
+
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var promotionCollView: UICollectionView!
     @IBOutlet weak var lblRide: UILabel!
     // @IBOutlet weak var lblNow: UILabel!
     //  @IBOutlet weak var btnNow: UIButton!
@@ -34,6 +41,8 @@ class VCHomeVC: VCBaseVC {
     @IBOutlet weak var lblCurrentLoc: UILabel!
     @IBOutlet weak var imgViewSchedule: UIImageView!
     
+    @IBOutlet weak var heightBannerCollView: NSLayoutConstraint!
+    @IBOutlet weak var bannerPageControl: UIPageControl!
     //  @IBOutlet weak var lblRide: UILabel!
     
     
@@ -65,12 +74,16 @@ class VCHomeVC: VCBaseVC {
     private let timerIntervalToRefersh: TimeInterval = 60.0
     var didPressHome: (()->Void)?
     var objOperator_availablity : operator_availablityy?
-    
+    var currentPage = 0
+    var currentPageBanner = 0
+
     // TODO: - DEINIT METHOD
     deinit {
         stopTimer()
     }
-    
+    var bannerPromotion : [homeBanners]?
+    var banner : [homeBanners]?
+
     //  To create ViewModel
     private var viewModel = VCHomeViewModel()
     var commingFrom = 1
@@ -82,18 +95,10 @@ class VCHomeVC: VCBaseVC {
     
     override func initialSetup() {
         
-        DispatchQueue.main.async {
-            do {
-                let gif = try UIImage(gifName: "gifHome.gif", levelOfIntegrity:0.5)
-                self.imngViewGif.setGifImage(gif, loopCount: -1)
-            } catch {
-                print(error)
-            }
-        }
-        
-        
-        
-        
+   
+        bannerPromotion = UserModel.currentUser.login?.home_banners?.filter { $0.banner_type_id == 1 }
+        banner = UserModel.currentUser.login?.home_banners?.filter { $0.banner_type_id != 1 }
+        heightPromotionCollView.constant = (self.view.frame.width - 30) / 2.56
         checkLocationPermission()
         
         
@@ -114,6 +119,11 @@ class VCHomeVC: VCBaseVC {
         }
         animationReferral()
         
+                setupCollectionView()
+                setupPageControl()
+                setupPageControlBanner()
+                startAutoScroll()
+                startAutoScrollBanner()
         if ClientModel.currentClientData.enabled_service! == 3{
             if self.objOperator_availablity?.id == 1{
                
@@ -126,6 +136,9 @@ class VCHomeVC: VCBaseVC {
                 imgViewRide.image = UIImage(named: "NowDel")
                 imgViewSchedule.image = UIImage(named: "calDel")
                 self.lblRide.text = "Now"
+                self.lblRentals.text = "Truck"
+                imgOutStation.image = UIImage(named: "outDel")
+                imgRentals.image = UIImage(named: "NowDel")
                 self.tabBarController?.tabBar.items?[1].title = "Deliveries"
             }
             setHomeVC()
@@ -135,6 +148,9 @@ class VCHomeVC: VCBaseVC {
             imgViewRide.image = UIImage(named: "NowDel")
             imgViewSchedule.image = UIImage(named: "calDel")
             self.lblRide.text = "Now"
+            self.lblRentals.text = "Truck"
+            imgOutStation.image = UIImage(named: "outDel")
+            imgRentals.image = UIImage(named: "NowDel")
             self.tabBarController?.tabBar.items?[2].title = "Deliveries"
            
         }else{
@@ -160,7 +176,81 @@ class VCHomeVC: VCBaseVC {
             view.addSubview(confettiView)
         }
     }
+    private func setupCollectionView() {
+          
+           if let layout = promotionCollView.collectionViewLayout as? UICollectionViewFlowLayout {
+               layout.scrollDirection = .horizontal
+               layout.minimumLineSpacing = 0
+           }
+        promotionCollView.isPagingEnabled = true
+        
+        if let layout = collectionViewBanner.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            layout.minimumLineSpacing = 0
+        }
+        collectionViewBanner.isPagingEnabled = true
+        
+       }
+    private func setupPageControl() {
+        pageControl.numberOfPages = bannerPromotion?.count ?? 0
+        pageControl.currentPage = 0
+        pageControl.hidesForSinglePage = true
+    }
     
+    private func setupPageControlBanner() {
+        bannerPageControl.numberOfPages = banner?.count ?? 0
+        bannerPageControl.currentPage = 0
+        bannerPageControl.hidesForSinglePage = true
+    }
+    // MARK: - Auto Scroll
+    private func startAutoScroll() {
+        if ((bannerPromotion?.count ?? 0) > 1)
+        {
+            timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+                self?.scrollToNextPage()
+            }
+        }
+      
+    }
+    
+    // MARK: - Auto Scroll Banner
+    private func startAutoScrollBanner() {
+        if ((banner?.count ?? 0) > 1)
+        {
+            timerBanner = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+                self?.scrollToNextPageBanner()
+            }
+        }
+      
+    }
+    
+    private func scrollToNextPage() {
+        guard let banner =  self.bannerPromotion else { return }
+        let nextIndex = (currentPage + 1) % (banner.count)
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        promotionCollView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        currentPage = nextIndex
+        pageControl.currentPage = currentPage
+    }
+    
+    private func scrollToNextPageBanner() {
+        guard let banner =  self.banner else { return }
+        let nextIndex = (currentPageBanner + 1) % (banner.count)
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        collectionViewBanner.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        currentPageBanner = nextIndex
+        bannerPageControl.currentPage = currentPageBanner
+    }
+ 
+    private func stopAutoScroll() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    private func stopAutoScrollBanner() {
+        timerBanner?.invalidate()
+        timerBanner = nil
+    }
     override func getCurrentLocation(lat: CLLocationDegrees,long:CLLocationDegrees){
        
             let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: long)
@@ -467,18 +557,66 @@ class VCHomeVC: VCBaseVC {
 
 extension VCHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if collectionView == collectionViewBanner{
+            return banner?.count ?? 0
+        }
+        return bannerPromotion?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBannerCollCell", for: indexPath) as! HomeBannerCollCell
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBannerCollCell", for: indexPath) as! HomeBannerCollCell
+        if collectionView == collectionViewBanner{
+            cell.imgviewBanner.setImage(withUrl: banner?[indexPath.row].banner_image ?? "") { status, image in}
+        }
+        else
+        {
+            cell.imgviewBanner.setImage(withUrl: bannerPromotion?[indexPath.row].banner_image ?? "") { status, image in}
+
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionViewBanner.frame.width, height: collectionViewBanner.frame.height)
+        if collectionView == collectionViewBanner{
+            return CGSizeMake(collectionViewBanner.frame.width,  collectionViewBanner.frame.width / 2.56)
+        }
+        
+
+        return CGSizeMake(promotionCollView.frame.width,  promotionCollView.frame.width / 2.56)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == collectionViewBanner{
+            let pageIndex = Int(scrollView.contentOffset.x / scrollView.frame.width)
+            currentPageBanner = pageIndex
+            bannerPageControl.currentPage = pageIndex
+        }
+else{
+    let pageIndex = Int(scrollView.contentOffset.x / scrollView.frame.width)
+    currentPage = pageIndex
+    pageControl.currentPage = pageIndex
+
+}
+       }
+
+       func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+           if scrollView == collectionViewBanner{
+               stopAutoScrollBanner()
+           }
+           else{
+               stopAutoScroll() // Stop auto-scroll when user starts dragging
+           }
+       }
+
+       func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+           if scrollView == collectionViewBanner{
+               startAutoScrollBanner() // Restart auto-scroll after user stops dragging
+           }
+           else{
+               startAutoScroll() // Restart auto-scroll after user stops dragging
+           }
+       }
     
 }
 
@@ -636,3 +774,4 @@ extension VCHomeVC{
         task.resume()
     }
 }
+

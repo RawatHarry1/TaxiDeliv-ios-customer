@@ -9,9 +9,9 @@ import UIKit
 
 class VCNotificationCell: UITableViewCell {
 
+    @IBOutlet weak var imgMain: UIImageView!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
-    @IBOutlet weak var titleLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +25,7 @@ class VCNotificationCell: UITableViewCell {
     }
 
     func updateCell(_ notification: NotificationDetails) {
-        titleLbl.text = notification.title ?? ""
         lblDescription.text = notification.message ?? ""
-        
-        
-        lblDate.text = notification.time_sent?.utcToLocal()
+        lblDescription.numberOfLines = 0
     }
 }

@@ -9,9 +9,7 @@ import UIKit
 var isRideClicked = 0
 class ServicesVC: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
-    
     @IBOutlet weak var collectionViewBanner: UICollectionView!
-    
     
     var onBackCallback: (() -> Void)?
     var timer: Timer?
@@ -157,6 +155,7 @@ class ServicesVC: UIViewController {
 }
 extension ServicesVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return banner.count
     }
     

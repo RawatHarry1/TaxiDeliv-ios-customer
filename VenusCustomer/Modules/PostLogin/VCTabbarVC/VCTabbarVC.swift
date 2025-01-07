@@ -19,7 +19,7 @@ class VCTabbarVC: UITabBarController {
         super.viewDidLoad()
         configureVC()
         VCRouter.goToSaveUserVC1()
-        tabBar.tintColor = hexStringToUIColor(hex: "#003C6E")
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +33,8 @@ class VCTabbarVC: UITabBarController {
         }
         
         tabBar.tintColor = hexStringToUIColor(hex: "#003C6E")
+
+       // tabBar.textColor = UIColor.black
     }
 
     override func viewDidLayoutSubviews() {
@@ -157,7 +159,6 @@ extension VCTabbarVC{
         item.title = "Home"
         item.image = VCImageAsset.backGray.asset?.withRenderingMode(.alwaysOriginal)
         item.selectedImage = VCImageAsset.homeSelected.asset?.withRenderingMode(.alwaysTemplate)
-        
         nav.tabBarItem = item
         return nav
     }

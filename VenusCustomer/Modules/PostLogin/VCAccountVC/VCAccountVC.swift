@@ -127,7 +127,8 @@ extension VCAccountVC : UITableViewDelegate , UITableViewDataSource {
         case 2:
             let vc = CardsVC.create()
             vc.comesFromAccount = true
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         case 3:
 //            let vc = VCWalletTCPopUp.create()
 //            vc.modalPresentationStyle = .overFullScreen
@@ -152,7 +153,11 @@ extension VCAccountVC : UITableViewDelegate , UITableViewDataSource {
             self.navigationController?.pushViewController(vc, animated: true)
          case 9:
             print("delete account")
-            self.deleteAccount()
+            let vc = VCLogoutVC.create()
+            vc.modalPresentationStyle = .overFullScreen
+            vc.deleteAccount = true
+            self.navigationController?.present(vc, animated: true)
+
         case 10:
             let vc = VCLogoutVC.create()
             vc.modalPresentationStyle = .overFullScreen

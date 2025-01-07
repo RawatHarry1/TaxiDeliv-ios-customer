@@ -15,6 +15,7 @@ class VCFeedbackVC: VCBaseVC {
     @IBOutlet weak var starTwo: UIImageView!
     @IBOutlet weak var starThree: UIImageView!
     @IBOutlet weak var starfour: UIImageView!
+    @IBOutlet weak var lblUnderline: UILabel!
     @IBOutlet weak var starFive: UIImageView!
     @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var ratingLbl: UILabel!
@@ -23,7 +24,7 @@ class VCFeedbackVC: VCBaseVC {
     var viewModel = VCTripHistoryViewModel()
     var selectedTrip: TripHistoryDetails?
     var callBackRatingSuccess : ((Int) -> ())?
-    var ratings = 5
+    var ratings = 3
     var viewcontrollerType = 1
     //  To create ViewModel
     static func create() -> VCFeedbackVC {
@@ -34,17 +35,16 @@ class VCFeedbackVC: VCBaseVC {
     override func initialSetup() {
         feebackTV.textContainerInset = UIEdgeInsets.zero
         feebackTV.textContainer.lineFragmentPadding = 0
-
 //        feebackTV.backgroundColor = UIColor.lightGray
-        feebackTV.textColor = VCColors.textColorGrey.color
+        feebackTV.textColor = UIColor.darkGray
         feebackTV.text = "Share feedback with driver."
         feebackTV.delegate = self
+
 //        descLbl.text = "How was your ride with \(selectedTrip?.driver_name ?? "")"
         titleLabelAttributes((selectedTrip?.driver_name ?? ""))
         callBacks()
-        ratingLbl.text = "Best"
+        ratingLbl.text = "Good"
     }
-
     private func callBacks() {
         viewModel.successCallBack = { status in
             self.dismiss(animated: true) {
@@ -59,11 +59,11 @@ class VCFeedbackVC: VCBaseVC {
 
     func titleLabelAttributes(_ clickAble: String) {
         let clickAble = clickAble
-        let fullText = "How was your trip with \(clickAble)"
+        let fullText = "How was your ride with \(clickAble)"
         let nsString = fullText as NSString
         let rangeClickableText = nsString.range(of: clickAble)
         let attributedString = NSMutableAttributedString(string: fullText)
-        attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 24.0, weight: .semibold), range: rangeClickableText)
+        attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 24.0, weight: .bold), range: rangeClickableText)
         descLbl.attributedText = attributedString
     }
 
@@ -165,7 +165,7 @@ class VCFeedbackVC: VCBaseVC {
             starFive.image = VCImageAsset.starDisable.asset
             ratingLbl.text = "Better"
         } else if count == 5 {
-            starFive.image = VCImageAsset.starDisable.asset
+//            starFive.image = VCImageAsset.star.asset
             ratingLbl.text = "Best"
         }
     }
@@ -175,16 +175,35 @@ class VCFeedbackVC: VCBaseVC {
 extension VCFeedbackVC : UITextViewDelegate {
 
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == VCColors.textColorGrey.color {
+        if textView.textColor == UIColor.darkGray {
             textView.text = nil
             textView.textColor = VCColors.textColor.color
+            lblUnderline.backgroundColor = VCColors.buttonSelectedOrange.color
         }
+    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let numLines = (feebackTV.contentSize.height / feebackTV.font!.lineHeight)
+        
+        if numLines >= 5
+        {
+            feebackTV.isScrollEnabled = true
+            print("Scroll Enabled true")
+        }
+        else
+        {
+            feebackTV.isScrollEnabled = false
+            print("Scroll Enabled false")
+
+        }
+        return true;
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = "Share feedback with driver."
-            textView.textColor = VCColors.textColorGrey.color
+            textView.textColor = UIColor.darkGray
+            lblUnderline.backgroundColor = VCColors.textColor.color
+
         }
     }
 }

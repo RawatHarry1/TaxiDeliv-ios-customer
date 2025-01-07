@@ -40,7 +40,7 @@ class VCTripHistoryCell: UITableViewCell {
     
 
     func SetUpUI(_ trip : TripHistoryModel) {
-        dashedView.addDashedSmallBorder()
+  //      dashedView.addDashedSmallBorder()
         baseView.addShadowView()
 
         pickUpLocationLbl.text = trip.pickup_address ?? ""
@@ -56,7 +56,7 @@ class VCTripHistoryCell: UITableViewCell {
     }
     
     func SetUpUISchedule(_ trip : ScheduledData) {
-        dashedView.addDashedSmallBorder()
+    //    dashedView.addDashedSmallBorder()
         baseView.addShadowView()
 
         pickUpLocationLbl.text = trip.pickup_location_address ?? ""

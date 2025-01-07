@@ -245,7 +245,7 @@ class VCRideVehiclesListVC: VCBaseVC {
     @IBAction func btnSelectionType(_ sender: UIButton) {
 
         if selectedRegions == nil {
-            SKToast.show(withMessage: "Please select vehicle type.")
+            SKToast.showToastViewInCenter(withMessage: "Please select vehicle type.")
         } else {
             stopAPITimer()
             self.dismiss(animated: true) {

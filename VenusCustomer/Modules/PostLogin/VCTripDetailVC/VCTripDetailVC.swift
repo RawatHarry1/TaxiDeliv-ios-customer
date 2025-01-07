@@ -74,7 +74,7 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
         }else{
             viewProductDetail.isHidden = true
         }
-        dashedView.addDashedSmallBorder()
+        //dashedView.addDashedSmallBorder()
         guard let trip = selectedTrip else {return}
         viewModel.getTripDetails(trip)
         
@@ -170,6 +170,7 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     @IBAction func btnInvoiceAction(_ sender: Any) {
         let pdfUrlString = "\(sharedAppDelegate.appEnvironment.baseURL)/ride/invoice?ride_id=\(self.angagementID)"
              if let pdfUrl = URL(string: pdfUrlString) {
+                 SKToast.show(withMessage: "Downloading invoice please wait!!")
                  downloadPDF(from: pdfUrl)
              }
     }
@@ -255,6 +256,8 @@ extension VCTripDetailVC: UIDocumentPickerDelegate {
         let urlSession = URLSession.shared
         let downloadTask = urlSession.downloadTask(with: url) { (location, response, error) in
             guard let location = location, error == nil else {
+                SKToast.show(withMessage: "Error downloading PDF: \(String(describing: error?.localizedDescription))")
+
                 print("Error downloading PDF: \(String(describing: error?.localizedDescription))")
                 return
             }
@@ -270,13 +273,14 @@ extension VCTripDetailVC: UIDocumentPickerDelegate {
                 
                 // Move the downloaded file to the temporary location
                 try FileManager.default.moveItem(at: location, to: temporaryPdfUrl)
-                print("PDF downloaded and saved to: \(temporaryPdfUrl)")
-                
+                SKToast.show(withMessage: "PDF downloaded")
+
                 DispatchQueue.main.async {
                     self.saveToiCloudDrive(fileUrl: temporaryPdfUrl)
                 }
                 
             } catch {
+                SKToast.show(withMessage: "Error saving PDF: \(error.localizedDescription)")
                 print("Error saving PDF: \(error.localizedDescription)")
             }
         }

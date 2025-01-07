@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -164,13 +164,22 @@
                                 <rect key="frame" x="0.0" y="283" width="393" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Transaction Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-5j-WUA">
+                                <rect key="frame" x="0.0" y="476" width="393" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0aF-7O-LaL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Hxa-5j-WUA" firstAttribute="centerX" secondItem="Pkq-uf-gsF" secondAttribute="centerX" id="1p2-sr-dla"/>
                             <constraint firstItem="0aF-7O-LaL" firstAttribute="trailing" secondItem="ZR5-eB-quS" secondAttribute="trailing" constant="16" id="5RF-zr-kVF"/>
+                            <constraint firstAttribute="trailing" secondItem="Hxa-5j-WUA" secondAttribute="trailing" id="AVh-HM-Zl3"/>
                             <constraint firstItem="Pkq-uf-gsF" firstAttribute="leading" secondItem="omc-Dq-1L8" secondAttribute="leading" id="CwD-yf-QD1"/>
                             <constraint firstAttribute="bottom" secondItem="Pkq-uf-gsF" secondAttribute="bottom" id="TCj-gN-8KA"/>
+                            <constraint firstItem="Hxa-5j-WUA" firstAttribute="leading" secondItem="0aF-7O-LaL" secondAttribute="leading" id="VoR-Dn-Ds0"/>
                             <constraint firstItem="ZR5-eB-quS" firstAttribute="top" secondItem="4Wh-e2-mpH" secondAttribute="bottom" constant="20" id="Xmv-bS-p1c"/>
                             <constraint firstItem="4Wh-e2-mpH" firstAttribute="top" secondItem="0aF-7O-LaL" secondAttribute="top" id="Zvh-qa-L9g"/>
                             <constraint firstItem="4Wh-e2-mpH" firstAttribute="leading" secondItem="omc-Dq-1L8" secondAttribute="leading" id="ctd-HR-vjf"/>
@@ -178,10 +187,12 @@
                             <constraint firstItem="Pkq-uf-gsF" firstAttribute="top" secondItem="ZR5-eB-quS" secondAttribute="bottom" constant="20" id="gKH-ny-NgB"/>
                             <constraint firstItem="ZR5-eB-quS" firstAttribute="leading" secondItem="0aF-7O-LaL" secondAttribute="leading" constant="16" id="lyq-3P-YfE"/>
                             <constraint firstItem="0aF-7O-LaL" firstAttribute="trailing" secondItem="4Wh-e2-mpH" secondAttribute="trailing" id="o8c-SS-ZIT"/>
+                            <constraint firstItem="Hxa-5j-WUA" firstAttribute="centerY" secondItem="Pkq-uf-gsF" secondAttribute="centerY" constant="-80" id="u1A-xx-MWK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lblName" destination="mTM-6M-he5" id="Vt9-G9-CGM"/>
+                        <outlet property="lblNoTransactionFound" destination="Hxa-5j-WUA" id="Sff-w7-fyB"/>
                         <outlet property="lblWalletBalance" destination="FJS-eB-jS8" id="1zS-78-oAF"/>
                         <outlet property="walletTableView" destination="Pkq-uf-gsF" id="Zs6-y8-JFL"/>
                     </connections>
@@ -725,7 +736,7 @@
         <image name="topUpArrowBlack" width="25.333333969116211" height="24"/>
         <image name="topUpWhite" width="25.333333969116211" height="24"/>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.23529411764705882" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="otpBorder">
             <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -737,7 +748,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

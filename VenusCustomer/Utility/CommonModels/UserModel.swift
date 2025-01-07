@@ -100,6 +100,7 @@ struct LoginModel : Codable {
     var referral_link : String?
     var popup : popupData?
     var banner :[bannerData]?
+    var home_banners : [homeBanners]?
     var user_image : String?
     var vehicle_types :[vechleType]?
     var package_details: [packageDetails]?
@@ -156,6 +157,7 @@ struct LoginModel : Codable {
         case stripeCredentials = "stripeCredentials"
         case popup = "popup"
         case banner = "banner"
+        case home_banners = "home_banners"
         case user_image = "user_image"
         case vehicle_types = "vehicle_types"
         case package_details = "package_details"
@@ -218,6 +220,7 @@ struct LoginModel : Codable {
         referral_data = try values.decodeIfPresent(refral_data.self, forKey: .referral_data)
         popup = try values.decodeIfPresent(popupData.self, forKey: .popup)
         banner = try values.decodeIfPresent([bannerData].self, forKey: .banner)
+        home_banners = try values.decodeIfPresent([homeBanners].self, forKey: .home_banners)
         user_image = try values.decodeIfPresent(String.self, forKey: .user_image)
         vehicle_types = try values.decodeIfPresent([vechleType].self, forKey: .vehicle_types)
         package_details  = try values.decodeIfPresent([packageDetails].self, forKey: .package_details)
@@ -281,6 +284,7 @@ struct LoginModel : Codable {
         referral_data = nil
         popup = nil
         banner = nil
+        home_banners = nil
         user_image = nil
     }
 }
@@ -517,6 +521,14 @@ struct bannerData:Codable{
     var action_url : String?
     var banner_image : String?
     var banner_text : String?
+}
+struct homeBanners:Codable{
+    var banner_image : String?
+    var banner_order : Int?
+    var banner_redirected_url: String?
+    var banner_type_id : Int?
+    var banner_type_name : String?
+    var is_active : Int?
 }
 struct vechleType: Codable{
     var images : String?

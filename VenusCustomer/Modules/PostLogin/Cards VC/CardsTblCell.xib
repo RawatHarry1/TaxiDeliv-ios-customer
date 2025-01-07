@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +19,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditCard" translatesAutoresizingMaskIntoConstraints="NO" id="jp6-Yz-qmx">
                         <rect key="frame" x="20" y="32" width="25" height="25"/>
-                        <color key="tintColor" name="buttonSelectedOrange"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="Lo9-Gj-aln"/>
                             <constraint firstAttribute="width" constant="25" id="RA4-er-L4B"/>
@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 4565" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9L-V9-eeo">
-                        <rect key="frame" x="30" y="88" width="437" height="1"/>
+                        <rect key="frame" x="20" y="72" width="457" height="1"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="rBZ-5N-Ba1"/>
@@ -58,15 +58,16 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="r4a-dx-5i6" secondAttribute="trailing" constant="20" id="5FZ-02-pvh"/>
                     <constraint firstItem="QUm-W6-782" firstAttribute="centerY" secondItem="jyW-sh-OGK" secondAttribute="centerY" id="AmD-0C-teO"/>
-                    <constraint firstAttribute="bottom" secondItem="h9L-V9-eeo" secondAttribute="bottom" id="HC6-lC-AWM"/>
                     <constraint firstItem="jyW-sh-OGK" firstAttribute="centerY" secondItem="7qK-Q1-f8s" secondAttribute="centerY" id="Oal-K8-axg"/>
+                    <constraint firstItem="h9L-V9-eeo" firstAttribute="top" secondItem="jp6-Yz-qmx" secondAttribute="bottom" constant="15" id="Ymu-Wq-AVz"/>
+                    <constraint firstAttribute="bottom" secondItem="h9L-V9-eeo" secondAttribute="bottom" constant="16" id="as0-fn-AwS"/>
                     <constraint firstItem="jp6-Yz-qmx" firstAttribute="leading" secondItem="7qK-Q1-f8s" secondAttribute="leading" constant="20" id="dL1-z8-B4b"/>
                     <constraint firstItem="r4a-dx-5i6" firstAttribute="centerY" secondItem="QUm-W6-782" secondAttribute="centerY" id="dOA-mr-6qe"/>
                     <constraint firstItem="r4a-dx-5i6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QUm-W6-782" secondAttribute="trailing" constant="15" id="ge5-c1-oWR"/>
                     <constraint firstItem="jyW-sh-OGK" firstAttribute="leading" secondItem="jp6-Yz-qmx" secondAttribute="trailing" constant="15" id="h6Y-Ji-cug"/>
-                    <constraint firstItem="h9L-V9-eeo" firstAttribute="leading" secondItem="7qK-Q1-f8s" secondAttribute="leading" constant="30" id="kUn-97-2of"/>
+                    <constraint firstItem="h9L-V9-eeo" firstAttribute="leading" secondItem="7qK-Q1-f8s" secondAttribute="leading" constant="20" id="kUn-97-2of"/>
                     <constraint firstItem="QUm-W6-782" firstAttribute="leading" secondItem="jyW-sh-OGK" secondAttribute="trailing" constant="15" id="oh6-yF-KXq"/>
-                    <constraint firstAttribute="trailing" secondItem="h9L-V9-eeo" secondAttribute="trailing" constant="30" id="qe3-Uj-WlX"/>
+                    <constraint firstAttribute="trailing" secondItem="h9L-V9-eeo" secondAttribute="trailing" constant="20" id="qe3-Uj-WlX"/>
                     <constraint firstItem="jp6-Yz-qmx" firstAttribute="centerY" secondItem="7qK-Q1-f8s" secondAttribute="centerY" id="rld-Ej-vBa"/>
                 </constraints>
             </tableViewCellContentView>
@@ -81,8 +82,8 @@
     <resources>
         <image name="creditCard" width="32" height="22"/>
         <image name="radioSelected" width="512" height="512"/>
-        <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

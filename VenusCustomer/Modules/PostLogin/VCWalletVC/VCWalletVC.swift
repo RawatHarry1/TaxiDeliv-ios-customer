@@ -10,6 +10,7 @@ import UIKit
 class VCWalletVC: VCBaseVC {
 
     // MARK: -> Outlets
+    @IBOutlet weak var lblNoTransactionFound: UILabel!
     @IBOutlet weak var walletTableView: UITableView!
     @IBOutlet weak var lblWalletBalance: UILabel!
     @IBOutlet weak var lblName: UILabel!
@@ -83,6 +84,15 @@ class VCWalletVC: VCBaseVC {
 extension VCWalletVC: UITableViewDelegate , UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        if self.objWalletVM.objWalletModal?.data?.transactions?.isEmpty == true
+        {
+            lblNoTransactionFound.isHidden = false
+        }
+        else
+        {
+            lblNoTransactionFound.isHidden = true
+        }
         return objWalletVM.objWalletModal?.data?.transactions?.count ?? 0
     }
 

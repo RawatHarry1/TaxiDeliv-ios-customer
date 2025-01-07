@@ -152,7 +152,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     func slideViewfunc(){
         slideView.sliderViewTopDistance = 0
         slideView.sliderCornerRadius = 30
-        
+        slideView.isEnabled = true
         slideView.thumnailImageView.backgroundColor  = .white
         slideView.draggedView.backgroundColor =  UIColor(named: "buttonSelectedOrange")
         slideView.backgroundColor = UIColor(named: "buttonSelectedOrange")
@@ -163,9 +163,39 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         slideView.thumnailImageView.image = #imageLiteral(resourceName: "right-arrow").imageFlippedForRightToLeftLayoutDirection()
         slideView.thumnailImageView.tintColor =  UIColor(named: "buttonSelectedOrange")
         slideView.thumnailImageView.size = CGSize(width: 40, height: 40)
-        slideView.thumbnailViewStartingDistance = 5
+        slideView.thumbnailViewStartingDistance = 15
         slideView.thumbnailViewTopDistance = 5
+    //    animateThumbnailView()
+     //   animateSlider()
+    }
+    func animateThumbnailView() {
+        // Create a basic animation for the custom property
+        let animation = CABasicAnimation(keyPath: "thumbnailViewStartingDistance")
         
+        // Set animation properties
+        animation.fromValue = 10 // Initial value
+        animation.toValue = 0   // Final value
+        animation.duration = 1.0 // Duration of one cycle
+        animation.autoreverses = true  // Automatically reverse the animation (back to 10)
+        animation.repeatCount = .infinity  // Repeat indefinitely
+        
+        // Add the animation to the slideView's layer
+        slideView.layer.add(animation, forKey: "thumbnailViewAnimation")
+    }
+    func animateSlider(){
+      
+
+        UIView.animate(
+              withDuration: 1.0, // Duration for one complete cycle
+              delay: 0,          // Delay before starting
+              options: [.autoreverse, .repeat], // Auto-reverse and repeat the animation
+              animations: {
+                  self.slideView.thumbnailViewStartingDistance = 5 // Animate to 0
+              },
+              completion: nil // Completion handler (optional)
+          )
+
+
     }
     
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {

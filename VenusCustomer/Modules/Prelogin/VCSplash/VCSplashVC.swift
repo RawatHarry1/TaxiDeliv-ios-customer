@@ -107,8 +107,7 @@ extension VCSplashVC {
                 if obj?.download_link == nil || obj?.force_to_version == nil || obj?.is_force == nil || obj?.popup_text == nil{
 
                         VCRouter.goToSaveUserVC()
-              
-                    
+  
                 }else{
                     let vc = self?.storyboard?.instantiateViewController(withIdentifier: "VersionUpdateVC") as! VersionUpdateVC
                     self?.present(vc, animated: true)

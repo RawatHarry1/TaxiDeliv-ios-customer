@@ -24,6 +24,8 @@ class ChooseAppVC: VCBaseVC {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var giftView: VDView!
+    @IBOutlet weak var topCollViewBackgroundView: UIView!
+    
     private var accountViewModel: VCAccountViewModel = VCAccountViewModel()
     
     var markerUser : GMSMarker?
@@ -48,7 +50,9 @@ class ChooseAppVC: VCBaseVC {
     }
     
     override func viewDidLoad() {
-       
+        topCollViewBackgroundView.layer.cornerRadius = 20
+        topCollViewBackgroundView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
+
         callBacks()
         accountViewModel.getAccountDetail()
         imgViewProfile.setImage(withUrl: UserModel.currentUser.login?.user_image ?? "") { status, image in}
@@ -57,7 +61,7 @@ class ChooseAppVC: VCBaseVC {
                 pageControl.currentPage = 0
         startAutoScroll()
         super.viewDidLoad()
-        createRideView.addShadowView()
+      //  createRideView.addShadowView()
     }
     
     func callBacks() {
@@ -160,7 +164,7 @@ class ChooseAppVC: VCBaseVC {
     
     func selectedView(view:UIView){
         view.layer.borderColor = UIColor(named: "buttonSelectedOrange")?.cgColor
-        view.layer.borderWidth = 1
+        view.layer.borderWidth = 2
     }
     
     func unSelectedView(view:UIView){
@@ -230,6 +234,13 @@ extension ChooseAppVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == bannerCollectionView{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCollectionCell", for: indexPath) as! BannerCollectionCell
@@ -277,7 +288,7 @@ extension ChooseAppVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         if collectionView == bannerCollectionView{
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         }else{
-            return CGSize(width: collectionView.frame.width / 2 - 15, height: 250)
+            return CGSize(width: (collectionView.frame.width / 2) , height: 235)
         }
        
     }

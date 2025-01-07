@@ -52,6 +52,12 @@ public class SKToast: NSObject {
         }
     }
     
+    public static func showToastViewInCenter(withMessage message:String) {
+        DispatchQueue.main.async {
+            self.shared.createToastView(message, completionHandler: nil,center: true)
+        }
+    }
+    
     public static func showOnAddress(withMessage message:String,controller: UIViewController) {
         DispatchQueue.main.async {
             self.shared.createToastView(message, completionHandler: {
@@ -81,7 +87,7 @@ public class SKToast: NSObject {
     
     
     // MARK: - Configure Toastview
-    fileprivate func createToastView(_ statusMessage:String, completionHandler: (CompletionHandlerType)? = nil) {
+    fileprivate func createToastView(_ statusMessage:String, completionHandler: (CompletionHandlerType)? = nil,center : Bool? = false) {
         /// Setup Toast View
         if toastView == nil {
             let blurEffect = UIBlurEffect(style: toastViewBackgroundStyle)
@@ -117,7 +123,14 @@ public class SKToast: NSObject {
             return
         } else {
             setToastViewSize()
-            setToastViewPosistion(notification: nil)
+            if center == true{
+                setToastViewPosistionCenter(notification: nil)
+            }
+            else
+            {
+                setToastViewPosistion(notification: nil)
+
+            }
             showToastView()
             
             if completionHandler != nil {
@@ -160,7 +173,7 @@ public class SKToast: NSObject {
     
     
     // MARK: - ToastView Position
-    @objc fileprivate func setToastViewPosistion(notification: NSNotification?) {
+    @objc fileprivate func setToastViewPosistion(notification: NSNotification? ) {
         var keyboardHeight: CGFloat = 0.0
         if notification?.name == UIApplication.didChangeStatusBarOrientationNotification {
             setToastViewSize()
@@ -177,13 +190,46 @@ public class SKToast: NSObject {
             keyboardHeight = 0.0
         }
         let screen: CGRect = UIScreen.main.bounds
-        let center: CGPoint = CGPoint(x: screen.size.width/2, y: (screen.size.height-keyboardHeight)-(25+toastViewHeight))
+     
+            let center: CGPoint = CGPoint(x: screen.size.width/2, y: (screen.size.height-keyboardHeight)-(25+toastViewHeight))
+            
+            UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
+                self.toastView?.center = CGPoint(x: center.x, y: center.y)
+            }, completion: nil)
         
-        UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
-            self.toastView?.center = CGPoint(x: center.x, y: center.y)
-        }, completion: nil)
+        
+     
     }
     
+    // MARK: - ToastView Position
+    @objc fileprivate func setToastViewPosistionCenter(notification: NSNotification? ) {
+        var keyboardHeight: CGFloat = 0.0
+        if notification?.name == UIApplication.didChangeStatusBarOrientationNotification {
+            setToastViewSize()
+        }
+        
+        if notification != nil {
+            if let keyboardFrame: NSValue = notification?.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                if (notification!.name == UIResponder.keyboardWillShowNotification || notification!.name == UIResponder.keyboardDidShowNotification) {
+                    keyboardHeight    = keyboardRectangle.height
+                }
+            }
+        } else {
+            keyboardHeight = 0.0
+        }
+        let screen: CGRect = UIScreen.main.bounds
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        print("Status bar height: \(statusBarHeight)")
+
+            let center: CGPoint = CGPoint(x: screen.size.width/2, y:  statusBarHeight + 150)
+            
+            UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
+                self.toastView?.center = CGPoint(x: center.x, y: center.y)
+            }, completion: nil)
+        
+     
+    }
     
     // MARK: - Show
     fileprivate func showToastView() {

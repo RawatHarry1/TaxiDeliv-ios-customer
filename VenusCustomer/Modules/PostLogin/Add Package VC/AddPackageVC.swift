@@ -121,13 +121,19 @@ class AddPackageVC: VCBaseVC , UITextFieldDelegate{
         self.txtFldQuantity.resignFirstResponder()
         if isEdit == true{
             if txtFldPackage.text == ""{
-                SKToast.show(withMessage: "Please select Package Description.")
+                SKToast.showToastViewInCenter(withMessage: "Please select Package Description.")
             }else if txtFldItem.text == ""{
-                SKToast.show(withMessage: "Please enter Item Description.")
+                SKToast.showToastViewInCenter(withMessage: "Please enter Item Description.")
             }else if txtFldQuantity.text == ""{
-                SKToast.show(withMessage: "Please enter Quantity.")
-            }else if txtFldLength.text == ""{
-                SKToast.show(withMessage: "Please add Package Size.")
+                SKToast.showToastViewInCenter(withMessage: "Please enter Quantity.")
+            }
+            else if Int(txtFldQuantity.text!)! > 100
+            {
+                SKToast.showToastViewInCenter(withMessage: "Quantity should be less than 100.")
+
+            }
+            else if txtFldLength.text == ""{
+                SKToast.showToastViewInCenter(withMessage: "Please add Package Size.")
             }else{
                 if selectedPhoto == true{
                     self.createProfileAPI()
@@ -138,15 +144,21 @@ class AddPackageVC: VCBaseVC , UITextFieldDelegate{
             }
         }else{
             if txtFldPackage.text == ""{
-                SKToast.show(withMessage: "Please select Package Description.")
+                SKToast.showToastViewInCenter(withMessage: "Please select Package Description.")
             }else if txtFldItem.text == ""{
-                SKToast.show(withMessage: "Please enter Item Description.")
+                SKToast.showToastViewInCenter(withMessage: "Please enter Item Description.")
             }else if txtFldQuantity.text == ""{
-                SKToast.show(withMessage: "Please enter Quantity.")
-            }else if txtFldLength.text == ""{
-                SKToast.show(withMessage: "Please add Package Size.")
+                SKToast.showToastViewInCenter(withMessage: "Please enter Quantity.")
+            }
+            else if Int(txtFldQuantity.text!)! > 100
+            {
+                SKToast.showToastViewInCenter(withMessage: "Quantity should be less than 100.")
+
+            }
+            else if txtFldLength.text == ""{
+                SKToast.showToastViewInCenter(withMessage: "Please add Package Size.")
             }else if selectedPhoto == false{
-                SKToast.show(withMessage: "Please Upload Image.")
+                SKToast.showToastViewInCenter(withMessage: "Please Upload Image.")
             }else{
                 self.createProfileAPI()
             }

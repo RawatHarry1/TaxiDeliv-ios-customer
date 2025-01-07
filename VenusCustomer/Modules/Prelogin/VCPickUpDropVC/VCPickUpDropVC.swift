@@ -129,7 +129,7 @@ class VCPickUpDropVC: VCBaseVC {
         
         if screenType == 1 {
             titleLbl.text = "DROP OFF"
-            tfPickUp.placeholder = "Where to?"
+            tfPickUp.placeholder = "Search..."
         } else {
             dotView.backgroundColor = VCColors.buttonSelectedOrange.color
         }
