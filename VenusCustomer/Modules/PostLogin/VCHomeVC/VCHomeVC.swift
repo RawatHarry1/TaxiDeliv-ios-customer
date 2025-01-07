@@ -581,8 +581,6 @@ extension VCHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         if collectionView == collectionViewBanner{
             return CGSizeMake(collectionViewBanner.frame.width,  collectionViewBanner.frame.width / 2.56)
         }
-        
-
         return CGSizeMake(promotionCollView.frame.width,  promotionCollView.frame.width / 2.56)
     }
     

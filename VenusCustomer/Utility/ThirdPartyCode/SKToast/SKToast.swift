@@ -222,7 +222,7 @@ public class SKToast: NSObject {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         print("Status bar height: \(statusBarHeight)")
 
-            let center: CGPoint = CGPoint(x: screen.size.width/2, y:  statusBarHeight + 150)
+            let center: CGPoint = CGPoint(x: screen.size.width/2, y:  statusBarHeight + 40)
             
             UIView.animate(withDuration: 0, delay: 0, options: [.allowUserInteraction], animations: {
                 self.toastView?.center = CGPoint(x: center.x, y: center.y)

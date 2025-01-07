@@ -62,6 +62,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
     var status = 0
     var isUpdateOnce = true
     var phoneNo = ""
+    @IBOutlet weak var viewPackagesLbl: UILabel!
     var arrPathCoordinates = [CLLocationCoordinate2D]()
     var driverImage = ""
     var driverName = ""
@@ -83,6 +84,22 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
 
     override func initialSetup() {
         
+        // Create an NSAttributedString with an underline
+        let attributes: [NSAttributedString.Key: Any] = [
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+
+        let attributedString = NSAttributedString(string: viewPackagesLbl.text!, attributes: attributes)
+        // Enable user interaction on the label
+        viewPackagesLbl.isUserInteractionEnabled = true
+
+        // Create a tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+
+        // Add the gesture recognizer to the label
+        viewPackagesLbl.addGestureRecognizer(tapGesture)
+        // Assign the attributed string to the label
+        viewPackagesLbl.attributedText = attributedString
         mapView.setMinZoom(5.0, maxZoom: 16.0)
        // viewDot.isHidden = true
        // if SocketManager.status != .connecting {
@@ -99,11 +116,20 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
         addObservers()
         fetchOngoingApi()
     }
-    
+    // Define the action for the tap gesture
+    @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+        // Handle the tap event here
+        print("Label tapped!")
+        let vc = VCPackageDetailVC.create()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.deliveryPackages = viewModel.deliveryPackages
+        self.present(vc, animated: true)
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         self.viewDot.isHidden = true
     }
-    
+//    var deliveryPackages : [DeliveryPackages]?
     func fetchOngoingApi(){
         
         viewModel.fetchOngoingRide(completion: {

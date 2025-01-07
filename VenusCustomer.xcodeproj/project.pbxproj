@@ -220,6 +220,9 @@
 		20F5513E2AE50F55000180A7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5513D2AE50F55000180A7 /* Date+Extensions.swift */; };
 		20F551412AE51986000180A7 /* VCRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F551402AE51986000180A7 /* VCRouters.swift */; };
 		ADDBAA657D1C1FAAD71AE765 /* Pods_VenusCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */; };
+		BDCF83BB2D2D27B400A253F2 /* VCPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */; };
+		BDCF83BD2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */; };
+		BDCF83BF2D2D2F8400A253F2 /* ImagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */; };
 		CF1198ED2C1C51DF00BDA023 /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1198EC2C1C51DF00BDA023 /* CalenderVC.swift */; };
 		CF120DA62D08101A00505440 /* RaiseTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120DA52D08101A00505440 /* RaiseTicketVC.swift */; };
 		CF17E35A2CEDE61B008A1D58 /* MTSlideToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17E3592CEDE61B008A1D58 /* MTSlideToOpenView.swift */; };
@@ -502,6 +505,9 @@
 		20F551402AE51986000180A7 /* VCRouters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRouters.swift; sourceTree = "<group>"; };
 		6CC4E873175BC6CD297503EA /* Pods-VenusCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenusCustomer.debug.xcconfig"; path = "Target Support Files/Pods-VenusCustomer/Pods-VenusCustomer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenusCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPackageDetailVC.swift; sourceTree = "<group>"; };
+		BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailViewTblCell.swift; sourceTree = "<group>"; };
+		BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionCell.swift; sourceTree = "<group>"; };
 		CF1198EC2C1C51DF00BDA023 /* CalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
 		CF120DA52D08101A00505440 /* RaiseTicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiseTicketVC.swift; sourceTree = "<group>"; };
 		CF17E3592CEDE61B008A1D58 /* MTSlideToOpenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSlideToOpenView.swift; sourceTree = "<group>"; };
@@ -1316,6 +1322,7 @@
 		0C9CC28B2A4DD1BB007CD755 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				BDCF83B92D2D277500A253F2 /* Package Detail VC */,
 				CF7BBA792D083B6400790443 /* Ticket List VC */,
 				CF120DA42D08100700505440 /* Raise Ticket VC */,
 				CF82A8262CFB130B00B7407A /* ImageViewerVC */,
@@ -1814,6 +1821,16 @@
 				20F551402AE51986000180A7 /* VCRouters.swift */,
 			);
 			path = VCRouters;
+			sourceTree = "<group>";
+		};
+		BDCF83B92D2D277500A253F2 /* Package Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */,
+				BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */,
+				BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */,
+			);
+			path = "Package Detail VC";
 			sourceTree = "<group>";
 		};
 		CF120DA42D08100700505440 /* Raise Ticket VC */ = {
@@ -2379,6 +2396,7 @@
 				CF82A8282CFB132400B7407A /* ImageViewerVC.swift in Sources */,
 				201C9D6D2B02005400C9F99D /* Fare_structure.swift in Sources */,
 				CFC7FDD82C9AE9B60026A5EA /* ChooseAppVC.swift in Sources */,
+				BDCF83BD2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift in Sources */,
 				CF7BBA7F2D0844E400790443 /* TicketListModal.swift in Sources */,
 				203D13A02AE7166600227502 /* UIIMage_Extension.swift in Sources */,
 				CF120DA62D08101A00505440 /* RaiseTicketVC.swift in Sources */,
@@ -2387,6 +2405,7 @@
 				20F5511A2AE42916000180A7 /* StringConstant.swift in Sources */,
 				0C9CC2352A4DCFBF007CD755 /* IQPreviousNextView.swift in Sources */,
 				203D13A42AE8375000227502 /* InformationURLModel.swift in Sources */,
+				BDCF83BF2D2D2F8400A253F2 /* ImagesCollectionCell.swift in Sources */,
 				CF8A2A1A2CBFBEF700137006 /* HomeBannerCollCell.swift in Sources */,
 				20E4818C2AE1A4B700C317B5 /* APINetworking.swift in Sources */,
 				0C9559B42A6016D400F35D13 /* VCScheduleVC.swift in Sources */,
@@ -2408,6 +2427,7 @@
 				20576F622AE70E2E0047D199 /* UserProfileModel.swift in Sources */,
 				CFC7FDDA2C9AEA6F0026A5EA /* ChooseAppCollectionCell.swift in Sources */,
 				20F5513E2AE50F55000180A7 /* Date+Extensions.swift in Sources */,
+				BDCF83BB2D2D27B400A253F2 /* VCPackageDetailVC.swift in Sources */,
 				CF17E35A2CEDE61B008A1D58 /* MTSlideToOpenView.swift in Sources */,
 				20F551112AE2E08B000180A7 /* Bundle+Extension.swift in Sources */,
 				0C9CC2332A4DCFBF007CD755 /* UIView+Extension.swift in Sources */,

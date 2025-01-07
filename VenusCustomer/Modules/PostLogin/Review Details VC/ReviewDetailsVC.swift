@@ -166,22 +166,9 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         slideView.thumbnailViewStartingDistance = 15
         slideView.thumbnailViewTopDistance = 5
     //    animateThumbnailView()
-     //   animateSlider()
+     animateSlider()
     }
-    func animateThumbnailView() {
-        // Create a basic animation for the custom property
-        let animation = CABasicAnimation(keyPath: "thumbnailViewStartingDistance")
-        
-        // Set animation properties
-        animation.fromValue = 10 // Initial value
-        animation.toValue = 0   // Final value
-        animation.duration = 1.0 // Duration of one cycle
-        animation.autoreverses = true  // Automatically reverse the animation (back to 10)
-        animation.repeatCount = .infinity  // Repeat indefinitely
-        
-        // Add the animation to the slideView's layer
-        slideView.layer.add(animation, forKey: "thumbnailViewAnimation")
-    }
+ 
     func animateSlider(){
       
 

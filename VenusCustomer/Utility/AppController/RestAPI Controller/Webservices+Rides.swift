@@ -80,7 +80,7 @@ extension WebServices {
     
     static func getCard(url: String,parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonGetAPI(parameters: parameters, endPoint: .getCard,toAppend: url, loader: true) { (result) in
-      
+            
             switch result {
             case .success(let json):
                 printDebug(json)
@@ -121,7 +121,7 @@ extension WebServices {
             }
         }
     }
-
+    
     // MARK: - To Request a ride
     static func requestRide(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonPostWithRawJSONAPI(parameters: parameters, endPoint: .requestTrip, loader: true) { (result) in
@@ -150,23 +150,23 @@ extension WebServices {
             }
         }
     }
-
-
+    
+    
     // MARK: - To Cancel Trip
     static func cancelTripApi(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonDeleteAPIWithAppendinURL(parameters: parameters, endPoint: .cancelTrip, append: "", loader: true) { (result) in
             switch result {
             case .success(let json):
                 printDebug(json)
-//                let data = try! json[APIKeys.data.rawValue].rawData()
-//                let model = try! JSONDecoder().decode(BlockDriverModel.self, from: data)
+                //                let data = try! json[APIKeys.data.rawValue].rawData()
+                //                let model = try! JSONDecoder().decode(BlockDriverModel.self, from: data)
                 response(.success(json))
             case .failure(let error):
                 response(.failure(error))
             }
         }
     }
-
+    
     // MARK: - To Get recent ride
     static func getRecentRides(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonPostWithRawJSONAPI(parameters: parameters, endPoint: .getrecentRides, loader: true) { (result) in
@@ -226,7 +226,7 @@ extension WebServices {
     
     static func tripSummaryApi(url: String,parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonGetAPI(parameters: parameters, endPoint: .tripSummary,toAppend: url, loader: true) { (result) in
-      
+            
             switch result {
             case .success(let json):
                 printDebug(json)
@@ -241,7 +241,7 @@ extension WebServices {
     
     static func getTicketList(url: String,parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonGetAPI(parameters: parameters, endPoint: .list_support_tickets,toAppend: url, loader: true) { (result) in
-      
+            
             switch result {
             case .success(let json):
                 printDebug(json)
@@ -294,7 +294,7 @@ extension WebServices {
             }
         }
     }
-
+    
     // MARK: - To Get Ride Details
     static func getRecentRideDetails(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonGetAPI(parameters: parameters, endPoint: .getRideDetails, loader: true) { (result) in
@@ -309,7 +309,7 @@ extension WebServices {
             }
         }
     }
-
+    
     static func cancelScheduleApi(pickupID: String,parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonPostWithRawJSONAPI(parameters: parameters, endPoint: .cancelSchedule, loader: true) { (result) in
             switch result {
@@ -329,40 +329,52 @@ extension WebServices {
             switch result {
             case .success(let json):
                 printDebug(json)
-//                let data = try! json["data"].rawData()
-//                let model = try! JSONDecoder().decode(TripHistoryDetails.self, from: data)
+                //                let data = try! json["data"].rawData()
+                //                let model = try! JSONDecoder().decode(TripHistoryDetails.self, from: data)
                 response(.success(json))
             case .failure(let error):
                 response(.failure(error))
             }
         }
     }
-
+    
     // MARK: - To Fetch Ongoing Ride
-    static func apiTogetOngoingRide(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
+    static func apiTogetOngoingRide(parameters: JSONDictionary, response: @escaping ((Result<([OngoingTripModel],[ DeliveryPackages]), Error>) -> Void)) {
         commonPostAPI(parameters: parameters, endPoint: .fetchOngoingRide, loader: true) { (result) in
             switch result {
             case .success(let json):
                 printDebug(json)
                 do {
-                    
+                    // Parse trips data (Model 1)
                     let data = try! json["data"]["trips"].rawData()
-                     let tripsData = data 
-                        let model = try! JSONDecoder().decode([OngoingTripModel].self, from: tripsData)
-                        response(.success(model))
-//                    } else {
-//                        printDebug("Failed to sort trips data.")
-//                    }
+                    let tripsData = data
+                    let model1 = try! JSONDecoder().decode([OngoingTripModel].self, from: tripsData)
+                    
+                    // Check if "deliveryPackages" key exists in the JSON
+                    var model2: [DeliveryPackages] = []
+                    if  (json["data"]["deliveryPackages"] != JSON.null) {
+                        // Only attempt to decode if the key exists and has data
+                        do {
+                            let deliveryPackagesData =  try! json["data"]["deliveryPackages"].rawData()
+                            model2 = try JSONDecoder().decode([DeliveryPackages].self, from: deliveryPackagesData)
+                        } catch {
+                            printDebug("Failed to parse deliveryPackages: \(error.localizedDescription)")
+                        }
+                    }
+                    // Send both models as a tuple
+                    response(.success((model1, model2)))
                 } catch {
                     printDebug(error.localizedDescription)
+                    response(.failure(error))  // Send the error if there's an issue parsing
                 }
-
+                
             case .failure(let error):
                 response(.failure(error))
             }
         }
     }
-
+    
+    
     //MARK: - To fetch notifications
     static func fetchNotificationList(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonGetAPI(parameters: parameters, endPoint: .fetchNotifications, loader: true) { (result) in

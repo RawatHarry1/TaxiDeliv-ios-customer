@@ -108,3 +108,15 @@ struct OngoingTripModel : Codable {
     }
 
 }
+
+struct DeliveryPackages: Codable{
+    var delivery_status: Int?
+    var notes :  String?
+    var package_id : Int?
+    var package_image_while_drop_off : [String]?
+    var package_image_while_pickup : [String]?
+    var package_images_by_customer : [String]?
+    var package_quantity : Int?
+    var package_size : String
+    var package_type: String?
+}

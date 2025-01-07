@@ -30,6 +30,8 @@ class VCHomeViewModel: NSObject {
     private(set) var ongoingTrips: [OngoingTripModel]! {
         didSet { self.callBackForOngoingRides?(ongoingTrips)}
     }
+    var deliveryPackages: [DeliveryPackages] = []
+
 
     override init() {
         super.init()
@@ -43,11 +45,17 @@ extension VCHomeViewModel {
         }
         WebServices.apiTogetOngoingRide(parameters: params, response: { [weak self] (result) in
             switch result {
-            case .success(let data):
-                printDebug(data)
-                guard let dataModel = data as? [OngoingTripModel] else { return }
-                self?.ongoingTrips = dataModel
+            case .success(let (ongoingTripsData, deliveryPackagesData)):
+                printDebug(ongoingTripsData)
+                printDebug(deliveryPackagesData)
+                
+                // Store the models in the class's properties
+                self?.ongoingTrips = ongoingTripsData
+                self?.deliveryPackages = deliveryPackagesData
+                
+                // Call completion if needed
                 completion()
+
             case .failure(let error):
                 printDebug(error.localizedDescription)
                 SKToast.show(withMessage: error.localizedDescription)
