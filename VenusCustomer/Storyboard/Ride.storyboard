@@ -5628,10 +5628,10 @@ Please begin trip within 5 minutes.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-k9-zcO">
-                                                <rect key="frame" x="162.5" y="11" width="50.5" height="22"/>
+                                                <rect key="frame" x="157.5" y="11.5" width="60" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-ze-QYu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
                                                         <fontDescription key="fontDescription" name="FONTSPRINGDEMO-ProximaNovaCondSemiboldRegular" family="FONTSPRING DEMO - Proxima Nova Cond Semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -7397,7 +7397,7 @@ Please begin trip within 5 minutes.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-nB-DvQ">
-                                                <rect key="frame" x="15" y="320" width="123" height="56"/>
+                                                <rect key="frame" x="15" y="320" width="111.5" height="56"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -7825,7 +7825,7 @@ Soon</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-kj-srX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="938"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="933.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fz-ZO-fwR">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
@@ -7860,13 +7860,13 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-8M-zBI">
-                                                <rect key="frame" x="15" y="470" width="112.5" height="28"/>
+                                                <rect key="frame" x="15" y="470" width="101.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-8h-wdZ">
-                                                <rect key="frame" x="20" y="508" width="335" height="90"/>
+                                                <rect key="frame" x="20" y="503.5" width="335" height="90"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aSh-Mg-3it">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -8061,7 +8061,7 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-og-Bug">
-                                                <rect key="frame" x="20" y="618" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="613.5" width="335" height="140"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-ev-bxL">
                                                         <rect key="frame" x="205" y="0.0" width="100" height="140"/>
@@ -8070,10 +8070,10 @@ Soon</string>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-XH-ZYX">
-                                                        <rect key="frame" x="15" y="21.5" width="163" height="97.5"/>
+                                                        <rect key="frame" x="15" y="25.5" width="154.5" height="89"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvN-n7-PWR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="42"/>
                                                                 <string key="text">Promotions of You
 20% off on 1st ride</string>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
@@ -8081,7 +8081,7 @@ Soon</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-VQ-5dF">
-                                                                <rect key="frame" x="0.0" y="65.5" width="163" height="32"/>
+                                                                <rect key="frame" x="0.0" y="57" width="154.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Comming Soon">
@@ -8107,7 +8107,7 @@ Soon</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Con-Bn-RNJ">
-                                                <rect key="frame" x="20" y="778" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="773.5" width="335" height="140"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="f5e-Zs-cYK"/>
@@ -8685,7 +8685,7 @@ Soon</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32I-hx-vnf">
                                                                         <rect key="frame" x="0.0" y="27" width="335" height="50"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter No. Items" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT2-OF-0Cz">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT2-OF-0Cz">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -9107,29 +9107,30 @@ Soon</string>
                                 <rect key="frame" x="0.0" y="80.5" width="375" height="586.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcM-W1-S9w">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="586.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1806.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9DH-cR-BvP">
-                                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                                                <rect key="frame" x="0.0" y="20" width="375" height="1620"/>
                                                 <subviews>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGj-SI-xzg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                    <view contentMode="scaleToFill" id="pGj-SI-xzg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="590.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PackageListImage" translatesAutoresizingMaskIntoConstraints="NO" id="dme-lq-dBT">
-                                                                <rect key="frame" x="20" y="10" width="335" height="380"/>
+                                                                <rect key="frame" x="20" y="10" width="335" height="1200"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="dme-lq-dBT" firstAttribute="leading" secondItem="pGj-SI-xzg" secondAttribute="leading" constant="20" id="31F-n4-isR"/>
-                                                            <constraint firstAttribute="bottom" secondItem="dme-lq-dBT" secondAttribute="bottom" constant="10" id="ZQE-b1-qkC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dme-lq-dBT" secondAttribute="trailing" constant="20" id="7d0-pl-ko8"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dme-lq-dBT" secondAttribute="bottom" constant="10" id="Hcq-X9-laW"/>
+                                                            <constraint firstItem="dme-lq-dBT" firstAttribute="leading" secondItem="pGj-SI-xzg" secondAttribute="leading" constant="20" id="NLD-K2-clK"/>
+                                                            <constraint firstItem="dme-lq-dBT" firstAttribute="top" secondItem="pGj-SI-xzg" secondAttribute="top" constant="10" id="NNO-Gu-6q9"/>
                                                             <constraint firstAttribute="height" constant="400" id="b1S-4x-XIg"/>
-                                                            <constraint firstItem="dme-lq-dBT" firstAttribute="top" secondItem="pGj-SI-xzg" secondAttribute="top" constant="10" id="djd-9l-5ZH"/>
-                                                            <constraint firstAttribute="trailing" secondItem="dme-lq-dBT" secondAttribute="trailing" constant="20" id="v7c-tp-x7c"/>
                                                         </constraints>
                                                     </view>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-fw-Hic">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                                        <rect key="frame" x="0.0" y="1220" width="375" height="400"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="eAS-2e-Q7v"/>
@@ -9367,7 +9368,7 @@ Soon</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GnV-Z2-jqY">
-                                                <rect key="frame" x="20" y="450" width="335" height="115"/>
+                                                <rect key="frame" x="20" y="1670" width="335" height="115"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5C-cg-MUJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -9957,7 +9958,7 @@ Soon</string>
         <image name="Group" width="41" height="50"/>
         <image name="NowDel" width="150" height="150"/>
         <image name="NowRide" width="180" height="103"/>
-        <image name="PackageListImage" width="240" height="256"/>
+        <image name="PackageListImage" width="1125" height="1200"/>
         <image name="RentalRide" width="150" height="150"/>
         <image name="anz" width="24" height="24"/>
         <image name="arrowDown2" width="512" height="512"/>
