@@ -3654,9 +3654,9 @@ Patrick</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdx-yK-VSv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a card" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUf-aw-nh7">
-                                        <rect key="frame" x="128" y="10" width="119" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a card" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xR-GJ-umn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                         <color key="textColor" name="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3676,29 +3676,31 @@ Patrick</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0Nw-pf-iO5"/>
-                                    <constraint firstItem="XUf-aw-nh7" firstAttribute="centerX" secondItem="sdx-yK-VSv" secondAttribute="centerX" id="1oa-ZW-yyy"/>
-                                    <constraint firstItem="XUf-aw-nh7" firstAttribute="centerY" secondItem="sdx-yK-VSv" secondAttribute="centerY" id="IB8-2U-3jQ"/>
+                                    <constraint firstItem="1xR-GJ-umn" firstAttribute="top" secondItem="sdx-yK-VSv" secondAttribute="top" id="4Xj-WH-Urb"/>
+                                    <constraint firstAttribute="trailing" secondItem="1xR-GJ-umn" secondAttribute="trailing" id="6By-j4-bnk"/>
+                                    <constraint firstAttribute="bottom" secondItem="1xR-GJ-umn" secondAttribute="bottom" id="J66-1z-n1t"/>
                                     <constraint firstItem="aqJ-QW-hQy" firstAttribute="leading" secondItem="sdx-yK-VSv" secondAttribute="leading" constant="15" id="Qji-br-co0"/>
+                                    <constraint firstItem="1xR-GJ-umn" firstAttribute="leading" secondItem="sdx-yK-VSv" secondAttribute="leading" id="YfG-Cx-PG9"/>
                                     <constraint firstItem="aqJ-QW-hQy" firstAttribute="centerY" secondItem="sdx-yK-VSv" secondAttribute="centerY" id="h2I-Wn-UAk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-th-trZ">
-                                <rect key="frame" x="0.0" y="234" width="375" height="433"/>
+                                <rect key="frame" x="0.0" y="244" width="375" height="423"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-G8-QnL" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="193.5" width="325" height="46"/>
+                                        <rect key="frame" x="25" y="184" width="325" height="55"/>
                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="266-Bg-Ty2"/>
+                                            <constraint firstAttribute="height" constant="55" id="266-Bg-Ty2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Add new card">
                                             <color key="titleColor" name="textColorWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="23"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -3714,19 +3716,19 @@ Patrick</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="41g-ra-Y67">
-                                <rect key="frame" x="20" y="84" width="335" height="150"/>
+                                <rect key="frame" x="40" y="94" width="295" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXY-qg-AQA">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Cards" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-Wh-Pag">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="IKj-ZE-MNS"/>
+                                            <constraint firstAttribute="height" constant="60" id="tnj-1V-Cae"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <color key="textColor" name="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UDW-Vo-XXa">
-                                        <rect key="frame" x="0.0" y="60" width="335" height="90"/>
+                                        <rect key="frame" x="0.0" y="60" width="295" height="90"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="tCV-MG-GSP"/>
@@ -3743,20 +3745,23 @@ Patrick</string>
                                         <color key="value" systemColor="systemGray3Color"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="4" height="4"/>
+                                        <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No cards found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgP-Um-GxP">
-                                <rect key="frame" x="123.5" y="168" width="128" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No cards found" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-6q-dku">
+                                <rect key="frame" x="0.0" y="171.5" width="375" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -3766,20 +3771,22 @@ Patrick</string>
                             <constraint firstItem="sdx-yK-VSv" firstAttribute="leading" secondItem="HoU-1a-NW5" secondAttribute="leading" id="0GB-q2-KaG"/>
                             <constraint firstItem="43Q-th-trZ" firstAttribute="bottom" secondItem="RIS-aK-K96" secondAttribute="bottom" id="0jj-oj-DDE"/>
                             <constraint firstItem="sdx-yK-VSv" firstAttribute="top" secondItem="RIS-aK-K96" secondAttribute="top" id="93Q-pC-Dlb"/>
-                            <constraint firstItem="41g-ra-Y67" firstAttribute="top" secondItem="sdx-yK-VSv" secondAttribute="bottom" constant="20" id="Gt2-Mr-duY"/>
+                            <constraint firstItem="OIB-6q-dku" firstAttribute="centerY" secondItem="UDW-Vo-XXa" secondAttribute="centerY" multiplier="0.85" id="GE2-Yn-eOo"/>
+                            <constraint firstItem="41g-ra-Y67" firstAttribute="top" secondItem="sdx-yK-VSv" secondAttribute="bottom" constant="30" id="Gt2-Mr-duY"/>
                             <constraint firstItem="43Q-th-trZ" firstAttribute="trailing" secondItem="RIS-aK-K96" secondAttribute="trailing" id="J6A-Wk-D6a"/>
+                            <constraint firstItem="OIB-6q-dku" firstAttribute="leading" secondItem="RIS-aK-K96" secondAttribute="leading" id="MHp-uU-CL6"/>
                             <constraint firstItem="RIS-aK-K96" firstAttribute="trailing" secondItem="sdx-yK-VSv" secondAttribute="trailing" id="RGY-nG-6Ga"/>
-                            <constraint firstItem="41g-ra-Y67" firstAttribute="trailing" secondItem="RIS-aK-K96" secondAttribute="trailing" constant="-20" id="Wu6-U9-Ni2"/>
-                            <constraint firstItem="FgP-Um-GxP" firstAttribute="centerY" secondItem="UDW-Vo-XXa" secondAttribute="centerY" multiplier="0.9" id="d60-7i-JQQ"/>
-                            <constraint firstItem="FgP-Um-GxP" firstAttribute="centerX" secondItem="UDW-Vo-XXa" secondAttribute="centerX" id="kU4-xf-ihl"/>
+                            <constraint firstItem="41g-ra-Y67" firstAttribute="trailing" secondItem="RIS-aK-K96" secondAttribute="trailing" constant="-40" id="Wu6-U9-Ni2"/>
+                            <constraint firstItem="OIB-6q-dku" firstAttribute="centerX" secondItem="UDW-Vo-XXa" secondAttribute="centerX" id="d5z-x2-YgK"/>
                             <constraint firstItem="43Q-th-trZ" firstAttribute="leading" secondItem="RIS-aK-K96" secondAttribute="leading" id="mJ6-1W-LhT"/>
                             <constraint firstItem="43Q-th-trZ" firstAttribute="top" secondItem="41g-ra-Y67" secondAttribute="bottom" id="nAz-6u-5Ae"/>
-                            <constraint firstItem="41g-ra-Y67" firstAttribute="leading" secondItem="RIS-aK-K96" secondAttribute="leading" constant="20" id="srR-Cf-HfT"/>
+                            <constraint firstAttribute="trailing" secondItem="OIB-6q-dku" secondAttribute="trailing" id="nlW-cU-lbl"/>
+                            <constraint firstItem="41g-ra-Y67" firstAttribute="leading" secondItem="RIS-aK-K96" secondAttribute="leading" constant="40" id="srR-Cf-HfT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnAddNewCard" destination="hPK-G8-QnL" id="WPf-3d-XXQ"/>
-                        <outlet property="lblNoDataFound" destination="FgP-Um-GxP" id="IHB-Qg-nao"/>
+                        <outlet property="lblNoDataFound" destination="OIB-6q-dku" id="JXO-LV-sQf"/>
                         <outlet property="tblHeightConstant" destination="tCV-MG-GSP" id="Wey-Sl-jRi"/>
                         <outlet property="tblViewCards" destination="UDW-Vo-XXa" id="C8g-b9-bRy"/>
                         <outlet property="viewStack" destination="41g-ra-Y67" id="o9f-EF-ZC9"/>
@@ -4441,7 +4448,7 @@ Patrick</string>
             <size key="intrinsicContentSize" width="30" height="32"/>
         </designable>
         <designable name="hPK-G8-QnL">
-            <size key="intrinsicContentSize" width="112" height="35"/>
+            <size key="intrinsicContentSize" width="127" height="38"/>
         </designable>
     </designables>
     <resources>
@@ -4492,10 +4499,10 @@ Patrick</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

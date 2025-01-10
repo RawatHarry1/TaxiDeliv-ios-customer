@@ -220,6 +220,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
         self.tripId = "\(tripDetail.trip_id ?? 0)"
         self.driverImage = tripDetail.driver_image ?? ""
         btnETA.text = "\(tripDetail.eta ?? 0) min"
+        print("\(tripDetail.eta ?? 0) min")
         var objc = [String:Any]()
         var param: JSONDictionary {
             objc["engagementId"] = tripDetail.trip_id

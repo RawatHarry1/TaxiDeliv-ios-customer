@@ -26,6 +26,7 @@ class ChooseAppVC: VCBaseVC {
     @IBOutlet weak var giftView: VDView!
     @IBOutlet weak var topCollViewBackgroundView: UIView!
     
+    @IBOutlet weak var lblTitle: UILabel!
     private var accountViewModel: VCAccountViewModel = VCAccountViewModel()
     
     var markerUser : GMSMarker?
@@ -122,7 +123,8 @@ class ChooseAppVC: VCBaseVC {
                 }else{
                     self.imgViewCarICon.image = UIImage(named: "NowDel")
                     self.lblDesc.text = "You have on going delivery"
-                    self.imgViewBg.image = UIImage(named: "bgRed")
+                    self.lblTitle.text = "Ongoing Delivery Ride"
+                    self.imgViewBg.image = UIImage(named: "bgBlue1")
                 }
                 self.viewRide.isHidden = false
                 self.objTrips = trips

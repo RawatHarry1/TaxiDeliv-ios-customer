@@ -33,9 +33,9 @@ class CardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
-        self.viewStack.layer.cornerRadius = 4
+        self.viewStack.layer.cornerRadius = 6
         self.stripSheet()
-        self.viewStack.addShadowView(width : 1.0, height : 1.0,radius: 2.0)
+        self.viewStack.addShadowView(width : 0, height : 0,opacidade : 0.3, radius:2)
         tblViewCards.register(UINib(nibName: "CardsTblCell", bundle: nil), forCellReuseIdentifier: "CardsTblCell")
         getCardApi()
         tblViewCards.rowHeight = 60
@@ -119,6 +119,12 @@ class CardsVC: UIViewController {
         STPAPIClient.shared.publishableKey = UserModel.currentUser.login?.stripeCredentials?.publishable_key ?? ""
     }
     
+    @objc func cardDelete(_ sender : UIButton )
+    {
+        let obj = self.objCardsVM.objGetCardModal?.data?[sender.tag]
+        self.deleteCardAlert(id: obj?.card_id ?? "")
+    }
+    
     func deleteCardAlert(id:String){
         let refreshAlert = UIAlertController(title: "Alert", message: "Are you sure you want to delete the  card?", preferredStyle: UIAlertController.Style.alert)
 
@@ -152,6 +158,10 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
         let obj = self.objCardsVM.objGetCardModal?.data?[indexPath.row]
         cell.lblCardNumber.text = "**** **** **** \(obj?.last_4 ?? "")"
         cell.lblCardType.text = obj?.brand
+        cell.imgDelete.isHidden = false
+        cell.btnDelete.isHidden = false
+        cell.btnDelete.tag = indexPath.row
+        cell.btnDelete.addTarget(self, action: #selector(cardDelete), for: .touchUpInside)
         
         if comesFromAccount == true{
             cell.imgViewRadio.isHidden = true
@@ -185,21 +195,21 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let obj = self.objCardsVM.objGetCardModal?.data?[indexPath.row]
-           // Create a delete action
-           let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
-               // Handle the delete action
-               self.deleteCardAlert(id: obj?.card_id ?? "")
-              
-               handler(true)
-           }
-           
-           // Create a configuration with the delete action
-           let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-           configuration.performsFirstActionWithFullSwipe = true // Optional: Enable full swipe to trigger the action
-           return configuration
-   }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let obj = self.objCardsVM.objGetCardModal?.data?[indexPath.row]
+//           // Create a delete action
+//           let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+//               // Handle the delete action
+//               self.deleteCardAlert(id: obj?.card_id ?? "")
+//              
+//               handler(true)
+//           }
+//           
+//           // Create a configuration with the delete action
+//           let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+//           configuration.performsFirstActionWithFullSwipe = true // Optional: Enable full swipe to trigger the action
+//           return configuration
+//   }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         emptyObj = nil
@@ -208,9 +218,9 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.tblHeightConstant.constant = self.tblViewCards.contentSize.height
+   
+            self.tblHeightConstant.constant = CGFloat(60 * self.tblViewCards.numberOfRows(inSection: 0)) + 10
         }
     }
-}
+
 
