@@ -165,25 +165,11 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         slideView.thumnailImageView.size = CGSize(width: 40, height: 40)
         slideView.thumbnailViewStartingDistance = 15
         slideView.thumbnailViewTopDistance = 5
-    //    animateThumbnailView()
-     animateSlider()
+      //  slideView.resetStateWithAnimation(true)
+
     }
  
-    func animateSlider(){
-      
 
-        UIView.animate(
-              withDuration: 1.0, // Duration for one complete cycle
-              delay: 0,          // Delay before starting
-              options: [.autoreverse, .repeat], // Auto-reverse and repeat the animation
-              animations: {
-                  self.slideView.thumbnailViewStartingDistance = 5 // Animate to 0
-              },
-              completion: nil // Completion handler (optional)
-          )
-
-
-    }
     
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
         sender.resetStateWithAnimation(false)

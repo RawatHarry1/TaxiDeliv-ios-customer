@@ -56,6 +56,7 @@ extension VCPackageDetailVC: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "PackageDetailViewTblCell", for: indexPath) as! PackageDetailViewTblCell
         cell.lblSize.text =  deliveryPackages[indexPath.row].package_size
         cell.lblPackageType.text =  deliveryPackages[indexPath.row].package_type
+        cell.lblQuantity.text =  String(describing: deliveryPackages[indexPath.row].package_quantity ?? 0) 
         cell.deliveryPackages = deliveryPackages[indexPath.row]
         return cell
     }
