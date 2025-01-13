@@ -138,6 +138,27 @@ extension VCTripHistoryViewModel {
         })
     }
     
+    func getTripDetailsFromID(_ tripID: Int) {
+
+        var attributes : JSONDictionary {
+            var att = [String:Any]()
+            att["tripId"] = tripID
+//            att["driverId"] = trip.driver_id
+            return att
+        }
+        WebServices.getRecentRideDetails(parameters: attributes, response: { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                printDebug(data)
+                guard let dataModel = data as? TripHistoryDetails else { return }
+                self?.tripHistoryDetails = dataModel
+            case .failure(let error):
+                printDebug(error.localizedDescription)
+                SKToast.show(withMessage: error.localizedDescription)
+            }
+        })
+    }
+    
     func cancelSchedule(pickip_Id : String,completion:@escaping() -> Void) {
         var attributes : JSONDictionary {
             var att = [String: Any]()

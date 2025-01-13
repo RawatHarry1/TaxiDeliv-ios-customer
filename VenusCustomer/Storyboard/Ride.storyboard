@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1434,7 +1434,7 @@ Soon</string>
                                                 <color key="currentPageIndicatorTintColor" name="buttonSelectedOrange"/>
                                             </pageControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-oM-wPr">
-                                                <rect key="frame" x="20" y="256" width="335" height="19"/>
+                                                <rect key="frame" x="20" y="256" width="335" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                                 <color key="textColor" red="0.13333333333333333" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2073,13 +2073,13 @@ Soon</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting you to a driver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBH-pn-aap">
-                                                <rect key="frame" x="38" y="15.5" width="317" height="17.5"/>
+                                                <rect key="frame" x="38" y="13.5" width="317" height="21"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                 <color key="textColor" red="0.29411764705882354" green="0.32941176470588235" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zZg-KI-eJV">
-                                                <rect key="frame" x="20" y="43" width="335" height="4"/>
+                                                <rect key="frame" x="20" y="44.5" width="335" height="4"/>
                                                 <color key="progressTintColor" name="buttonSelectedOrange"/>
                                             </progressView>
                                         </subviews>
@@ -2194,7 +2194,7 @@ time for booking</string>
                                                                                                 <rect key="frame" x="-16" y="8" width="343" height="45.5"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VmK-sD-tVo">
-                                                                                                        <rect key="frame" x="119" y="0.0" width="105" height="20"/>
+                                                                                                        <rect key="frame" x="114" y="0.0" width="115" height="20"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Njo-0l-Xib">
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -2204,7 +2204,7 @@ time for booking</string>
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPD-Ia-6OR">
-                                                                                                                <rect key="frame" x="36" y="2" width="69" height="16.5"/>
+                                                                                                                <rect key="frame" x="36" y="0.0" width="79" height="20"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                                                                 <color key="textColor" red="0.3411764705882353" green="0.61176470588235299" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -2212,17 +2212,17 @@ time for booking</string>
                                                                                                         </subviews>
                                                                                                     </stackView>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-fG-f0e">
-                                                                                                        <rect key="frame" x="111" y="24.5" width="121.5" height="21"/>
+                                                                                                        <rect key="frame" x="113" y="20" width="117.5" height="25.5"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-jK-p00">
-                                                                                                                <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
+                                                                                                                <rect key="frame" x="0.0" y="3" width="20" height="20"/>
                                                                                                                 <constraints>
                                                                                                                     <constraint firstAttribute="width" constant="20" id="qIG-lU-ZqI"/>
                                                                                                                     <constraint firstAttribute="height" constant="20" id="rW1-zi-mU0"/>
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, 15 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxt-vi-TLn">
-                                                                                                                <rect key="frame" x="36" y="0.0" width="85.5" height="21"/>
+                                                                                                                <rect key="frame" x="36" y="0.0" width="81.5" height="25.5"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                                                 <nil key="textColor"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -2248,7 +2248,7 @@ time for booking</string>
                                                                                                 <rect key="frame" x="-16" y="8" width="343" height="45.5"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7yg-08-H0w">
-                                                                                                        <rect key="frame" x="119.5" y="0.0" width="104" height="20"/>
+                                                                                                        <rect key="frame" x="114.5" y="0.0" width="114" height="20"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JNF-7a-2Jr">
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -2258,7 +2258,7 @@ time for booking</string>
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H45-xX-jZa">
-                                                                                                                <rect key="frame" x="36" y="2" width="68" height="16.5"/>
+                                                                                                                <rect key="frame" x="36" y="0.0" width="78" height="20"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                                                                 <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -2266,17 +2266,17 @@ time for booking</string>
                                                                                                         </subviews>
                                                                                                     </stackView>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-ZT-487">
-                                                                                                        <rect key="frame" x="115" y="24.5" width="113.5" height="21"/>
+                                                                                                        <rect key="frame" x="115.5" y="20" width="112" height="25.5"/>
                                                                                                         <subviews>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wE6-ZZ-eHd">
-                                                                                                                <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
+                                                                                                                <rect key="frame" x="0.0" y="3" width="20" height="20"/>
                                                                                                                 <constraints>
                                                                                                                     <constraint firstAttribute="width" constant="20" id="K30-JX-dkF"/>
                                                                                                                     <constraint firstAttribute="height" constant="20" id="SkV-R6-eI5"/>
                                                                                                                 </constraints>
                                                                                                             </imageView>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ly-FS-9iJ">
-                                                                                                                <rect key="frame" x="36" y="0.0" width="77.5" height="21"/>
+                                                                                                                <rect key="frame" x="36" y="0.0" width="76" height="25.5"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                                                 <nil key="textColor"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -2322,14 +2322,14 @@ time for booking</string>
                                                                 <rect key="frame" x="0.0" y="194" width="335" height="200"/>
                                                                 <subviews>
                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beu-BF-gv7">
-                                                                        <rect key="frame" x="24" y="32" width="4" height="95"/>
+                                                                        <rect key="frame" x="24" y="33.5" width="4" height="92"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="4" id="2Bj-Md-C5L"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33p-Av-7Lk">
-                                                                        <rect key="frame" x="20" y="32" width="10" height="10"/>
+                                                                        <rect key="frame" x="20" y="33.5" width="10" height="10"/>
                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="10" id="MCh-Rj-dh7"/>
@@ -2342,7 +2342,7 @@ time for booking</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrH-Ct-UVG">
-                                                                        <rect key="frame" x="20" y="117" width="10" height="10"/>
+                                                                        <rect key="frame" x="20" y="115.5" width="10" height="10"/>
                                                                         <color key="backgroundColor" red="0.10588235294117647" green="0.10980392156862745" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="10" id="R7y-bg-1n3"/>
@@ -2358,16 +2358,16 @@ time for booking</string>
                                                                         <rect key="frame" x="60" y="30" width="255" height="140"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i4v-9K-KeY">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="255" height="55"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="255" height="58"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUX-Gl-68y">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="14"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="17"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                                         <color key="textColor" red="0.51764705882352935" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pick up" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXc-lo-LBb">
-                                                                                        <rect key="frame" x="0.0" y="19" width="255" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="22" width="255" height="30"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="30" id="AG9-jb-9Qf"/>
@@ -2377,7 +2377,7 @@ time for booking</string>
                                                                                         <textInputTraits key="textInputTraits"/>
                                                                                     </textField>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFB-ik-34V">
-                                                                                        <rect key="frame" x="0.0" y="54" width="255" height="1"/>
+                                                                                        <rect key="frame" x="0.0" y="57" width="255" height="1"/>
                                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="1" id="544-Oi-gYZ"/>
@@ -2389,16 +2389,16 @@ time for booking</string>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-v4-8jy">
-                                                                                <rect key="frame" x="0.0" y="85" width="255" height="55"/>
+                                                                                <rect key="frame" x="0.0" y="82" width="255" height="58"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DROP OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yau-T3-H6j">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="14"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="17"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                                         <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where to?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="df9-Oc-z11">
-                                                                                        <rect key="frame" x="0.0" y="19" width="255" height="30"/>
+                                                                                        <rect key="frame" x="0.0" y="22" width="255" height="30"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="30" id="tad-y5-t6i"/>
@@ -2408,7 +2408,7 @@ time for booking</string>
                                                                                         <textInputTraits key="textInputTraits"/>
                                                                                     </textField>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEY-lQ-F1S">
-                                                                                        <rect key="frame" x="0.0" y="54" width="255" height="1"/>
+                                                                                        <rect key="frame" x="0.0" y="57" width="255" height="1"/>
                                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="1" id="azi-t9-GCm"/>
@@ -2422,7 +2422,7 @@ time for booking</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="his-xg-6DY">
-                                                                        <rect key="frame" x="60" y="49" width="255" height="30"/>
+                                                                        <rect key="frame" x="60" y="52" width="255" height="30"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <connections>
                                                                             <action selector="pickupBtn:" destination="hRs-NM-mDK" eventType="touchUpInside" id="gGC-xe-h9e"/>
@@ -2735,7 +2735,7 @@ time for booking</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Codes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-7P-4at">
-                                <rect key="frame" x="107.5" y="53" width="160.5" height="30.5"/>
+                                <rect key="frame" x="99" y="50" width="177.5" height="36.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2860,19 +2860,19 @@ time for booking</string>
                                         <rect key="frame" x="0.0" y="286" width="375" height="134"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hDx-eR-MWs">
-                                                <rect key="frame" x="20" y="20" width="133" height="46.5"/>
+                                                <rect key="frame" x="20" y="20" width="143" height="51"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rch-Sm-llN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                         <color key="textColor" name="textColorWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="B2l-7Y-Rke">
-                                                        <rect key="frame" x="0.0" y="31.5" width="133" height="15"/>
+                                                        <rect key="frame" x="0.0" y="36" width="143" height="15"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Beg-Sd-RjF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="15"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="15"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingUser" translatesAutoresizingMaskIntoConstraints="NO" id="hDb-Ml-gmb">
                                                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -2882,7 +2882,7 @@ time for booking</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayr-ic-Fhy">
-                                                                        <rect key="frame" x="21" y="0.0" width="39.5" height="15"/>
+                                                                        <rect key="frame" x="21" y="0.0" width="44.5" height="15"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                         <color key="textColor" name="textColorWhite"/>
                                                                         <nil key="highlightedColor"/>
@@ -2890,7 +2890,7 @@ time for booking</string>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="j3I-hm-Nn4">
-                                                                <rect key="frame" x="72.5" y="0.0" width="60.5" height="15"/>
+                                                                <rect key="frame" x="77.5" y="0.0" width="65.5" height="15"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userWhite" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-O3-DGI">
                                                                         <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -2901,7 +2901,7 @@ time for booking</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cx-IM-7ff">
-                                                                        <rect key="frame" x="21" y="0.0" width="39.5" height="15"/>
+                                                                        <rect key="frame" x="21" y="0.0" width="44.5" height="15"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                         <color key="textColor" name="textColorWhite"/>
                                                                         <nil key="highlightedColor"/>
@@ -2939,37 +2939,37 @@ time for booking</string>
                                         <rect key="frame" x="0.0" y="380" width="375" height="400"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-qP-Lm6">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="428.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-XJ-s10">
-                                                        <rect key="frame" x="20" y="10" width="335" height="394"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="398.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YUY-IF-mVN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="333"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="337.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RXW-rb-Dv4">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7jc-da-tki">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X2-Ii-7DZ">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="194" height="21"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="25.5"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                                                         <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CpR-gM-uAq">
-                                                                                        <rect key="frame" x="194" y="0.0" width="141" height="21"/>
+                                                                                        <rect key="frame" x="199" y="0.0" width="136" height="25.5"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 20.43" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-Id-npc">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="21"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="25.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
                                                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 20.43" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-gZ-Qhb">
-                                                                                                <rect key="frame" x="70.5" y="0.0" width="70.5" height="21"/>
+                                                                                                <rect key="frame" x="68" y="0.0" width="68" height="25.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
                                                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -2988,13 +2988,13 @@ time for booking</string>
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="0.0"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUSTOMER NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-2N-386">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="0.0"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="0.0"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                                                         <color key="textColor" red="0.51764705882352935" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28f-L6-p9v">
-                                                                                                        <rect key="frame" x="252.5" y="0.0" width="82.5" height="0.0"/>
+                                                                                                        <rect key="frame" x="242" y="0.0" width="93" height="0.0"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                                                         <color key="textColor" red="0.51764705882352935" green="0.51372549019607838" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3005,13 +3005,13 @@ time for booking</string>
                                                                                                 <rect key="frame" x="0.0" y="5" width="335" height="0.0"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="-" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-RL-lAY">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="6" height="0.0"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="9" height="0.0"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                                                         <color key="textColor" red="0.13333333333333333" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnV-31-FPK">
-                                                                                                        <rect key="frame" x="329" y="0.0" width="6" height="0.0"/>
+                                                                                                        <rect key="frame" x="326" y="0.0" width="9" height="0.0"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                                                         <color key="textColor" red="0.13333333333333333" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3066,7 +3066,7 @@ time for booking</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sxz-yd-bjh">
-                                                                        <rect key="frame" x="0.0" y="21" width="335" height="92"/>
+                                                                        <rect key="frame" x="0.0" y="25.5" width="335" height="92"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-ME-L5n">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="46"/>
@@ -3208,7 +3208,7 @@ time for booking</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vNV-Rg-L0k">
-                                                                        <rect key="frame" x="0.0" y="113" width="335" height="220"/>
+                                                                        <rect key="frame" x="0.0" y="117.5" width="335" height="220"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-0w-hHd">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="220"/>
@@ -3234,7 +3234,7 @@ time for booking</string>
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**** **** **** 1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3p-nN-bIQ">
-                                                                                                        <rect key="frame" x="62" y="20.5" width="209" height="19"/>
+                                                                                                        <rect key="frame" x="62" y="19" width="209" height="22.5"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                                                         <color key="textColor" red="0.13333333333333333" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3276,7 +3276,7 @@ time for booking</string>
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-Ty-wUy">
-                                                                                                        <rect key="frame" x="52" y="20.5" width="233" height="19"/>
+                                                                                                        <rect key="frame" x="52" y="19" width="233" height="22.5"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3345,7 +3345,7 @@ time for booking</string>
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9y-st-xeM">
-                                                                                                        <rect key="frame" x="52" y="20.5" width="233" height="19"/>
+                                                                                                        <rect key="frame" x="52" y="19" width="233" height="22.5"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3380,7 +3380,7 @@ time for booking</string>
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-xW-gTJ">
-                                                                                                        <rect key="frame" x="52" y="20.5" width="90.5" height="19"/>
+                                                                                                        <rect key="frame" x="52" y="19" width="99.5" height="22.5"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -3426,16 +3426,16 @@ time for booking</string>
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3re-mJ-6He">
-                                                                                                        <rect key="frame" x="52" y="11.5" width="88.5" height="37"/>
+                                                                                                        <rect key="frame" x="52" y="8.5" width="99.5" height="43.5"/>
                                                                                                         <subviews>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXE-GY-QES">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="19"/>
+                                                                                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="22.5"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                                 <nil key="highlightedColor"/>
                                                                                                             </label>
                                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select: **** 4444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-Xk-QXO">
-                                                                                                                <rect key="frame" x="0.0" y="23" width="87.5" height="14"/>
+                                                                                                                <rect key="frame" x="0.0" y="26.5" width="99.5" height="17"/>
                                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                                 <nil key="highlightedColor"/>
@@ -3455,7 +3455,7 @@ time for booking</string>
                                                                                                         </connections>
                                                                                                     </button>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr9-JO-5Om">
-                                                                                                        <rect key="frame" x="155.5" y="24" width="60" height="35"/>
+                                                                                                        <rect key="frame" x="166.5" y="26" width="60" height="35"/>
                                                                                                         <constraints>
                                                                                                             <constraint firstAttribute="width" constant="60" id="QXL-0V-jHn"/>
                                                                                                             <constraint firstAttribute="height" constant="35" id="jTF-xU-x0F"/>
@@ -3508,7 +3508,7 @@ time for booking</string>
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWA-8X-cUM" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
-                                                                <rect key="frame" x="20" y="348" width="295" height="46"/>
+                                                                <rect key="frame" x="20" y="352.5" width="295" height="46"/>
                                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="46" id="bgm-xh-K7o"/>
@@ -3540,7 +3540,7 @@ time for booking</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-0a-uwR">
-                                                        <rect key="frame" x="214" y="20" width="70.5" height="1"/>
+                                                        <rect key="frame" x="219" y="22.5" width="68" height="1"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="P6B-V8-OUn"/>
@@ -3788,16 +3788,16 @@ time for booking</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="knM-tW-H8R">
-                                                        <rect key="frame" x="112" y="16" width="115" height="48"/>
+                                                        <rect key="frame" x="112" y="13.5" width="115" height="53"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dh-ug-Zk9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="26"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blT-YB-QUD">
-                                                                <rect key="frame" x="0.0" y="28" width="30.5" height="20"/>
+                                                                <rect key="frame" x="0.0" y="33" width="31.5" height="20"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starGolden" translatesAutoresizingMaskIntoConstraints="NO" id="WDc-eI-Lvj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -3807,7 +3807,7 @@ time for booking</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-G9-eEm">
-                                                                        <rect key="frame" x="20" y="0.0" width="10.5" height="20"/>
+                                                                        <rect key="frame" x="20" y="0.0" width="11.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -3891,13 +3891,13 @@ time for booking</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lfS-Ii-8cM">
-                                                <rect key="frame" x="20" y="100" width="335" height="92"/>
+                                                <rect key="frame" x="20" y="100" width="335" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-cL-MV8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="122" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLW-gr-0u9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="36"/>
                                                                 <color key="backgroundColor" red="0.9025121331" green="0.9034321904" blue="0.99528414009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="36" id="Gsq-Pw-Txr"/>
@@ -3915,13 +3915,13 @@ time for booking</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volkswagen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-5h-Gay">
-                                                                <rect key="frame" x="0.0" y="44" width="96" height="21"/>
+                                                                <rect key="frame" x="0.0" y="44" width="109" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Packages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YG-7i-IJt">
-                                                                <rect key="frame" x="0.0" y="73" width="108.5" height="19"/>
+                                                                <rect key="frame" x="0.0" y="77.5" width="120.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" name="buttonSelectedOrange"/>
                                                                 <nil key="highlightedColor"/>
@@ -3938,10 +3938,10 @@ time for booking</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-gU-sSW">
-                                                <rect key="frame" x="20" y="212" width="335" height="243.5"/>
+                                                <rect key="frame" x="20" y="220" width="335" height="250"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T6g-kZ-eof">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="243.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="250"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-8Z-05N">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="99"/>
@@ -4074,19 +4074,19 @@ Please begin trip within 5 minutes.</string>
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-GU-orT">
-                                                                <rect key="frame" x="0.0" y="204" width="335" height="39.5"/>
+                                                                <rect key="frame" x="0.0" y="204" width="335" height="46"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-tx-aR0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="39.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="46"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfx-0K-nPb">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="58" height="14"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="17"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                                                 <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-h8-hux">
-                                                                                <rect key="frame" x="0.0" y="22" width="48" height="17.5"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="53.5" height="21"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4094,16 +4094,16 @@ Please begin trip within 5 minutes.</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eVV-Cd-Zoi">
-                                                                        <rect key="frame" x="155" y="0.0" width="37" height="39.5"/>
+                                                                        <rect key="frame" x="150.5" y="0.0" width="42" height="46"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puE-Up-eAR">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="27" height="17"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                                                 <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cah-Ni-ZgM">
-                                                                                <rect key="frame" x="0.0" y="22" width="37" height="17.5"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="42" height="21"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4111,16 +4111,16 @@ Please begin trip within 5 minutes.</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KN3-jl-ol8">
-                                                                        <rect key="frame" x="289" y="0.0" width="46" height="39.5"/>
+                                                                        <rect key="frame" x="284" y="0.0" width="51" height="46"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-4R-xxo">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="14"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="33.5" height="17"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                                                                 <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoW-up-DFf">
-                                                                                <rect key="frame" x="0.0" y="22" width="46" height="17.5"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="51" height="21"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4134,10 +4134,10 @@ Please begin trip within 5 minutes.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="soY-zF-nhb">
-                                                <rect key="frame" x="0.0" y="475.5" width="375" height="72.5"/>
+                                                <rect key="frame" x="0.0" y="490" width="375" height="58"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihe-1q-rub">
-                                                        <rect key="frame" x="0.0" y="9.5" width="375" height="54"/>
+                                                        <rect key="frame" x="0.0" y="2" width="375" height="54"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vg-6h-VO5" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="4" width="335" height="46"/>
@@ -4519,10 +4519,10 @@ Please begin trip within 5 minutes.</string>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vh-Bw-D6g">
-                                <rect key="frame" x="20" y="40" width="335" height="101"/>
+                                <rect key="frame" x="20" y="40" width="335" height="104"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nkb-dQ-EGL">
-                                        <rect key="frame" x="20" y="32" width="10" height="10"/>
+                                        <rect key="frame" x="20" y="33.5" width="10" height="10"/>
                                         <color key="backgroundColor" red="0.10588235294117647" green="0.10980392156862745" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="10" id="3nJ-v3-MQ8"/>
@@ -4535,16 +4535,16 @@ Please begin trip within 5 minutes.</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J4y-nY-GSk">
-                                        <rect key="frame" x="40" y="30" width="205" height="55"/>
+                                        <rect key="frame" x="40" y="30" width="205" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-q2-P5Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="205" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                 <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="pick up" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-Xx-vQl">
-                                                <rect key="frame" x="0.0" y="19" width="205" height="30"/>
+                                                <rect key="frame" x="0.0" y="22" width="205" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Ikf-3k-EjV"/>
@@ -4554,7 +4554,7 @@ Please begin trip within 5 minutes.</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-S4-fB3">
-                                                <rect key="frame" x="0.0" y="54" width="205" height="1"/>
+                                                <rect key="frame" x="0.0" y="57" width="205" height="1"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="0Px-Zv-3NT"/>
@@ -4566,13 +4566,13 @@ Please begin trip within 5 minutes.</string>
                                         </subviews>
                                     </stackView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnV-Sq-cgO">
-                                        <rect key="frame" x="40" y="93" width="295" height="0.0"/>
+                                        <rect key="frame" x="40" y="96" width="295" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3m-wf-JG0">
-                                        <rect key="frame" x="255" y="49" width="30" height="30"/>
+                                        <rect key="frame" x="255" y="52" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="0ug-Xh-VTM"/>
                                             <constraint firstAttribute="width" constant="30" id="w47-LW-Cfz"/>
@@ -4583,7 +4583,7 @@ Please begin trip within 5 minutes.</string>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-PG-gzp">
-                                        <rect key="frame" x="260" y="56" width="20" height="15.5"/>
+                                        <rect key="frame" x="260" y="59" width="20" height="15.5"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Kwz-t4-uA6"/>
@@ -4591,7 +4591,7 @@ Please begin trip within 5 minutes.</string>
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wcV-JZ-kWq">
-                                        <rect key="frame" x="0.0" y="93" width="335" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="96" width="335" height="0.0"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="X27-t9-2Bf"/>
@@ -4602,7 +4602,7 @@ Please begin trip within 5 minutes.</string>
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smv-YG-pt8">
-                                        <rect key="frame" x="285" y="44" width="40" height="40"/>
+                                        <rect key="frame" x="285" y="47" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="RWA-YW-IJZ"/>
                                             <constraint firstAttribute="height" constant="40" id="ZNE-gS-5mQ"/>
@@ -4716,10 +4716,10 @@ Please begin trip within 5 minutes.</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zZJ-iA-KGe">
-                                        <rect key="frame" x="128" y="0.0" width="27.5" height="74"/>
+                                        <rect key="frame" x="128" y="0.0" width="29.5" height="74"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK6-hc-sEy">
-                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="74"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="29.5" height="74"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -5265,17 +5265,17 @@ Please begin trip within 5 minutes.</string>
                                                                         <rect key="frame" x="8" y="8" width="319" height="95.5"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-2w-4Gp">
-                                                                                <rect key="frame" x="107" y="0.0" width="105" height="64.5"/>
+                                                                                <rect key="frame" x="102" y="0.0" width="115" height="60"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-H2-P11">
-                                                                                        <rect key="frame" x="0.0" y="22.5" width="20" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="20" width="20" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="20" id="fzV-Cv-uZ5"/>
                                                                                             <constraint firstAttribute="height" constant="20" id="qpn-3u-pXP"/>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0s-Fe-Np2">
-                                                                                        <rect key="frame" x="36" y="24" width="69" height="16.5"/>
+                                                                                        <rect key="frame" x="36" y="20" width="79" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                                         <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -5283,17 +5283,17 @@ Please begin trip within 5 minutes.</string>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Cg5-hh-fgl">
-                                                                                <rect key="frame" x="125" y="74.5" width="69.5" height="21"/>
+                                                                                <rect key="frame" x="118" y="70" width="83" height="25.5"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-AH-KNk">
-                                                                                        <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
+                                                                                        <rect key="frame" x="0.0" y="3" width="20" height="20"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="20" id="gJf-p2-Bwo"/>
                                                                                             <constraint firstAttribute="width" constant="20" id="maW-qX-U69"/>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXd-UB-Y3u">
-                                                                                        <rect key="frame" x="36" y="0.0" width="33.5" height="21"/>
+                                                                                        <rect key="frame" x="36" y="0.0" width="47" height="25.5"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -5342,7 +5342,7 @@ Please begin trip within 5 minutes.</string>
                                                                         <rect key="frame" x="8" y="8" width="319" height="50"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-lH-TSw">
-                                                                                <rect key="frame" x="107.5" y="0.0" width="104" height="20"/>
+                                                                                <rect key="frame" x="102.5" y="0.0" width="114" height="20"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ND-KM-tS8">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -5352,7 +5352,7 @@ Please begin trip within 5 minutes.</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYX-uK-XU8">
-                                                                                        <rect key="frame" x="36" y="0.0" width="68" height="20"/>
+                                                                                        <rect key="frame" x="36" y="0.0" width="78" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                                         <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -5360,7 +5360,7 @@ Please begin trip within 5 minutes.</string>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-jH-Zff">
-                                                                                <rect key="frame" x="125" y="30" width="69.5" height="20"/>
+                                                                                <rect key="frame" x="118" y="30" width="83" height="20"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="new-mb-6g3">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -5370,7 +5370,7 @@ Please begin trip within 5 minutes.</string>
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLo-De-eLq">
-                                                                                        <rect key="frame" x="36" y="0.0" width="33.5" height="20"/>
+                                                                                        <rect key="frame" x="36" y="0.0" width="47" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -6703,7 +6703,7 @@ Please begin trip within 5 minutes.</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-H4-osF">
-                                                                <rect key="frame" x="52" y="20.5" width="90.5" height="19"/>
+                                                                <rect key="frame" x="52" y="19" width="99.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -6761,16 +6761,16 @@ Please begin trip within 5 minutes.</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-GA-N8t">
-                                                                <rect key="frame" x="52" y="11.5" width="88.5" height="37"/>
+                                                                <rect key="frame" x="52" y="8.5" width="99.5" height="43.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-2M-HKh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="19"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="22.5"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select: **** 4444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96w-8B-zXM">
-                                                                        <rect key="frame" x="0.0" y="23" width="87.5" height="14"/>
+                                                                        <rect key="frame" x="0.0" y="26.5" width="99.5" height="17"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -6790,7 +6790,7 @@ Please begin trip within 5 minutes.</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwJ-mo-NrX">
-                                                                <rect key="frame" x="155.5" y="24" width="60" height="35"/>
+                                                                <rect key="frame" x="166.5" y="26" width="60" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="cSP-hM-UeQ"/>
                                                                     <constraint firstAttribute="width" constant="60" id="rqw-ia-ns9"/>
@@ -9915,43 +9915,43 @@ Soon</string>
             <size key="intrinsicContentSize" width="62" height="34"/>
         </designable>
         <designable name="0kz-VL-69V">
-            <size key="intrinsicContentSize" width="50" height="29"/>
+            <size key="intrinsicContentSize" width="58" height="32"/>
         </designable>
         <designable name="41R-fu-Smd">
-            <size key="intrinsicContentSize" width="48" height="30"/>
+            <size key="intrinsicContentSize" width="55" height="33"/>
         </designable>
         <designable name="7ng-QP-FgD">
-            <size key="intrinsicContentSize" width="78" height="30"/>
+            <size key="intrinsicContentSize" width="87" height="33"/>
         </designable>
         <designable name="8Vg-6h-VO5">
-            <size key="intrinsicContentSize" width="82" height="30"/>
+            <size key="intrinsicContentSize" width="91" height="33"/>
         </designable>
         <designable name="E8A-1K-Qnp">
-            <size key="intrinsicContentSize" width="87" height="30"/>
+            <size key="intrinsicContentSize" width="97" height="33"/>
         </designable>
         <designable name="JWA-8X-cUM">
-            <size key="intrinsicContentSize" width="54" height="30"/>
+            <size key="intrinsicContentSize" width="62" height="33"/>
         </designable>
         <designable name="LzI-mi-7B7">
-            <size key="intrinsicContentSize" width="45" height="29"/>
+            <size key="intrinsicContentSize" width="51" height="32"/>
         </designable>
         <designable name="OPY-dJ-vCH">
             <size key="intrinsicContentSize" width="118" height="34"/>
         </designable>
         <designable name="daL-pC-GOq">
-            <size key="intrinsicContentSize" width="45" height="29"/>
+            <size key="intrinsicContentSize" width="51" height="32"/>
         </designable>
         <designable name="jgD-x3-foS">
             <size key="intrinsicContentSize" width="57" height="34"/>
         </designable>
         <designable name="pyH-uw-lbg">
-            <size key="intrinsicContentSize" width="36" height="29"/>
+            <size key="intrinsicContentSize" width="41" height="32"/>
         </designable>
         <designable name="rCG-XX-xKM">
             <size key="intrinsicContentSize" width="62" height="34"/>
         </designable>
         <designable name="zbr-wJ-1Sv">
-            <size key="intrinsicContentSize" width="50" height="29"/>
+            <size key="intrinsicContentSize" width="58" height="32"/>
         </designable>
     </designables>
     <resources>

@@ -49,8 +49,10 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     var selectedTripDetails: TripHistoryDetails?
     var angagementID = ""
     var driverId = ""
+    var tripId = 0
     var delivery_packages: [deliveryPackagesD]?
     var isHideDetail = false
+    var fromFeedback = false
     
     //  To create ViewModel
     static func create() -> VCTripDetailVC {
@@ -75,60 +77,120 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
             viewProductDetail.isHidden = true
         }
         //dashedView.addDashedSmallBorder()
-        guard let trip = selectedTrip else {return}
-        viewModel.getTripDetails(trip)
-        
-        viewModel.callBackForTripHistoryDetails = { trip in
-            self.selectedTripDetails = trip
-           
-            self.pickupAddressLbl.text = trip.pickup_address ?? ""
-            self.dropLocationLbl.text = trip.drop_address ?? ""
-            self.pickUpTimeLbl.text = ConvertTimeFormater(date: trip.pickup_time ?? "")
-            self.dropTimeLbl.text = ConvertTimeFormater(date: trip.drop_time ?? "")
-            self.angagementID = "\(trip.engagement_id ?? 0)"
-            if let currency = UserModel.currentUser.login?.currency_symbol {
-                self.paymentCashLbl.text = currency + " " + (trip.fare ?? 0.0).toString
-                self.subTotalLbl.text = currency + " " + (trip.fare ?? 0.0).toString
-                self.vatLbl.text = currency + " " + (trip.net_customer_tax ?? 0.0).toString
-                self.discountLbl.text = currency + " " + (trip.discount_value ?? 0.0).toString
-                self.totalChargeLbl.text = currency + " " + (trip.trip_total ?? 0.0).toString
-                self.ratingsLbl.text = ((trip.driver_rating ?? -1) == -1) ? "0" : "\(trip.driver_rating ?? -1)"
+        if fromFeedback == false {
+            guard let trip = selectedTrip else {return}
+            viewModel.getTripDetails(trip)
+            
+            viewModel.callBackForTripHistoryDetails = { trip in
+                self.selectedTripDetails = trip
                 
-                self.ratingView.isHidden = (trip.driver_rating ?? -1 ) != -1
-                self.titleLbl.text =  trip.autos_status_text ?? ""
-                self.driverNameLbl.text = trip.driver_name ?? ""
-                self.vehicleNumberLbl.setTitle(trip.driver_car_no ?? "", for: .normal)
-                self.vehicleModelLbl.setTitle(trip.model_name ?? "", for: .normal)
+                self.pickupAddressLbl.text = trip.pickup_address ?? ""
+                self.dropLocationLbl.text = trip.drop_address ?? ""
+                self.pickUpTimeLbl.text = ConvertTimeFormater(date: trip.pickup_time ?? "")
+                self.dropTimeLbl.text = ConvertTimeFormater(date: trip.drop_time ?? "")
+                self.angagementID = "\(trip.engagement_id ?? 0)"
+                if let currency = UserModel.currentUser.login?.currency_symbol {
+                    self.paymentCashLbl.text = currency + " " + (trip.fare ?? 0.0).toString
+                    self.subTotalLbl.text = currency + " " + (trip.fare ?? 0.0).toString
+                    self.vatLbl.text = currency + " " + (trip.net_customer_tax ?? 0.0).toString
+                    self.discountLbl.text = currency + " " + (trip.discount_value ?? 0.0).toString
+                    self.totalChargeLbl.text = currency + " " + (trip.trip_total ?? 0.0).toString
+                    self.ratingsLbl.text = ((trip.driver_rating ?? -1) == -1) ? "0" : "\(trip.driver_rating ?? -1)"
+                    
+                    self.ratingView.isHidden = (trip.driver_rating ?? -1 ) != -1
+                    self.titleLbl.text =  trip.autos_status_text ?? ""
+                    self.driverNameLbl.text = trip.driver_name ?? ""
+                    self.vehicleNumberLbl.setTitle(trip.driver_car_no ?? "", for: .normal)
+                    self.vehicleModelLbl.setTitle(trip.model_name ?? "", for: .normal)
+                    
+                    if let urlStr = trip.driver_image {
+                        self.driverImage.setImage(urlStr, showIndicator: true)
+                    }
+                    if let urlStr = trip.tracking_image {
+                        self.imageMap.setImage(urlStr, showIndicator: true)
+                    }
+                    
+                    self.questionLbl.text = "How was your trip with \(trip.driver_name ?? "")"
+                    if trip.paid_using_stripe ?? 0 > 0{
+                        self.lblPaidByStripe.text = "\(currency) \(trip.paid_using_stripe ?? 0.0)"
+                        self.viewStripe.isHidden = false
+                    }else{
+                        self.viewStripe.isHidden = true
+                    }
+                    if trip.paid_using_wallet ?? 0 > 0{
+                        self.lblPaidByWallet.text = "\(currency) \(trip.paid_using_wallet ?? 0.0)"
+                        self.viewWallet.isHidden = false
+                    }else{
+                        self.viewWallet.isHidden = true
+                    }
+                    
+                    if trip.paid_using_paytm ?? 0 > 0{
+                        self.lblPaybyPaytm.text = "\(currency) \(trip.paid_using_paytm ?? 0.0)"
+                        self.viewPaytm.isHidden = false
+                    }else{
+                        self.viewPaytm.isHidden = true
+                    }
+                    
+                    self.getTripSummaryApi()
+                }
+            }
+        }
+        else
+        {
+            viewModel.getTripDetailsFromID(tripId)
+            
+            viewModel.callBackForTripHistoryDetails = { trip in
+                self.selectedTripDetails = trip
                 
-                if let urlStr = trip.driver_image {
-                    self.driverImage.setImage(urlStr, showIndicator: true)
+                self.pickupAddressLbl.text = trip.pickup_address ?? ""
+                self.dropLocationLbl.text = trip.drop_address ?? ""
+                self.pickUpTimeLbl.text = ConvertTimeFormater(date: trip.pickup_time ?? "")
+                self.dropTimeLbl.text = ConvertTimeFormater(date: trip.drop_time ?? "")
+                self.angagementID = "\(trip.engagement_id ?? 0)"
+                if let currency = UserModel.currentUser.login?.currency_symbol {
+                    self.paymentCashLbl.text = currency + " " + (trip.fare ?? 0.0).toString
+                    self.subTotalLbl.text = currency + " " + (trip.fare ?? 0.0).toString
+                    self.vatLbl.text = currency + " " + (trip.net_customer_tax ?? 0.0).toString
+                    self.discountLbl.text = currency + " " + (trip.discount_value ?? 0.0).toString
+                    self.totalChargeLbl.text = currency + " " + (trip.trip_total ?? 0.0).toString
+                    self.ratingsLbl.text = ((trip.driver_rating ?? -1) == -1) ? "0" : "\(trip.driver_rating ?? -1)"
+                    
+                    self.ratingView.isHidden = (trip.driver_rating ?? -1 ) != -1
+                    self.titleLbl.text =  trip.autos_status_text ?? ""
+                    self.driverNameLbl.text = trip.driver_name ?? ""
+                    self.vehicleNumberLbl.setTitle(trip.driver_car_no ?? "", for: .normal)
+                    self.vehicleModelLbl.setTitle(trip.model_name ?? "", for: .normal)
+                    
+                    if let urlStr = trip.driver_image {
+                        self.driverImage.setImage(urlStr, showIndicator: true)
+                    }
+                    if let urlStr = trip.tracking_image {
+                        self.imageMap.setImage(urlStr, showIndicator: true)
+                    }
+                    
+                    self.questionLbl.text = "How was your trip with \(trip.driver_name ?? "")"
+                    if trip.paid_using_stripe ?? 0 > 0{
+                        self.lblPaidByStripe.text = "\(currency) \(trip.paid_using_stripe ?? 0.0)"
+                        self.viewStripe.isHidden = false
+                    }else{
+                        self.viewStripe.isHidden = true
+                    }
+                    if trip.paid_using_wallet ?? 0 > 0{
+                        self.lblPaidByWallet.text = "\(currency) \(trip.paid_using_wallet ?? 0.0)"
+                        self.viewWallet.isHidden = false
+                    }else{
+                        self.viewWallet.isHidden = true
+                    }
+                    
+                    if trip.paid_using_paytm ?? 0 > 0{
+                        self.lblPaybyPaytm.text = "\(currency) \(trip.paid_using_paytm ?? 0.0)"
+                        self.viewPaytm.isHidden = false
+                    }else{
+                        self.viewPaytm.isHidden = true
+                    }
+                    
+                    self.getTripSummaryApi()
                 }
-                if let urlStr = trip.tracking_image {
-                    self.imageMap.setImage(urlStr, showIndicator: true)
-                }
-                
-                self.questionLbl.text = "How was your trip with \(trip.driver_name ?? "")"
-                if trip.paid_using_stripe ?? 0 > 0{
-                    self.lblPaidByStripe.text = "\(currency) \(trip.paid_using_stripe ?? 0.0)"
-                    self.viewStripe.isHidden = false
-                }else{
-                    self.viewStripe.isHidden = true
-                }
-                if trip.paid_using_wallet ?? 0 > 0{
-                    self.lblPaidByWallet.text = "\(currency) \(trip.paid_using_wallet ?? 0.0)"
-                    self.viewWallet.isHidden = false
-                }else{
-                    self.viewWallet.isHidden = true
-                }
-                
-                if trip.paid_using_paytm ?? 0 > 0{
-                    self.lblPaybyPaytm.text = "\(currency) \(trip.paid_using_paytm ?? 0.0)"
-                    self.viewPaytm.isHidden = false
-                }else{
-                    self.viewPaytm.isHidden = true
-                }
-                
-                self.getTripSummaryApi()
             }
         }
     }
@@ -148,13 +210,31 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     
    
     @IBAction func btnRaiseTicketAction(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
-        vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
-        self.navigationController?.pushViewController(vc, animated: true)
+        if fromFeedback == true{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
+            vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+
+        }
+        else
+        {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
+            vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }
     }
     
     @IBAction func btnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        if fromFeedback == true{
+//            self.navigationController?.dismiss(animated: true)
+//        }
+//        else
+//        {
+            self.navigationController?.popViewController(animated: true)
+ //       }
+      
     }
 
     @IBAction func btnSupport(_ sender: Any) {

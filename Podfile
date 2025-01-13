@@ -16,5 +16,5 @@ target 'VenusCustomer' do
   pod 'StripePaymentSheet'
   pod 'Stripe'
   pod 'SwiftyGif'
-
+  pod 'SDWebImage'
 end
