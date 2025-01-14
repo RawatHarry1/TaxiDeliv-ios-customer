@@ -49,14 +49,14 @@ class VCFeedbackVC: VCBaseVC {
     private func callBacks() {
         viewModel.successCallBack = { status in
             if self.viewcontrollerType == 2 {
-                self.dismiss(animated: true) {
+           
                     var vc = VCTripDetailVC.create()
                     vc.tripId = self.selectedTrip?.engagement_id ?? 0
                     vc.fromFeedback = true
                     vc.driverId = "\(self.driver_id)"
                     vc.modalPresentationStyle = .fullScreen
                     self.navigationController?.pushViewController(vc, animated: true)
-                }
+                
              //   VCRouter.goToSaveUserVC()
             }
             else
@@ -90,15 +90,7 @@ class VCFeedbackVC: VCBaseVC {
         if self.viewcontrollerType == 1 {
             self.dismiss(animated: true)
         } else {
-            self.dismiss(animated: false) {
-                if let window = UIApplication.shared.windows.first {
-                         let rootVC = UINavigationController(rootViewController:  VCTabbarVC.create()) // Replace with your actual root VC
-                    rootVC.navigationBar.isHidden = true
-                         window.rootViewController = rootVC
-                     }
-            }
-        
-         
+            VCRouter.goToSaveUserVC()
         }
     }
 

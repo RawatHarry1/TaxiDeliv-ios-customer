@@ -42,7 +42,8 @@ class VCTabbarVC: UITabBarController {
     }
 
     func configureVC() {
-       
+        tabBar.barTintColor = UIColor.white
+
        // self.viewControllers = [setChooseApp(),setHomeVC(),setDeliveryHomeVC(), setTripsVC(), setAccountVC()]
         self.viewControllers = [setChooseAppVC(),setServicesVC(), setTripsVC(),  setNotificationVC() , setAccountVC()]
     }

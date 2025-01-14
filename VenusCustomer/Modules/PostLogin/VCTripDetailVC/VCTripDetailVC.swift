@@ -210,30 +210,30 @@ class VCTripDetailVC: VCBaseVC, CollectionViewCellDelegate {
     
    
     @IBAction func btnRaiseTicketAction(_ sender: Any) {
-        if fromFeedback == true{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
-            vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-
-        }
-        else
-        {
+//        if fromFeedback == true{
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
+//            vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true)
+//
+//        }
+//        else
+//        {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "RaiseTicketVC") as! RaiseTicketVC
             vc.rideId = "\(self.viewModel.objGetTripSummaryModal?.data?.engagement_id ?? 0)"
             self.navigationController?.pushViewController(vc, animated: true)
 
-        }
+    //    }
     }
     
     @IBAction func btnBack(_ sender: Any) {
-//        if fromFeedback == true{
-//            self.navigationController?.dismiss(animated: true)
-//        }
-//        else
-//        {
+        if fromFeedback == true{
+            VCRouter.goToSaveUserVC()
+        }
+        else
+        {
             self.navigationController?.popViewController(animated: true)
- //       }
+      }
       
     }
 

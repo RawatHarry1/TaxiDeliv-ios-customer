@@ -205,28 +205,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             vc.selectedTrip = tripHistory
             vc.modalPresentationStyle = .overFullScreen
             vc.viewcontrollerType = 2
-
-            // Step 1: Create the TabbarVC in the background but don't show it yet.
-            let tabbarVC = VCTabbarVC.create()
-
-            // Step 2: Create a navigation controller with the tabbarVC as root.
-            let navigationController = UINavigationController(rootViewController: tabbarVC)
-            navigationController.interactivePopGestureRecognizer?.delegate = nil
-            navigationController.navigationBar.isHidden = true
-
-            // Step 3: Set the navigation controller as the root view controller of the window.
-            UIApplication.shared.windows.first?.rootViewController = navigationController
-
-            // Step 4: Present VCFeedbackVC immediately on top of the root view controller.
-            if let navigationController = self.navigationController {
-                // Pop to root and present `VCFeedbackVC` immediately without waiting
-                navigationController.popToRootViewController(animated: false)  // Pop to root view controller
-                DispatchQueue.main.async {
-                    // Present VCFeedbackVC modally
-                    navigationController.present(vc, animated: true, completion: nil)
-                }
-            }
-
+            self.navigationController?.pushViewController(vc, animated: true)
         }
 
     }
@@ -355,7 +334,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             vc.selectedTrip = tripHistory
             vc.modalPresentationStyle = .overFullScreen
             vc.viewcontrollerType = 2
-            self.navigationController?.present(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
