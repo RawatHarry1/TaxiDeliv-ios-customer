@@ -138,7 +138,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             if self.viewModel.ongoingTrips.count > 0{
                 let obj = self.viewModel.ongoingTrips[0]
                 if obj.status == 0{
-                    
+                    self.viewPackagesLbl.isHidden = obj.service_type == 1 ? true : false
                     let pickupLocation = CLLocationCoordinate2D(latitude: obj.latitude ?? 0.0, longitude: obj.longitude ?? 0.0)
                     let destinationCoordinates = CLLocationCoordinate2D(latitude: obj.request_drop_latitude ?? 0.0, longitude: obj.request_drop_longitude ?? 0.0)
                     let driverBearing = 0.0//self.calculateBearing(from: pickupLocation, to: destinationCoordinates)
@@ -221,7 +221,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
         self.driverName = tripDetail.driver_name ?? ""
         self.tripId = "\(tripDetail.trip_id ?? 0)"
         self.driverImage = tripDetail.driver_image ?? ""
-        btnETA.text = "\(tripDetail.eta ?? 0) min"
+      //  btnETA.text = "\(tripDetail.eta ?? 0) min"
         print("\(tripDetail.eta ?? 0) min")
         var objc = [String:Any]()
         var param: JSONDictionary {
@@ -580,7 +580,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
 
             pickLocationLbl.text = tripDetails.pickup_address ?? ""
             destinationAddress = tripDetails.drop_address ?? ""
-            btnETA.text = "\(tripDetails.dry_eta ?? "0") min"
+          //  btnETA.text = "\(tripDetails.dry_eta ?? "0") min"
             distanceLbl.text = tripDetails.estimated_distance ?? ""
             timeLbl.text = "\(tripDetails.dry_eta ?? "0")" + " mins"
             priceLbl.text = tripDetails.estimated_driver_fare ?? ""
@@ -868,6 +868,8 @@ extension VCRideStatusVC {
                     if(status){
                         self.polyLinePath = polyline
                         self.drawpolyLineForRide(polyline)
+                        self.btnETA.text = timeValue
+                        
                         //          self.dista.text = distance
                         //  self.showPath1(polyStr: polyline)
                         //          let param: [String:Any] = ["id":self.bookingsData._id ?? "","eta":distanceValue,"distance":time]
@@ -1301,6 +1303,10 @@ extension VCRideStatusVC{
                     let distanceValue = distanceDict["value"]as?Int {
                     var arr = [[String : Any]]()
                     //self.ETA = timeValue
+                    DispatchQueue.main.async {
+                        self.btnETA.text = timeValue
+                    }
+                    
                     if let arrSteps = legfirstDict["steps"] as? [[String : Any]] {
                         arrSteps.forEach({ (dict) in
                             let dict = dict["start_location"] as? [String : Any]

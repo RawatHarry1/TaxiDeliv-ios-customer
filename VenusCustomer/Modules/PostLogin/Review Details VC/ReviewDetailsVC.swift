@@ -165,6 +165,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         slideView.thumnailImageView.size = CGSize(width: 40, height: 40)
         slideView.thumbnailViewStartingDistance = 15
         slideView.thumbnailViewTopDistance = 5
+      
       //  slideView.resetStateWithAnimation(true)
 
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 import AVFoundation
-
+import SDWebImage
 struct PackageDetail: Codable {
     var quantity : String?
     var image: [String]?
@@ -70,14 +70,14 @@ class AddPackageVC: VCBaseVC , UITextFieldDelegate{
             if objPackageDetailsArray?.image?.count ?? 0 != 0{
                 
                 let urlString = objPackageDetailsArray?.image?[0] ?? ""
-
-                loadImage(from: urlString) { image in
-                    if let image = image {
-                        self.imgViewPhoto.image = image
-                    } else {
-                        print("Failed to load image.")
-                    }
-                }
+                self.imgViewPhoto.sd_setImage(with: URL(string:  urlString), placeholderImage: nil, options: [.refreshCached, .highPriority], completed: nil)
+//                loadImage(from: urlString) { image in
+//                    if let image = image {
+//                        self.imgViewPhoto.image = image
+//                    } else {
+//                        print("Failed to load image.")
+//                    }
+//                }
             }
         }
         
