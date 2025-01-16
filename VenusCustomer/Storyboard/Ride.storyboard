@@ -5630,10 +5630,10 @@ Please begin trip within 5 minutes.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-k9-zcO">
-                                                <rect key="frame" x="162.5" y="11" width="50.5" height="22"/>
+                                                <rect key="frame" x="157.5" y="11.5" width="60" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-ze-QYu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
                                                         <fontDescription key="fontDescription" name="FONTSPRINGDEMO-ProximaNovaCondSemiboldRegular" family="FONTSPRING DEMO - Proxima Nova Cond Semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -7399,7 +7399,7 @@ Please begin trip within 5 minutes.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-nB-DvQ">
-                                                <rect key="frame" x="15" y="320" width="123" height="56"/>
+                                                <rect key="frame" x="15" y="320" width="111.5" height="56"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -7827,7 +7827,7 @@ Soon</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-kj-srX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="938"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="933.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fz-ZO-fwR">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
@@ -7862,13 +7862,13 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-8M-zBI">
-                                                <rect key="frame" x="15" y="470" width="112.5" height="28"/>
+                                                <rect key="frame" x="15" y="470" width="101.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-8h-wdZ">
-                                                <rect key="frame" x="20" y="508" width="335" height="90"/>
+                                                <rect key="frame" x="20" y="503.5" width="335" height="90"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aSh-Mg-3it">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -8063,7 +8063,7 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-og-Bug">
-                                                <rect key="frame" x="20" y="618" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="613.5" width="335" height="140"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-ev-bxL">
                                                         <rect key="frame" x="205" y="0.0" width="100" height="140"/>
@@ -8072,10 +8072,10 @@ Soon</string>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-XH-ZYX">
-                                                        <rect key="frame" x="15" y="21.5" width="163" height="97.5"/>
+                                                        <rect key="frame" x="15" y="25.5" width="154.5" height="89"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvN-n7-PWR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="42"/>
                                                                 <string key="text">Promotions of You
 20% off on 1st ride</string>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
@@ -8083,7 +8083,7 @@ Soon</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-VQ-5dF">
-                                                                <rect key="frame" x="0.0" y="65.5" width="163" height="32"/>
+                                                                <rect key="frame" x="0.0" y="57" width="154.5" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Comming Soon">
@@ -8109,7 +8109,7 @@ Soon</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Con-Bn-RNJ">
-                                                <rect key="frame" x="20" y="778" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="773.5" width="335" height="140"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="f5e-Zs-cYK"/>

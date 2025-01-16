@@ -163,7 +163,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         slideView.thumnailImageView.image = #imageLiteral(resourceName: "right-arrow").imageFlippedForRightToLeftLayoutDirection()
         slideView.thumnailImageView.tintColor =  UIColor(named: "buttonSelectedOrange")
         slideView.thumnailImageView.size = CGSize(width: 40, height: 40)
-        slideView.thumbnailViewStartingDistance = 15
+        slideView.thumbnailViewStartingDistance = 10
         slideView.thumbnailViewTopDistance = 5
       
       //  slideView.resetStateWithAnimation(true)
