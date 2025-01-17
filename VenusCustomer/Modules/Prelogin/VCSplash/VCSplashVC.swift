@@ -57,9 +57,10 @@ extension VCSplashVC {
 extension VCSplashVC {
     // TODO: - Configure client
     private func apiClientConfigure() {
+        let bundleID = Bundle.main.bundleIdentifier
         var paramToModifyVehicleDetails: JSONDictionary {
             let param = [
-                "packageName": "com.app.superApp1"//"com.venus.customer",
+                "packageName": bundleID ?? "Com.app.EarthDelivery"//"com.venus.customer",
             ] as [String: Any]
             return param
         }
