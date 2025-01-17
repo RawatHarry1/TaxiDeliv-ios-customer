@@ -336,7 +336,7 @@
 		0C9559EA2A606EC800F35D13 /* VCCancelReasonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCancelReasonVC.swift; sourceTree = "<group>"; };
 		0C9559ED2A606F0A00F35D13 /* VCCancelReasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCancelReasonCell.swift; sourceTree = "<group>"; };
 		0C9559EE2A606F0A00F35D13 /* VCCancelReasonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCCancelReasonCell.xib; sourceTree = "<group>"; };
-		0C9CC1E22A4D5BF8007CD755 /* VenusCustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenusCustomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9CC1E22A4D5BF8007CD755 /* MarsCustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsCustomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9CC1E52A4D5BF8007CD755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9CC1EF2A4D5BF9007CD755 /* VenusCustomer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenusCustomer.xcdatamodel; sourceTree = "<group>"; };
 		0C9CC1FE2A4DCFBF007CD755 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
@@ -899,7 +899,7 @@
 		0C9CC1E32A4D5BF8007CD755 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C9CC1E22A4D5BF8007CD755 /* VenusCustomer.app */,
+				0C9CC1E22A4D5BF8007CD755 /* MarsCustomer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2043,9 +2043,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C9CC1E12A4D5BF8007CD755 /* VenusCustomer */ = {
+		0C9CC1E12A4D5BF8007CD755 /* MarsCustomer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C9CC1F92A4D5BFA007CD755 /* Build configuration list for PBXNativeTarget "VenusCustomer" */;
+			buildConfigurationList = 0C9CC1F92A4D5BFA007CD755 /* Build configuration list for PBXNativeTarget "MarsCustomer" */;
 			buildPhases = (
 				46356E59BEB48A77C917D001 /* [CP] Check Pods Manifest.lock */,
 				0C9CC1DE2A4D5BF8007CD755 /* Sources */,
@@ -2058,7 +2058,7 @@
 			);
 			dependencies = (
 			);
-			name = VenusCustomer;
+			name = MarsCustomer;
 			packageProductDependencies = (
 				20E4819B2AE1A7AE00C317B5 /* NVActivityIndicatorView */,
 				20E4819D2AE1A7AF00C317B5 /* NVActivityIndicatorViewExtended */,
@@ -2067,7 +2067,7 @@
 				20E481A62AE1A85D00C317B5 /* RSKImageCropper */,
 			);
 			productName = VenusCustomer;
-			productReference = 0C9CC1E22A4D5BF8007CD755 /* VenusCustomer.app */;
+			productReference = 0C9CC1E22A4D5BF8007CD755 /* MarsCustomer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2085,7 +2085,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0C9CC1DD2A4D5BF8007CD755 /* Build configuration list for PBXProject "VenusCustomer" */;
+			buildConfigurationList = 0C9CC1DD2A4D5BF8007CD755 /* Build configuration list for PBXProject "MarsCustomer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -2104,7 +2104,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C9CC1E12A4D5BF8007CD755 /* VenusCustomer */,
+				0C9CC1E12A4D5BF8007CD755 /* MarsCustomer */,
 			);
 		};
 /* End PBXProject section */
@@ -2612,7 +2612,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VenusCustomer/Resources/Plist/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Venus Taxi";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mars Delivery";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Venus Taxi wants to access your Camera.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Venus Taxi wants to access your location.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Venus Taxi wants to access your location.";
@@ -2627,7 +2627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.superApp1;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.app.EarthDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -2653,7 +2653,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VenusCustomer/Resources/Plist/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Venus Taxi";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mars Delivery";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Venus Taxi wants to access your Camera.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Venus Taxi wants to access your location.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Venus Taxi wants to access your location.";
@@ -2669,7 +2669,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.superApp1;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.app.EarthDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -2684,7 +2684,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C9CC1DD2A4D5BF8007CD755 /* Build configuration list for PBXProject "VenusCustomer" */ = {
+		0C9CC1DD2A4D5BF8007CD755 /* Build configuration list for PBXProject "MarsCustomer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9CC1F72A4D5BFA007CD755 /* Debug */,
@@ -2693,7 +2693,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C9CC1F92A4D5BFA007CD755 /* Build configuration list for PBXNativeTarget "VenusCustomer" */ = {
+		0C9CC1F92A4D5BFA007CD755 /* Build configuration list for PBXNativeTarget "MarsCustomer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C9CC1FA2A4D5BFA007CD755 /* Debug */,

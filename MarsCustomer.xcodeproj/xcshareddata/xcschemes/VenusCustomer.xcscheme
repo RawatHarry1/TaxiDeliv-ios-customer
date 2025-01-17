@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C9CC1E12A4D5BF8007CD755"
-               BuildableName = "VenusCustomer.app"
-               BlueprintName = "VenusCustomer"
-               ReferencedContainer = "container:VenusCustomer.xcodeproj">
+               BuildableName = "MarsCustomer.app"
+               BlueprintName = "MarsCustomer"
+               ReferencedContainer = "container:MarsCustomer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C9CC1E12A4D5BF8007CD755"
-            BuildableName = "VenusCustomer.app"
-            BlueprintName = "VenusCustomer"
-            ReferencedContainer = "container:VenusCustomer.xcodeproj">
+            BuildableName = "MarsCustomer.app"
+            BlueprintName = "MarsCustomer"
+            ReferencedContainer = "container:MarsCustomer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0C9CC1E12A4D5BF8007CD755"
-            BuildableName = "VenusCustomer.app"
-            BlueprintName = "VenusCustomer"
-            ReferencedContainer = "container:VenusCustomer.xcodeproj">
+            BuildableName = "MarsCustomer.app"
+            BlueprintName = "MarsCustomer"
+            ReferencedContainer = "container:MarsCustomer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

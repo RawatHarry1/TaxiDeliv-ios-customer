@@ -26,7 +26,8 @@ class VCAccountCell: UITableViewCell {
     }
 
     func setUpUI(_ index: Int) {
-        titleImage.image = images[index]
+        titleImage.image = images[index]?.withRenderingMode(.alwaysTemplate)
+        titleImage.tintColor = VCColors.buttonSelectedOrange.color
         titleLabel.text = titles[index]
     }
 }

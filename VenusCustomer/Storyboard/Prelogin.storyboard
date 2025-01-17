@@ -24,7 +24,7 @@
         <!--WelcomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="VCWelcomeVC" id="Y6W-OH-hqX" customClass="VCWelcomeVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCWelcomeVC" id="Y6W-OH-hqX" customClass="VCWelcomeVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,13 +47,13 @@
                                 <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have a account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87B-9L-EgJ" customClass="TTAttributedLabel" customModule="VenusCustomer" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have a account? Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87B-9L-EgJ" customClass="TTAttributedLabel" customModule="MarsCustomer" customModuleProvider="target">
                                 <rect key="frame" x="30" y="718.33333333333337" width="315" height="19.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                 <color key="textColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8X-I3-RDy" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8X-I3-RDy" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                 <rect key="frame" x="30" y="642.33333333333337" width="315" height="46"/>
                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                 <constraints>
@@ -122,7 +122,7 @@
         <!--Check EmailVC-->
         <scene sceneID="YaI-Ho-uBa">
             <objects>
-                <viewController storyboardIdentifier="VCCheckEmailVC" id="XMD-oz-w3r" customClass="VCCheckEmailVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCCheckEmailVC" id="XMD-oz-w3r" customClass="VCCheckEmailVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="egt-VY-07V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,7 @@
                                 <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-HO-WBW" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-HO-WBW" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                 <rect key="frame" x="30" y="712" width="315" height="46"/>
                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                 <constraints>
@@ -192,7 +192,7 @@
         <!--LoginVC-->
         <scene sceneID="LSh-fr-FNo">
             <objects>
-                <viewController storyboardIdentifier="VCLoginVC" id="w5T-Sl-qcu" customClass="VCLoginVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCLoginVC" id="w5T-Sl-qcu" customClass="VCLoginVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MLt-ca-AjP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +324,7 @@
                                                                                         <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="admin@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXE-IQ-DLT" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="admin@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXE-IQ-DLT" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="28" width="336.66666666666669" height="42"/>
                                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
@@ -348,7 +348,7 @@
                                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18u-zr-iXj" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18u-zr-iXj" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="28" width="336.66666666666669" height="42"/>
                                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
@@ -372,7 +372,7 @@
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIa-PB-OkF">
                                                                                         <rect key="frame" x="0.0" y="27.666666666666657" width="336.66666666666669" height="42"/>
                                                                                         <subviews>
-                                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-eA-gI9" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-eA-gI9" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.66666666666669" height="42"/>
                                                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                                 <constraints>
@@ -488,7 +488,7 @@
                                                                             <action selector="btnForgotPassword:" destination="w5T-Sl-qcu" eventType="touchUpInside" id="UAd-FT-Fy6"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-dl-GbF" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-dl-GbF" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="30" y="120.66666666666669" width="336.66666666666669" height="46"/>
                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -628,7 +628,7 @@
                                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="admin@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xr1-HR-9oE" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="admin@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xr1-HR-9oE" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="28" width="336.33333333333331" height="42"/>
                                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
@@ -652,7 +652,7 @@
                                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jK3-jw-R9J" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jK3-jw-R9J" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="28" width="336.33333333333331" height="42"/>
                                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
@@ -676,7 +676,7 @@
                                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-04-3uX" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-04-3uX" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="28" width="336.33333333333331" height="42"/>
                                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                         <constraints>
@@ -700,7 +700,7 @@
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22x-pF-hkx">
                                                                                         <rect key="frame" x="0.0" y="27.666666666666657" width="336.33333333333331" height="42"/>
                                                                                         <subviews>
-                                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woL-Xf-Yys" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woL-Xf-Yys" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.33333333333331" height="42"/>
                                                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                                 <constraints>
@@ -791,7 +791,7 @@
                                                                             <color key="titleColor" name="textColor"/>
                                                                         </state>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-1c-HX0" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-1c-HX0" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="30" y="120.66666666666669" width="336.33333333333331" height="46"/>
                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -949,7 +949,7 @@
         <!--Create ProfileVC-->
         <scene sceneID="xQg-Dh-ZEi">
             <objects>
-                <viewController storyboardIdentifier="VCCreateProfileVC" hidesBottomBarWhenPushed="YES" id="c7b-7Z-hN1" customClass="VCCreateProfileVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCCreateProfileVC" hidesBottomBarWhenPushed="YES" id="c7b-7Z-hN1" customClass="VCCreateProfileVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Cy-UE-N3l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -966,7 +966,7 @@
                                                 <color key="textColor" name="buttonSelectedOrange"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWJ-Ud-n6u" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWJ-Ud-n6u" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="914.66666666666663" width="315" height="46"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
@@ -1043,7 +1043,7 @@
                                                                         <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-tF-OfA" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-tF-OfA" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="27.666666666666629" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1064,7 +1064,7 @@
                                                                         <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoL-OQ-IRM" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoL-OQ-IRM" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="27.666666666666686" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1085,7 +1085,7 @@
                                                                         <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-L1-EgV" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-L1-EgV" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="27.666666666666629" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1109,7 +1109,7 @@
                                                                         <color key="textColor" red="0.36078431372549019" green="0.40000000000000002" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0G-rj-xwu" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0G-rj-xwu" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="27.666666666666742" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1133,7 +1133,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Uh-MNr">
                                                                         <rect key="frame" x="0.0" y="8" width="315" height="42"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-K5-fvr" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-K5-fvr" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
                                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                 <constraints>
@@ -1203,7 +1203,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzE-bq-YA0">
                                                                         <rect key="frame" x="0.0" y="8" width="315" height="42"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvV-Zc-gRZ" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvV-Zc-gRZ" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
                                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                                 <constraints>
@@ -1284,7 +1284,7 @@
                                                                         </attributedString>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter referral code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-rh-SEe" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter referral code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-rh-SEe" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.333333333333258" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1322,7 +1322,7 @@
                                                                         </attributedString>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter street address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-7u-rTC" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter street address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-7u-rTC" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="24.333333333333258" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1343,7 +1343,7 @@
                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-O2-zqs" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-O2-zqs" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="8" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1364,7 +1364,7 @@
                                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Pincode/Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vp5-Ya-bPq" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Pincode/Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vp5-Ya-bPq" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="8" width="315" height="42"/>
                                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
@@ -1483,7 +1483,7 @@
         <!--Sign Up CompleteVC-->
         <scene sceneID="zFS-it-Cz7">
             <objects>
-                <viewController storyboardIdentifier="VCSignUpCompleteVC" id="HsO-XI-Uav" customClass="VCSignUpCompleteVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCSignUpCompleteVC" id="HsO-XI-Uav" customClass="VCSignUpCompleteVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XVI-h0-Lcs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1499,6 +1499,7 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="2sR-1Z-ghG">
                                         <rect key="frame" x="8.9999999999999929" y="77" width="124.33333333333331" height="124.33333333333331"/>
+                                        <color key="tintColor" name="buttonSelectedOrange"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -1518,7 +1519,7 @@
         <!--OtpVC-->
         <scene sceneID="6Sh-P5-4lb">
             <objects>
-                <viewController storyboardIdentifier="VCOtpVC" id="f9u-IP-OtE" customClass="VCOtpVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCOtpVC" id="f9u-IP-OtE" customClass="VCOtpVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9pf-Gg-w4t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1568,7 +1569,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="IFC-Ia-FRT">
                                                 <rect key="frame" x="0.0" y="173.66666666666669" width="285" height="172.33333333333331"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-Qz-fQr" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-Qz-fQr" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="285" height="46"/>
                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                         <constraints>
@@ -1670,7 +1671,7 @@
         <!--Forgot PasswordVC-->
         <scene sceneID="a0O-7U-FOy">
             <objects>
-                <viewController storyboardIdentifier="VCForgotPasswordVC" id="Ibs-iD-Zb4" customClass="VCForgotPasswordVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCForgotPasswordVC" id="Ibs-iD-Zb4" customClass="VCForgotPasswordVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vA-tP-eRM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1705,7 +1706,7 @@
                                                         <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ec5-rM-3zq" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ec5-rM-3zq" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27.999999999999972" width="315" height="42"/>
                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                         <constraints>
@@ -1725,7 +1726,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-gD-MyO" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-gD-MyO" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="287.33333333333331" width="315" height="46"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
@@ -1822,7 +1823,7 @@
         <!--Reset PasswordVC-->
         <scene sceneID="RSS-Af-aH5">
             <objects>
-                <viewController storyboardIdentifier="VCResetPasswordVC" id="RWr-OD-fNr" customClass="VCResetPasswordVC" customModule="VenusCustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCResetPasswordVC" id="RWr-OD-fNr" customClass="VCResetPasswordVC" customModule="MarsCustomer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkp-tw-XM8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1860,7 +1861,7 @@
                                                                 <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bk-Xj-M7z" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bk-Xj-M7z" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="315" height="42"/>
                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                 <constraints>
@@ -1884,7 +1885,7 @@
                                                                 <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utr-2H-rhW" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*  *  *  *  *  *  *  *" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utr-2H-rhW" customClass="VCTextField" customModule="MarsCustomer" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="315" height="42"/>
                                                                 <color key="tintColor" name="buttonSelectedOrange"/>
                                                                 <constraints>
@@ -1898,7 +1899,7 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-0m-6PK" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-0m-6PK" customClass="VDButton" customModule="MarsCustomer" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="337.66666666666669" width="315" height="46"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
@@ -2041,7 +2042,7 @@
             <color red="0.90200001001358032" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.23529411764705882" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85882352941176465" green="0.20784313725490197" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="textColor">
             <color red="0.10199999809265137" green="0.093999996781349182" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -32,7 +32,7 @@ class VCTabbarVC: UITabBarController {
             configureVC()
         }
         
-        tabBar.tintColor = hexStringToUIColor(hex: "#003C6E")
+        tabBar.tintColor = VCColors.buttonSelectedOrange.color
 
        // tabBar.textColor = UIColor.black
     }
