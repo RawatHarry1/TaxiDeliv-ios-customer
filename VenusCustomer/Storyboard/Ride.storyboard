@@ -7399,7 +7399,7 @@ Please begin trip within 5 minutes.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-nB-DvQ">
-                                                <rect key="frame" x="15" y="320" width="111.5" height="56"/>
+                                                <rect key="frame" x="15" y="320" width="123" height="56"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -7777,17 +7777,92 @@ Soon</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pZB-Ko-VQ1">
+                                <rect key="frame" x="0.0" y="920" width="375" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lz4-lA-PGW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBlue1" translatesAutoresizingMaskIntoConstraints="NO" id="fh2-ez-uRQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NowRide" translatesAutoresizingMaskIntoConstraints="NO" id="zy8-mn-T5O">
+                                                <rect key="frame" x="20" y="10" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="BAi-JU-qsc"/>
+                                                    <constraint firstAttribute="height" constant="60" id="CRd-oZ-nH2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iBe-3M-x86">
+                                                <rect key="frame" x="95" y="18" width="165" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ongoing Taxi Ride" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-e4-cPn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have on going ride" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfc-4z-oFO">
+                                                        <rect key="frame" x="0.0" y="27" width="147" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7da-Sn-YMg">
+                                                <rect key="frame" x="280" y="22.5" width="80" height="35"/>
+                                                <color key="backgroundColor" name="buttonSelectedOrange"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="3Fd-5R-eBs"/>
+                                                    <constraint firstAttribute="height" constant="35" id="kF2-mu-6T1"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="View">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnViewAction:" destination="Uja-bt-rMh" eventType="touchUpInside" id="AU2-UG-Ahw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="7da-Sn-YMg" firstAttribute="centerY" secondItem="iBe-3M-x86" secondAttribute="centerY" id="1k8-uV-v1B"/>
+                                            <constraint firstItem="iBe-3M-x86" firstAttribute="centerY" secondItem="zy8-mn-T5O" secondAttribute="centerY" id="F2W-1t-1A2"/>
+                                            <constraint firstAttribute="height" constant="80" id="Fdk-fg-bBD"/>
+                                            <constraint firstItem="fh2-ez-uRQ" firstAttribute="leading" secondItem="lz4-lA-PGW" secondAttribute="leading" id="IHf-Zu-bj2"/>
+                                            <constraint firstItem="iBe-3M-x86" firstAttribute="leading" secondItem="zy8-mn-T5O" secondAttribute="trailing" constant="15" id="Iv1-u2-S6i"/>
+                                            <constraint firstItem="7da-Sn-YMg" firstAttribute="leading" secondItem="iBe-3M-x86" secondAttribute="trailing" constant="20" id="OJd-1W-4sW"/>
+                                            <constraint firstAttribute="trailing" secondItem="7da-Sn-YMg" secondAttribute="trailing" constant="15" id="W92-6N-Cxi"/>
+                                            <constraint firstItem="fh2-ez-uRQ" firstAttribute="top" secondItem="lz4-lA-PGW" secondAttribute="top" id="aaA-Kf-zbl"/>
+                                            <constraint firstItem="zy8-mn-T5O" firstAttribute="leading" secondItem="lz4-lA-PGW" secondAttribute="leading" constant="20" id="d05-k6-2cN"/>
+                                            <constraint firstAttribute="trailing" secondItem="fh2-ez-uRQ" secondAttribute="trailing" id="eGS-oe-0MB"/>
+                                            <constraint firstItem="zy8-mn-T5O" firstAttribute="centerY" secondItem="lz4-lA-PGW" secondAttribute="centerY" id="u0W-aE-gfc"/>
+                                            <constraint firstAttribute="bottom" secondItem="fh2-ez-uRQ" secondAttribute="bottom" id="wY2-jw-cCV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ek-3u-EJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7LJ-Ej-bhZ" firstAttribute="leading" secondItem="5Ek-3u-EJm" secondAttribute="leading" constant="20" id="25z-C4-MuF"/>
                             <constraint firstItem="5Ek-3u-EJm" firstAttribute="trailing" secondItem="7LJ-Ej-bhZ" secondAttribute="trailing" constant="20" id="Dni-cU-SWu"/>
+                            <constraint firstAttribute="trailing" secondItem="pZB-Ko-VQ1" secondAttribute="trailing" id="Mwl-tZ-6DQ"/>
                             <constraint firstItem="7LJ-Ej-bhZ" firstAttribute="top" secondItem="5Ek-3u-EJm" secondAttribute="top" constant="20" id="NHo-Tn-dOU"/>
                             <constraint firstItem="lEr-c3-1B7" firstAttribute="top" secondItem="LNS-vy-Hck" secondAttribute="top" id="RdX-OW-Bjb"/>
                             <constraint firstItem="5Ek-3u-EJm" firstAttribute="bottom" secondItem="lEr-c3-1B7" secondAttribute="bottom" id="UNt-lK-6cM"/>
                             <constraint firstItem="ChR-mV-bdx" firstAttribute="centerX" secondItem="5Ek-3u-EJm" secondAttribute="centerX" id="Uxw-Rp-oP3"/>
                             <constraint firstAttribute="trailing" secondItem="lEr-c3-1B7" secondAttribute="trailing" id="YWv-cK-f83"/>
+                            <constraint firstItem="pZB-Ko-VQ1" firstAttribute="leading" secondItem="5Ek-3u-EJm" secondAttribute="leading" id="gxX-ov-xuf"/>
+                            <constraint firstItem="5Ek-3u-EJm" firstAttribute="bottom" secondItem="pZB-Ko-VQ1" secondAttribute="bottom" id="mG1-xW-0Qe"/>
                             <constraint firstItem="lEr-c3-1B7" firstAttribute="leading" secondItem="LNS-vy-Hck" secondAttribute="leading" id="nva-Ay-IU7"/>
                         </constraints>
                     </view>
@@ -7800,15 +7875,20 @@ Soon</string>
                         <outlet property="heightPromotionCollView" destination="oVH-wt-h4e" id="062-MC-8lX"/>
                         <outlet property="imgOutStation" destination="CDL-RF-Zdg" id="2MF-95-aFB"/>
                         <outlet property="imgRentals" destination="zaS-x0-kfa" id="mgG-Go-UWX"/>
+                        <outlet property="imgViewBg" destination="fh2-ez-uRQ" id="DGU-Bb-Pnc"/>
+                        <outlet property="imgViewCarICon" destination="zy8-mn-T5O" id="cnQ-hU-WLF"/>
                         <outlet property="imgViewRide" destination="rjo-NV-IBA" id="rTA-XH-dit"/>
                         <outlet property="imgViewSchedule" destination="DOj-JH-MBT" id="juk-vr-k1R"/>
                         <outlet property="lblCurrentLoc" destination="A7S-Uu-wZ7" id="vQt-bY-nmk"/>
+                        <outlet property="lblDesc" destination="kfc-4z-oFO" id="BcH-Jn-2WV"/>
                         <outlet property="lblRentals" destination="tut-bT-gi5" id="aFw-v5-nCU"/>
                         <outlet property="lblRide" destination="jQs-nA-BPs" id="UVG-d6-cbf"/>
+                        <outlet property="lblTitle" destination="Z3M-e4-cPn" id="y9G-WJ-9Y3"/>
                         <outlet property="mapBaseView" destination="wg4-kv-OQA" id="x4T-7F-JU7"/>
                         <outlet property="mapView" destination="b41-1N-P7z" id="Uy5-9m-N6y"/>
                         <outlet property="pageControl" destination="Fuf-fT-3oG" id="3gM-iZ-Xoo"/>
                         <outlet property="promotionCollView" destination="d7T-tL-bJd" id="RW8-EY-03w"/>
+                        <outlet property="viewRide" destination="lz4-lA-PGW" id="F36-A0-7Gv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9d-rc-DM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -7827,7 +7907,7 @@ Soon</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-kj-srX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="933.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="938"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fz-ZO-fwR">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
@@ -7862,13 +7942,13 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgr-8M-zBI">
-                                                <rect key="frame" x="15" y="470" width="101.5" height="23.5"/>
+                                                <rect key="frame" x="15" y="470" width="112.5" height="28"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-8h-wdZ">
-                                                <rect key="frame" x="20" y="503.5" width="335" height="90"/>
+                                                <rect key="frame" x="20" y="508" width="335" height="90"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aSh-Mg-3it">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -8063,7 +8143,7 @@ Soon</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-og-Bug">
-                                                <rect key="frame" x="20" y="613.5" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="618" width="335" height="140"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-ev-bxL">
                                                         <rect key="frame" x="205" y="0.0" width="100" height="140"/>
@@ -8072,10 +8152,10 @@ Soon</string>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-XH-ZYX">
-                                                        <rect key="frame" x="15" y="25.5" width="154.5" height="89"/>
+                                                        <rect key="frame" x="15" y="21.5" width="163" height="97.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvN-n7-PWR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="50.5"/>
                                                                 <string key="text">Promotions of You
 20% off on 1st ride</string>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
@@ -8083,7 +8163,7 @@ Soon</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-VQ-5dF">
-                                                                <rect key="frame" x="0.0" y="57" width="154.5" height="32"/>
+                                                                <rect key="frame" x="0.0" y="65.5" width="163" height="32"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Comming Soon">
@@ -8109,7 +8189,7 @@ Soon</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Con-Bn-RNJ">
-                                                <rect key="frame" x="20" y="773.5" width="335" height="140"/>
+                                                <rect key="frame" x="20" y="778" width="335" height="140"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="f5e-Zs-cYK"/>
@@ -10026,7 +10106,7 @@ Soon</string>
         <image name="whiteWatch" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.23529411764705882" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.32941176470588235" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="notification">
             <color red="0.91399997472763062" green="0.94099998474121094" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -10050,22 +10130,22 @@ Soon</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

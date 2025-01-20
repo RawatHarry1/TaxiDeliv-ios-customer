@@ -18,7 +18,12 @@ class VCHomeVC: VCBaseVC {
     @IBOutlet weak var collectionViewBanner: UICollectionView!
     @IBOutlet weak var mapBaseView: UIView!
     @IBOutlet weak var createRideView: UIView!
- 
+    @IBOutlet weak var viewRide: UIView!
+    @IBOutlet weak var imgViewCarICon: UIImageView!
+    @IBOutlet weak var imgViewBg: UIImageView!
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+
     @IBOutlet weak var lblRentals: UILabel!
     @IBOutlet weak var imgRentals: UIImageView!
     @IBOutlet weak var imgOutStation: UIImageView!
@@ -145,6 +150,7 @@ class VCHomeVC: VCBaseVC {
             
         }else if ClientModel.currentClientData.enabled_service! == 2{
             requestRideType = 2
+            objOperator_availablity = ClientModel.currentClientData.operator_availablity?[0]
             imgViewRide.image = UIImage(named: "NowDel")
             imgViewSchedule.image = UIImage(named: "calDel")
             self.lblRide.text = "Now"
@@ -155,6 +161,7 @@ class VCHomeVC: VCBaseVC {
            
         }else{
             requestRideType = 1
+            objOperator_availablity = ClientModel.currentClientData.operator_availablity?[0]
             self.lblRide.text = "Ride"
             imgViewRide.image = UIImage(named: "NowRide")
             imgViewSchedule.image = UIImage(named: "calRide")
@@ -286,7 +293,7 @@ class VCHomeVC: VCBaseVC {
    
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        viewRide.isHidden = true
        // lblNow.text = "Now"
         if isScheduleViewVisible {
             self.tabBarController?.tabBar.isHidden = true
@@ -294,6 +301,7 @@ class VCHomeVC: VCBaseVC {
             self.tabBarController?.tabBar.isHidden = false
         }
         viewModel.fetchOngoingRide(completion: {
+            
             if self.viewModel.ongoingTrips.count > 0{
                 if self.viewModel.ongoingTrips?[0].status == 0{
                     let cancelReasonVC = VCCancelPopUpVC.create()
@@ -316,6 +324,18 @@ class VCHomeVC: VCBaseVC {
                     }
                     self.navigationController?.present(cancelReasonVC, animated: true)
                 }
+                    if self.viewModel.ongoingTrips?[0].service_type == 1{
+                        self.imgViewCarICon.image = UIImage(named: "NowRide")
+                        self.lblDesc.text = "You have on going ride"
+                        self.imgViewBg.image = UIImage(named: "bgBlue1")
+                    }else{
+                        self.imgViewCarICon.image = UIImage(named: "NowDel")
+                        self.lblDesc.text = "You have on going delivery"
+                        self.lblTitle.text = "Ongoing Delivery Ride"
+                        self.imgViewBg.image = UIImage(named: "bgBlue1")
+                    }
+                    self.viewRide.isHidden = false
+                
             }
         })
     }
@@ -353,7 +373,14 @@ class VCHomeVC: VCBaseVC {
             }
         }
     }
-
+    @IBAction func btnViewAction(_ sender: Any) {
+        if self.viewModel.ongoingTrips?[0].status != 0{
+            if self.viewModel.ongoingTrips?.count ?? 0 > 0{
+                VCRouter.goToOngoingRide(self.viewModel.ongoingTrips)
+            }
+        }
+    }
+    
     private func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(updatedRideStatus(_:)), name: NSNotification.Name.updateRideStatus, object: nil)
     }

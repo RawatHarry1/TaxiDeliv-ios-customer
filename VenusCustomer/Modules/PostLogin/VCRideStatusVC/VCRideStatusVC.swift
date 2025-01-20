@@ -88,7 +88,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
         let attributes: [NSAttributedString.Key: Any] = [
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
-
+        self.viewPackagesLbl.isHidden = ClientModel.currentClientData.enabled_service! == 1 ? true : false
         let attributedString = NSAttributedString(string: viewPackagesLbl.text!, attributes: attributes)
         // Enable user interaction on the label
         viewPackagesLbl.isUserInteractionEnabled = true
@@ -138,7 +138,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             if self.viewModel.ongoingTrips.count > 0{
                 let obj = self.viewModel.ongoingTrips[0]
                 if obj.status == 0{
-                    self.viewPackagesLbl.isHidden = obj.service_type == 1 ? true : false
+                    
                     let pickupLocation = CLLocationCoordinate2D(latitude: obj.latitude ?? 0.0, longitude: obj.longitude ?? 0.0)
                     let destinationCoordinates = CLLocationCoordinate2D(latitude: obj.request_drop_latitude ?? 0.0, longitude: obj.request_drop_longitude ?? 0.0)
                     let driverBearing = 0.0//self.calculateBearing(from: pickupLocation, to: destinationCoordinates)
