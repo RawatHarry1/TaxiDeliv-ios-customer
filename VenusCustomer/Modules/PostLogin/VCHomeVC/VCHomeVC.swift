@@ -95,7 +95,7 @@ class VCHomeVC: VCBaseVC {
     
     override func initialSetup() {
         
-   
+      
         bannerPromotion = UserModel.currentUser.login?.home_banners?.filter { $0.banner_type_id == 1 }
         banner = UserModel.currentUser.login?.home_banners?.filter { $0.banner_type_id != 1 }
         heightPromotionCollView.constant = (self.view.frame.width - 30) / 2.56
@@ -144,6 +144,7 @@ class VCHomeVC: VCBaseVC {
             setHomeVC()
             
         }else if ClientModel.currentClientData.enabled_service! == 2{
+            objOperator_availablity = ClientModel.currentClientData.operator_availablity?[0]
             requestRideType = 2
             imgViewRide.image = UIImage(named: "NowDel")
             imgViewSchedule.image = UIImage(named: "calDel")
@@ -154,6 +155,7 @@ class VCHomeVC: VCBaseVC {
             self.tabBarController?.tabBar.items?[2].title = "Deliveries"
            
         }else{
+            objOperator_availablity = ClientModel.currentClientData.operator_availablity?[0]
             requestRideType = 1
             self.lblRide.text = "Ride"
             imgViewRide.image = UIImage(named: "NowRide")
