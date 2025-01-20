@@ -8477,7 +8477,7 @@ Soon</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDl-of-JND">
                                 <rect key="frame" x="20" y="607" width="335" height="50"/>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="buttonSelectedOrange"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QtK-eG-YdL"/>
                                 </constraints>
@@ -9066,7 +9066,7 @@ Soon</string>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-PH-g7K">
                                                         <rect key="frame" x="20" y="991" width="335" height="50"/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Qe1-zt-xw2"/>
                                                         </constraints>
@@ -9182,7 +9182,7 @@ Soon</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XD-hN-7SL">
                                 <rect key="frame" x="139.5" y="40" width="96.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0039215686269999999" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" name="buttonSelectedOrange"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-9k-wON">
@@ -9454,7 +9454,7 @@ Soon</string>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5C-cg-MUJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
-                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="IS4-Em-WDi"/>
                                                         </constraints>
@@ -9557,7 +9557,7 @@ Soon</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsl-hL-DKF">
                                 <rect key="frame" x="139" y="40" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0039215686269999999" green="0.20392156859999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" name="buttonSelectedOrange"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-dE-gmE">
@@ -10106,7 +10106,7 @@ Soon</string>
         <image name="whiteWatch" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.32941176470588235" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="notification">
             <color red="0.91399997472763062" green="0.94099998474121094" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

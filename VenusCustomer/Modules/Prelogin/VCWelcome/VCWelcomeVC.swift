@@ -58,9 +58,9 @@ extension VCWelcomeVC: TTTAttributedLabelDelegate {
         let nsString = fullText as NSString
         let rangeClickableText = nsString.range(of: clickAble)
         attributedString = NSMutableAttributedString(string: fullText)
-        attributedString.addAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor : VCColors.textColorGrey.color], range: NSRange(location: 0, length: fullText.count))
+        attributedString.addAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor : UIColor.black], range: NSRange(location: 0, length: fullText.count))
 
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: VCColors.signupColor.color.cgColor, range: rangeClickableText)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black, range: rangeClickableText)
 //        signUpLabel.addLink(toAddress: [AnyHashable : Any](), with: rangeClickableText)
         signUpLabel.attributedText = attributedString
 //        signUpLabel.delegate = self

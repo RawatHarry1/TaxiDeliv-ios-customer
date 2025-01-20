@@ -32,7 +32,7 @@ class VCTabbarVC: UITabBarController {
             configureVC()
         }
         
-        tabBar.tintColor = hexStringToUIColor(hex: "#003C6E")
+        tabBar.tintColor = VCColors.buttonSelectedOrange.color
 
        // tabBar.textColor = UIColor.black
     }
@@ -79,10 +79,10 @@ class VCTabbarVC: UITabBarController {
         nav.isNavigationBarHidden = true
         let item = UITabBarItem()
         item.imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        item.title = "Ride"
-        item.image = VCImageAsset.rideUnselected.asset?.withRenderingMode(.alwaysOriginal)
-        item.selectedImage = VCImageAsset.rideSelected.asset?.withRenderingMode(.alwaysTemplate)
-        
+        item.title = "Home"
+        item.image = VCImageAsset.backGray.asset?.withRenderingMode(.alwaysOriginal)
+        item.selectedImage = VCImageAsset.homeSelected.asset?.withRenderingMode(.alwaysTemplate)
+
         nav.tabBarItem = item
         return nav
     }
@@ -184,7 +184,7 @@ extension VCTabbarVC{
         let nav = UINavigationController(rootViewController: vc)
         nav.isNavigationBarHidden = true
         let item = UITabBarItem()
-        item.title = "Trips"
+        item.title = "Deliveries"
         item.image = VCImageAsset.trips.asset?.withRenderingMode(.alwaysOriginal)
         item.selectedImage = VCImageAsset.tripsSelected.asset?.withRenderingMode(.alwaysTemplate)
         item.selectedImage?.withTintColor(hexStringToUIColor(hex: "#003C6E"))

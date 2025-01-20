@@ -10,7 +10,10 @@ import CoreLocation
 
 class VCLoginVC: VCBaseVC {
     // MARK: - Outlets
-
+    @IBOutlet weak var topStackView: UIStackView!
+    
+    @IBOutlet weak var welcomeText: UILabel!
+    @IBOutlet weak var welcomeSpaceText: UIView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var subtitleLbl: UILabel!
     @IBOutlet weak var signUpSelectionLbl: UILabel!
@@ -60,6 +63,7 @@ class VCLoginVC: VCBaseVC {
         viewWidth.constant = UIScreen.main.bounds.size.width * 2
         if isLogin {
             signInSelection()
+            
         } else {
             signUpSelection()
         }
@@ -221,7 +225,8 @@ class VCLoginVC: VCBaseVC {
 
     }
 
-    func signInSelection() {
+    func
+    signInSelection() {
         signUpSelectionLbl.backgroundColor = .clear
         signInSelectionLbl.backgroundColor = VCColors.signUpSelection.color
 
@@ -233,6 +238,10 @@ class VCLoginVC: VCBaseVC {
         isLogin = true
         phoneSignupTF.text = ""
         loginScrollView.contentOffset = CGPoint(x: 0, y: 0)
+        topStackView.isHidden = true
+        welcomeText.isHidden = false
+        welcomeSpaceText.isHidden = false
+
     }
 
     func signUpSelection() {
@@ -247,6 +256,10 @@ class VCLoginVC: VCBaseVC {
         isLogin = false
         phonesinginTF.text = ""
         loginScrollView.contentOffset = CGPoint(x: UIScreen.main.bounds.size.width, y: 0)
+        topStackView.isHidden = false
+        welcomeText.isHidden = true
+        welcomeSpaceText.isHidden = true
+
     }
 
     func setUpUnderLineText() {

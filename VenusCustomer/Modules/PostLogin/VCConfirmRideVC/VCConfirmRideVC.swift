@@ -308,7 +308,7 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
     }
     
     func scheduleAlert(){
-        let alert = UIAlertController(title: "Venus Taxi", message: "Your ride has been scheduled successfully!!", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "UJEFF", message: "Your ride has been scheduled successfully!!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in
             self.removeFromParentVC()
             self.dismiss(animated: true)
