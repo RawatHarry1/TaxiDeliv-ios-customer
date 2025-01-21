@@ -27,5 +27,7 @@ class VCNotificationCell: UITableViewCell {
     func updateCell(_ notification: NotificationDetails) {
         lblDescription.text = notification.message ?? ""
         lblDescription.numberOfLines = 0
+        imgMain.image = imgMain.image?.withRenderingMode(.alwaysTemplate)
+        
     }
 }

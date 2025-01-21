@@ -11,7 +11,7 @@ class SIIntroCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var introImg: UIImageView!
 
-    var images = [VCImageAsset.saloneIntro1.asset, VCImageAsset.saloneIntro2.asset, VCImageAsset.saloneIntro3.asset ]
+    var images = [VCImageAsset.saloneIntro1.asset, VCImageAsset.saloneIntro2.asset, VCImageAsset.saloneIntro3.asset]
 
     override func awakeFromNib() {
         super.awakeFromNib()

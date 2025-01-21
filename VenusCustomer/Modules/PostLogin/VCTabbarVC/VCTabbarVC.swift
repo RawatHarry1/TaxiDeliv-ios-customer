@@ -80,7 +80,7 @@ class VCTabbarVC: UITabBarController {
         let item = UITabBarItem()
         item.imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         item.title = "Home"
-        item.image = VCImageAsset.backGray.asset?.withRenderingMode(.alwaysOriginal)
+        item.image = VCImageAsset.home.asset?.withRenderingMode(.alwaysOriginal)
         item.selectedImage = VCImageAsset.homeSelected.asset?.withRenderingMode(.alwaysTemplate)
 
         nav.tabBarItem = item
@@ -185,8 +185,8 @@ extension VCTabbarVC{
         nav.isNavigationBarHidden = true
         let item = UITabBarItem()
         item.title = "Deliveries"
-        item.image = VCImageAsset.trips.asset?.withRenderingMode(.alwaysOriginal)
-        item.selectedImage = VCImageAsset.tripsSelected.asset?.withRenderingMode(.alwaysTemplate)
+        item.image = VCImageAsset.orderUnselected.asset?.withRenderingMode(.alwaysOriginal)
+        item.selectedImage = VCImageAsset.orderSelected.asset?.withRenderingMode(.alwaysTemplate)
         item.selectedImage?.withTintColor(hexStringToUIColor(hex: "#003C6E"))
         nav.tabBarItem = item
         item.imageInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)

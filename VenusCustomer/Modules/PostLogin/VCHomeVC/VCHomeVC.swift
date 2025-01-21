@@ -157,7 +157,7 @@ class VCHomeVC: VCBaseVC {
             self.lblRentals.text = "Truck"
             imgOutStation.image = UIImage(named: "outDel")
             imgRentals.image = UIImage(named: "NowDel")
-            self.tabBarController?.tabBar.items?[2].title = "Deliveries"
+            self.tabBarController?.tabBar.items?[2].title = "Notifications"
            
         }else{
             requestRideType = 1
