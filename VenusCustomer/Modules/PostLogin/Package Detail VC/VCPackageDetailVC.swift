@@ -7,7 +7,8 @@
 
 import UIKit
 
-class VCPackageDetailVC: UIViewController {
+class VCPackageDetailVC: UIViewController, CollectionViewCellDelegate {
+
     var deliveryPackages: [DeliveryPackages] = []
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var heightTblView: NSLayoutConstraint!
@@ -45,7 +46,15 @@ class VCPackageDetailVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func didSelectItem(url: String) {
+        var storyboardMain = UIStoryboard(name: "PostLogin", bundle: nil)
+         
+        let detailVC = storyboardMain.instantiateViewController(withIdentifier: "ImageViewerVC") as! ImageViewerVC
+        detailVC.url = url
+        detailVC.modalPresentationStyle = .overFullScreen
+        self.present(detailVC, animated: true)
+    }
+    
 }
 extension VCPackageDetailVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +65,8 @@ extension VCPackageDetailVC: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "PackageDetailViewTblCell", for: indexPath) as! PackageDetailViewTblCell
         cell.lblSize.text =  deliveryPackages[indexPath.row].package_size
         cell.lblPackageType.text =  deliveryPackages[indexPath.row].package_type
-        cell.lblQuantity.text =  String(describing: deliveryPackages[indexPath.row].package_quantity ?? 0) 
+        cell.delegate = self
+        cell.lblQuantity.text =  String(describing: deliveryPackages[indexPath.row].package_quantity ?? 0)
         cell.deliveryPackages = deliveryPackages[indexPath.row]
         return cell
     }
@@ -68,22 +78,3 @@ extension VCPackageDetailVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension VCPackageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
- 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagesCollectionCell", for: indexPath) as! ImagesCollectionCell
-     
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSizeMake(58, 58)
-    }
-    
-    
-    
-}

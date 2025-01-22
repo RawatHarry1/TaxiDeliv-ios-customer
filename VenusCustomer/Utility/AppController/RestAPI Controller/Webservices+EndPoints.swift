@@ -51,6 +51,8 @@ extension WebServices {
         case uploadPhoto = "/upload_file_customer"
         case generate_ticket = "/generate_ticket"
         case list_support_tickets = "/list_support_tickets"
+        case initialize_mobile_money = "/paystack/initialize_mobile_money"
+        case verify_mobile_money_payment = "/paystack/verify_mobile_money_payment"
         // MARK: - API url path
         var path: String {
             return sharedAppDelegate.appEnvironment.baseURL + rawValue

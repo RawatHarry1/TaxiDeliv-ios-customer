@@ -32,13 +32,14 @@ class VCTripHistoryVC: VCBaseVC {
         tripsTableView.register(UINib(nibName: "VCTripHistoryCell", bundle: nil), forCellReuseIdentifier: "VCTripHistoryCell")
         
         selectedBtn(btn: btnTrip)
-        lblHistory.text = "Trip History"
+        btnTrip.setTitle(ClientModel.currentClientData.enabled_service! == 1 ? "Trip" : "Deliveries", for: .normal)
+        lblHistory.text = ClientModel.currentClientData.enabled_service! == 1 ? "Trip History" : "Delivery History"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         selectedBtn(btn: btnTrip)
         unSelectedBtn(btn: btnSchedule)
-        lblHistory.text = "Trip History"
+        lblHistory.text = ClientModel.currentClientData.enabled_service! == 1 ? "Trip History" : "Delivery History"
         isTrip = true
         viewModel.getRecentTrips()
     }

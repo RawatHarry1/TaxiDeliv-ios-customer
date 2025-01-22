@@ -24,6 +24,7 @@ class PackageDetailViewTblCell: UITableViewCell {
         collectionViewImages.delegate = self
         collectionViewImages.dataSource = self
     }
+    weak var delegate: CollectionViewCellDelegate?
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -58,6 +59,10 @@ extension PackageDetailViewTblCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSizeMake(58, 58)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectItem(url:deliveryPackages?.package_images_by_customer?[indexPath.row] ?? "")
+
     }
     
     

@@ -6,12 +6,15 @@
 //
 
 import UIKit
-
+extension Notification.Name {
+    static let didUpdateData = Notification.Name("didUpdateDataNotification")
+}
 class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     
     
     @IBOutlet weak var lblDeliveryDetails: UILabel!
     
+    @IBOutlet weak var viewMobileMoney: UIView!
     @IBOutlet weak var lblVechecle: UILabel!
     @IBOutlet weak var slideView: MTSlideToOpenView!
     @IBOutlet weak var txtFldPromocode: UITextField!
@@ -49,10 +52,12 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     @IBOutlet weak var lblCardDetails: UILabel!
     @IBOutlet weak var btnApply: UIButton!
     
+    @IBOutlet weak var btnRadioMobileMoney: UIButton!
     var loadedPackageDetails: [PackageDetail]?
     var pickUpLocation : GeometryFromPlaceID?
     var dropLocation : GeometryFromPlaceID?
     var objOperator_availablity : operator_availablityy?
+    var btnMobileMoneySelected = false
     var lat = 0.0
     var long = 0.0
     var isDeliveryHidden = false
@@ -72,13 +77,25 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     var objSelecrCard : GetCardData?
     var onConfirm:((Int , RequestRideData) -> Void)?
     var promoApply = false
-    
+    var referenceId = ""
     private var viewModell = VCRideVehiclesListViewModel()
     private var viewModel = VCRideVehiclesListViewModel()
    
     static func create() -> ReviewDetailsVC {
         let obj = ReviewDetailsVC.instantiate(fromAppStoryboard: .ride)
         return obj
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if self.referenceId != ""
+        {
+            var att: [String:Any] = [
+                "reference": self.referenceId,
+            ]
+            var jsonAtt: JSONDictionary {
+               return att
+            }
+            viewModel.verifyMobileMoneyApi(jsonAtt)
+        }
     }
     
     override func viewDidLoad() {
@@ -111,6 +128,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         viewNotes.addShadowView()
         viewPayByCard.addShadowView()
         viewPayByCash.addShadowView()
+        viewMobileMoney.addShadowView()
         viewPromoCode.addShadowView()
         if let urlStr = selectedRegions?.images?.ride_now_normal_2x {
             self.vehicleImg.setImage(urlStr, showIndicator: true)
@@ -147,8 +165,29 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         } else {
             print("No package details found in UserDefaults.")
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: .didUpdateData, object: nil)
+
     }
-    
+    @objc func handleNotification(notification: Notification) {
+        if self.referenceId != ""
+        {
+            var att: [String:Any] = [
+                "reference": self.referenceId,
+            ]
+            var jsonAtt: JSONDictionary {
+               return att
+            }
+            viewModel.verifyMobileMoneyApi(jsonAtt)
+        }
+        if let userInfo = notification.userInfo {
+            if let message = userInfo["message"] as? String {
+                print("Received message: \(message)")
+            }
+            if let timestamp = userInfo["timestamp"] as? Date {
+                print("Received timestamp: \(timestamp)")
+            }
+        }
+    }
     func slideViewfunc(){
         slideView.sliderViewTopDistance = 0
         slideView.sliderCornerRadius = 30
@@ -170,7 +209,18 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
 
     }
  
+    @IBAction func btnRadioMobileMoneyAct(_ sender: UIButton) {
+        self.objSelecrCard = nil
+        self.lblCardDetails.isHidden = true
+        self.btnChange.isHidden = true
+        self.btnRadio.setImage(UIImage(named: "radio"), for: .normal)
+        self.btnRadioMobileMoney.setImage(UIImage(named: "radioSelected"), for: .normal)
+        self.btnRadioPayByCard.setImage(UIImage(named: "radio"), for: .normal)
+        self.btnMobileMoneySelected = true
 
+    }
+    
+ 
     
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
         sender.resetStateWithAnimation(false)
@@ -223,6 +273,8 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         return nil
     }
     
+    
+    
     func getLocation(){
         self.getDetailedAddressFromLatLon(latitude: self.pickUpLocation?.location?.lat ?? 0.0, longitude: self.pickUpLocation?.location?.lng ?? 0.0) { str in
             if let address = str {
@@ -274,6 +326,25 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
             
             self.scheduleAlert()
         }
+        
+        viewModel.callbackMobileMoneyData = { mobileMoneyModel in
+            if let url = mobileMoneyModel.data?.authorizationUrl
+            {
+                if let url = URL(string: url) {
+                     if UIApplication.shared.canOpenURL(url) {
+                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                     } else {
+                         print("Cannot open URL")
+                     }
+                 }
+            }
+            if let requestIdNo = mobileMoneyModel.data?.reference
+            {
+                self.referenceId = requestIdNo
+            }
+            
+            
+        }
     }
     
     func scheduleAlert(){
@@ -301,7 +372,14 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
 //                    SKToast.show(withMessage: "Please select Goods type.")
 //                }
                 else{
-                    scheduleRequest()
+                    if self.btnMobileMoneySelected == true
+                    {
+                        requestMobileMoney()
+                    }
+                    else{
+                        scheduleRequest()
+                    }
+                    
                 }
             }
         }else{
@@ -318,13 +396,30 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
 //                    SKToast.show(withMessage: "Please select Goods type.")
 //                }
                 else{
-                    requestRide()
+                    if self.btnMobileMoneySelected == true
+                    {
+                        requestMobileMoney()
+                    }
+                    else{
+                        requestRide()
+                    }
                 }
             }
             
         }
     }
     
+    func requestMobileMoney()
+    {
+        var att: [String:Any] = [
+            "amount": "\(selectedRegions?.region_fare?.fare ?? 0.0)",
+            "currency": "\(selectedRegions?.region_fare?.currency ?? "")",
+        ]
+        var jsonAtt: JSONDictionary {
+           return att
+        }
+        viewModel.initializeMobileMoneyApi(jsonAtt)
+    }
     @IBAction func btnApplyPromoCation(_ sender: Any) {
         if promoApply == false{
             if txtFldPromocode.text?.trimmingCharacters(in: .whitespaces) == ""{
@@ -345,7 +440,9 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         self.objSelecrCard = nil
         self.lblCardDetails.isHidden = true
         self.btnChange.isHidden = true
+        self.btnMobileMoneySelected = false
         self.btnRadio.setImage(UIImage(named: "radioSelected"), for: .normal)
+        self.btnRadioMobileMoney.setImage(UIImage(named: "radio"), for: .normal)
         self.btnRadioPayByCard.setImage(UIImage(named: "radio"), for: .normal)
     }
     
@@ -358,10 +455,12 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
             self.lblCardDetails.text = "Selected Card: **** \(selectedCardData.last_4 ?? "")"
             self.lblCardDetails.isHidden = false
             self.btnChange.isHidden = false
-            
+            self.btnMobileMoneySelected = false
             self.objSelecrCard = selectedCardData
             self.btnRadioPayByCard.setImage(UIImage(named: "radioSelected"), for: .normal)
             self.btnRadio.setImage(UIImage(named: "radio"), for: .normal)
+            self.btnRadioMobileMoney.setImage(UIImage(named: "radio"), for: .normal)
+
         }
         self.present(vc, animated: true)
        // self.navigationController?.pushViewController(vc, animated: true)

@@ -75,7 +75,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-oh-kMy">
                                                 <rect key="frame" x="0.0" y="0.0" width="101.66666666666667" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.69914114238410596" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJS-eB-jS8">
@@ -736,7 +736,7 @@
         <image name="topUpArrowBlack" width="25.333333969116211" height="24"/>
         <image name="topUpWhite" width="25.333333969116211" height="24"/>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.0" green="0.23529411764705882" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="otpBorder">
             <color red="0.0" green="0.23499999940395355" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

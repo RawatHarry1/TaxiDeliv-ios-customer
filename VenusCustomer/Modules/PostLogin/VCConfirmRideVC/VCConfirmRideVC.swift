@@ -195,6 +195,7 @@ class VCConfirmRideVC: VCBaseVC, UIGestureRecognizerDelegate,UINavigationControl
             self.btnRadioPayByCard.setImage(UIImage(named: "radioSelected"), for: .normal)
             self.btnRadio.setImage(UIImage(named: "radio"), for: .normal)
         }
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

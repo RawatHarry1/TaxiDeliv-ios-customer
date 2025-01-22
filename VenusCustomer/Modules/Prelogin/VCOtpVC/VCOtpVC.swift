@@ -35,7 +35,7 @@ class VCOtpVC: VCBaseVC {
     var currentLocation : CLLocation?
 
     override func initialSetup() {
-        fullText = "Enter the 4-digit code sent to you at\n \(countryCode)\(phoneNumber)"
+        fullText = "Enter the 4 digit code \nsent to \(countryCode)\(phoneNumber)"
         otpView.addSubview(otpStackView)
         otpStackView.delegate = self
         self.lblTimer.isHidden = true

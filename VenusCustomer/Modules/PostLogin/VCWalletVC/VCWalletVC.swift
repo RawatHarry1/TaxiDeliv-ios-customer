@@ -47,11 +47,26 @@ class VCWalletVC: VCBaseVC {
             vc.comesFromAccount = false
             vc.didPressSelecrCard = { selectedCardData in
                 self.ohjGetCardData = selectedCardData
-                self.addMoneyAlert(cardNo: selectedCardData.last_4 ?? "")
+                let vc = VCThemeAlertVC.create()
+                vc.lblText = "Are you sure you want to use **** \(selectedCardData.last_4 ?? "") card for top up?"
+                vc.modalPresentationStyle = .overFullScreen
+                vc.didPressYesNo = { useCard in
+                    if useCard == true
+                    {
+                        self.objWalletVM.addAmountApi(cardID: self.ohjGetCardData?.card_id ?? "", amount: self.amount,currency:UserModel.currentUser.login?.currency_symbol ?? "") {
+                            self.getWalletApi()
+                        }
+                    }
+                }
+                self.navigationController?.present(vc, animated: true)
+
+//              self.addMoneyAlert(cardNo: selectedCardData.last_4 ?? "")
             }
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true)
         }
-        self.navigationController?.present(vc, animated: true)
+        self.present(vc, animated: true)
+//        self.navigationController?.present(vc, animated: true)
     }
     
     func addMoneyAlert(cardNo:String){

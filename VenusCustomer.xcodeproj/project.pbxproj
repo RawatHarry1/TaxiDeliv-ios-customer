@@ -221,6 +221,8 @@
 		20F551412AE51986000180A7 /* VCRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F551402AE51986000180A7 /* VCRouters.swift */; };
 		ADDBAA657D1C1FAAD71AE765 /* Pods_VenusCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */; };
 		BDAF83FE2D3E37B0001CB7FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAF83FD2D3E37B0001CB7FF /* GoogleService-Info.plist */; };
+		BDBC3D982D40ED9F006AF6E0 /* VCLogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC3D972D40ED9E006AF6E0 /* VCLogoutVC.swift */; };
+		BDBC3D9A2D40EDDA006AF6E0 /* VCThemeAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC3D992D40EDD9006AF6E0 /* VCThemeAlertVC.swift */; };
 		BDCF83BB2D2D27B400A253F2 /* VCPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */; };
 		BDCF83BD2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */; };
 		BDCF83BF2D2D2F8400A253F2 /* ImagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */; };
@@ -506,6 +508,8 @@
 		6CC4E873175BC6CD297503EA /* Pods-VenusCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenusCustomer.debug.xcconfig"; path = "Target Support Files/Pods-VenusCustomer/Pods-VenusCustomer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenusCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAF83FD2D3E37B0001CB7FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDBC3D972D40ED9E006AF6E0 /* VCLogoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLogoutVC.swift; sourceTree = "<group>"; };
+		BDBC3D992D40EDD9006AF6E0 /* VCThemeAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCThemeAlertVC.swift; sourceTree = "<group>"; };
 		BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPackageDetailVC.swift; sourceTree = "<group>"; };
 		BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailViewTblCell.swift; sourceTree = "<group>"; };
 		BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionCell.swift; sourceTree = "<group>"; };
@@ -1322,6 +1326,7 @@
 		0C9CC28B2A4DD1BB007CD755 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				BDBC3D942D40ED20006AF6E0 /* VCThemeAlert */,
 				BDCF83B92D2D277500A253F2 /* Package Detail VC */,
 				CF7BBA792D083B6400790443 /* Ticket List VC */,
 				CF120DA42D08100700505440 /* Raise Ticket VC */,
@@ -1501,6 +1506,7 @@
 		0CD31B672A5BEB2400CACE60 /* VCLogoutVC */ = {
 			isa = PBXGroup;
 			children = (
+				BDBC3D972D40ED9E006AF6E0 /* VCLogoutVC.swift */,
 				0CD31B682A5BEB3300CACE60 /* VCLogoutVC.swift */,
 			);
 			path = VCLogoutVC;
@@ -1821,6 +1827,14 @@
 				20F551402AE51986000180A7 /* VCRouters.swift */,
 			);
 			path = VCRouters;
+			sourceTree = "<group>";
+		};
+		BDBC3D942D40ED20006AF6E0 /* VCThemeAlert */ = {
+			isa = PBXGroup;
+			children = (
+				BDBC3D992D40EDD9006AF6E0 /* VCThemeAlertVC.swift */,
+			);
+			path = VCThemeAlert;
 			sourceTree = "<group>";
 		};
 		BDCF83B92D2D277500A253F2 /* Package Detail VC */ = {
@@ -2328,6 +2342,7 @@
 				2094906A2AFD52BF00A22580 /* VCScheduleViewModel.swift in Sources */,
 				203D139E2AE70EC100227502 /* VCAccountViewModel.swift in Sources */,
 				0CD31B7D2A5CA28400CACE60 /* VCPromoCodesVC.swift in Sources */,
+				BDBC3D982D40ED9F006AF6E0 /* VCLogoutVC.swift in Sources */,
 				CF3C920B2C4637FA00F9D0EF /* ReceiverTblCell.swift in Sources */,
 				0CD31B692A5BEB3300CACE60 /* VCLogoutVC.swift in Sources */,
 				20F5511F2AE42EA9000180A7 /* CountryPicker.swift in Sources */,
@@ -2377,6 +2392,7 @@
 				CFC1B2792C48CDFD00D34B76 /* PromoModal.swift in Sources */,
 				0C65F5C42A616050004AA255 /* VCAddressVC.swift in Sources */,
 				0C6BD8472B582EF4002DC861 /* VCSocketManager.swift in Sources */,
+				BDBC3D9A2D40EDDA006AF6E0 /* VCThemeAlertVC.swift in Sources */,
 				20C9E2012AFAB0FE00901498 /* GooglePlacesModel.swift in Sources */,
 				CF9E70122C9D831C00FD145A /* GoodsVC.swift in Sources */,
 				0C9CC23C2A4DCFBF007CD755 /* IQKeyboardManagerConstants.swift in Sources */,

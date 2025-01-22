@@ -109,6 +109,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        NotificationCenter.default.post(name: .didUpdateData, object: nil)
+
         endBackgroundTask()
     }
     

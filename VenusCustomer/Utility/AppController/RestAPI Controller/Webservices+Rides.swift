@@ -151,7 +151,33 @@ extension WebServices {
         }
     }
     
+    static func initializeMobileMoney(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
+        commonPostAPI(parameters: parameters, endPoint: .initialize_mobile_money, loader: true) { (result) in
+            switch result {
+            case .success(let json):
+                printDebug(json)
+                let data = try! json.rawData()
+                let model = try! JSONDecoder().decode(MobileMoneyModel.self, from: data)
+                response(.success(model))
+            case .failure(let error):
+                response(.failure(error))
+            }
+        }
+    }
     
+    static func verifyMobileMoney(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
+        commonPostAPI(parameters: parameters, endPoint: .verify_mobile_money_payment, loader: true) { (result) in
+            switch result {
+            case .success(let json):
+                printDebug(json)
+                let data = try! json.rawData()
+                let model = try! JSONDecoder().decode(MobileMoneyModel.self, from: data)
+                response(.success(model))
+            case .failure(let error):
+                response(.failure(error))
+            }
+        }
+    }
     // MARK: - To Cancel Trip
     static func cancelTripApi(parameters: JSONDictionary, response: @escaping ((Result<(Any?), Error>) -> Void)) {
         commonDeleteAPIWithAppendinURL(parameters: parameters, endPoint: .cancelTrip, append: "", loader: true) { (result) in

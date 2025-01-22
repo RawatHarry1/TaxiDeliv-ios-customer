@@ -14,6 +14,8 @@ class VCRideVehiclesListViewModel: NSObject{
     var successCallBack : ((Bool) -> ()) = { _ in }
     var callbackRequestRideData : ((RequestRideData) -> ()) = {_ in }
     var callbackScheduleRequestRideData : ((ScheduleRequestRideResponse) -> ()) = {_ in }
+    var callbackMobileMoneyData : ((MobileMoneyModel) -> ()) = {_ in }
+
     var objPromoModal: PromoModal?
     var error: CustomError? {
         didSet { self.showAlertClosure?() }
@@ -33,7 +35,11 @@ class VCRideVehiclesListViewModel: NSObject{
             self.callbackScheduleRequestRideData(scheduleSequestRideData)
         }
     }
-
+    private(set) var mobileMoneyData : MobileMoneyModel! {
+        didSet {
+            self.callbackMobileMoneyData(mobileMoneyData)
+        }
+    }
     override init() {
         super.init()
     }
@@ -70,6 +76,32 @@ extension VCRideVehiclesListViewModel {
         }
     }
     
+    func initializeMobileMoneyApi(_ params: JSONDictionary) {
+        WebServices.initializeMobileMoney(parameters: params) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                printDebug(data)
+                guard let obj = data as? MobileMoneyModel else {return}
+                self?.mobileMoneyData = obj
+            case .failure(let error):
+                printDebug(error.localizedDescription)
+                SKToast.show(withMessage: error.localizedDescription)
+            }
+        }
+    }
+    func verifyMobileMoneyApi(_ params: JSONDictionary) {
+        WebServices.verifyMobileMoney(parameters: params) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                printDebug(data)
+                guard let obj = data as? MobileMoneyModel else {return}
+                self?.mobileMoneyData = obj
+            case .failure(let error):
+                printDebug(error.localizedDescription)
+                SKToast.show(withMessage: error.localizedDescription)
+            }
+        }
+    }
     func promoCodeApi(parms : [String:Any],completion:@escaping() -> Void) {
         var attributes : JSONDictionary {
             let att = parms

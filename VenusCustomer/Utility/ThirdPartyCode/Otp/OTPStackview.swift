@@ -87,7 +87,7 @@ class OTPStackView: UIStackView {
 //        textField.textColor = .white
         textField.layer.cornerRadius = 10
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = VCColors.otpBorder.color.cgColor
+        textField.layer.borderColor = VCColors.buttonSelectedOrange.color.cgColor
         textField.keyboardType = .numberPad
         textField.autocorrectionType = .yes
         textField.textContentType = .oneTimeCode

@@ -289,6 +289,29 @@ extension VCTripDetailVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PackageDetailTblCell", for: indexPath) as! PackageDetailTblCell
         let obj = delivery_packages?[indexPath.row]
+        if (obj?.delivery_status ?? 0) == 5
+       {
+            cell.statusView.isHidden = false
+            cell.pickUpImageView.isHidden = true
+            cell.deliveryImageView.isHidden = true
+            cell.lblStatus.text = "Not Picked"
+       }
+       else if (obj?.delivery_status ?? 0) == 3
+       {
+           cell.statusView.isHidden = false
+           cell.pickUpImageView.isHidden = false
+           cell.deliveryImageView.isHidden = true
+           cell.lblStatus.text = "Not Delivered"
+       }
+       else
+       {
+           cell.statusView.isHidden = true
+           cell.pickUpImageView.isHidden = false
+           cell.deliveryImageView.isHidden = false
+
+           cell.lblStatus.text = "Not Delivered"
+
+       }
         cell.delivery_packages = obj
         cell.lblSize.text = obj?.package_size ?? ""
         cell.lblQuantity.text = "\(obj?.package_quantity ?? 0)"

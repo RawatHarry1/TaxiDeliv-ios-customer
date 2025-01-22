@@ -15,10 +15,14 @@ class PackageDetailTblCell: UITableViewCell {
     @IBOutlet weak var lblQuantity: UILabel!
     @IBOutlet weak var lblPackageType: UILabel!
     @IBOutlet weak var lblSize: UILabel!
+    @IBOutlet weak var pickUpImageView: UIStackView!
+    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var collectionViewCustomer: UICollectionView!
     @IBOutlet weak var collectionViewPickup: UICollectionView!
     @IBOutlet weak var collectionViewDelivery: UICollectionView!
   
+    @IBOutlet weak var deliveryImageView: UIStackView!
     var didPressEdit: (()->Void)?
     var didPressDlt: (()->Void)?
     var delivery_packages: deliveryPackagesD?
@@ -73,16 +77,23 @@ extension PackageDetailTblCell: UICollectionViewDelegate, UICollectionViewDataSo
         if collectionView == collectionViewCustomer{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellCustomer", for: indexPath) as! CollectionViewCellCustomer
             let urlStr = self.delivery_packages?.package_images_by_customer?[indexPath.row] ?? ""
+            cell.imgViewCustomer.contentMode = .scaleAspectFill
+            cell.imgViewCustomer.layer.cornerRadius = 5
             cell.imgViewCustomer.setImage(urlStr)
             return cell
         }else if collectionView == collectionViewPickup{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellPickup", for: indexPath) as! CollectionViewCellPickup
             let urlStr = self.delivery_packages?.package_image_while_pickup?[indexPath.row] ?? ""
+            cell.imgViewPickup.layer.cornerRadius = 5
             cell.imgViewPickup.setImage(urlStr)
+            cell.imgViewPickup.contentMode = .scaleAspectFill
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellDelivery", for: indexPath) as! CollectionViewCellDelivery
+            cell.imgViewDelivery.layer.cornerRadius = 5
             let urlStr = self.delivery_packages?.package_image_while_drop_off?[indexPath.row] ?? ""
+            cell.imgViewDelivery.contentMode = .scaleAspectFill
+
             cell.imgViewDelivery.setImage(urlStr)
             return cell
         }

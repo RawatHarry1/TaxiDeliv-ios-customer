@@ -6,10 +6,31 @@
 //
 
 import Foundation
+
+struct MobileMoneyModel: Codable {
+    let flag: Int?
+    let message: String?
+    let data: DataResponse?
+    
+    struct DataResponse: Codable {
+        let accessCode: String?
+        let authorizationUrl: String?
+        let reference: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case accessCode = "access_code"
+            case authorizationUrl = "authorization_url"
+            case reference
+        }
+    }
+}
+
+
 struct ScheduleRequestRideResponse : Codable {
     let error : String?
     let flag : Int?
 }
+
 struct RequestRideResponse : Codable {
     let message : String?
     let flag : Int?

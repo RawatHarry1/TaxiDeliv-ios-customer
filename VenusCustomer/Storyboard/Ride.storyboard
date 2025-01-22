@@ -5966,7 +5966,7 @@ Please begin trip within 5 minutes.</string>
                                 <rect key="frame" x="0.0" y="70" width="375" height="930"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljS-KO-S8P">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1547.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1622.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euu-n1-AEe">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -6689,21 +6689,21 @@ Please begin trip within 5 minutes.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-HY-cBO">
-                                                <rect key="frame" x="20" y="1204.5" width="335" height="135"/>
+                                                <rect key="frame" x="20" y="1204.5" width="335" height="210"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCc-Rg-NH1">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-Rd-HZ1">
                                                                 <rect key="frame" x="10" y="19" width="22" height="22"/>
-                                                                <color key="tintColor" name="buttonSelectedOrange"/>
+                                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69981374172185429" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="22" id="V9X-Vo-Icb"/>
                                                                     <constraint firstAttribute="height" constant="22" id="diE-88-NfB"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-H4-osF">
-                                                                <rect key="frame" x="52" y="19" width="99.5" height="22.5"/>
+                                                                <rect key="frame" x="52" y="20.5" width="90.5" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -6749,28 +6749,88 @@ Please begin trip within 5 minutes.</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJ9-gH-cF9">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq5-DP-DGk">
                                                         <rect key="frame" x="0.0" y="75" width="335" height="60"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-Mg-PTO">
+                                                                <rect key="frame" x="10" y="19" width="22" height="22"/>
+                                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.69981374169999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="22" id="E9h-F9-Nfs"/>
+                                                                    <constraint firstAttribute="width" constant="22" id="Fcv-j5-w0z"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUt-o2-hyo">
+                                                                <rect key="frame" x="52" y="20.5" width="101.5" height="19"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXT-md-t49">
+                                                                <rect key="frame" x="290" y="10" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="92J-bt-3Di"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="S6G-2L-HP0"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                                <state key="normal" image="radio"/>
+                                                                <connections>
+                                                                    <action selector="btnRadioAction:" destination="HYw-p0-Igg" eventType="touchUpInside" id="kg2-TW-zkg"/>
+                                                                    <action selector="btnRadioMobileMoneyAct:" destination="HYw-p0-Igg" eventType="touchUpInside" id="0FL-7S-agA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <viewLayoutGuide key="safeArea" id="0g9-ef-paG"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="pUt-o2-hyo" firstAttribute="centerY" secondItem="Yq5-DP-DGk" secondAttribute="centerY" id="6X9-qm-9V3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="DXT-md-t49" secondAttribute="trailing" constant="5" id="H2v-wu-PHY"/>
+                                                            <constraint firstItem="bgr-Mg-PTO" firstAttribute="leading" secondItem="Yq5-DP-DGk" secondAttribute="leading" constant="10" id="dVl-gJ-gNA"/>
+                                                            <constraint firstItem="pUt-o2-hyo" firstAttribute="leading" secondItem="bgr-Mg-PTO" secondAttribute="trailing" constant="20" id="gl8-a4-gKi"/>
+                                                            <constraint firstItem="DXT-md-t49" firstAttribute="centerY" secondItem="pUt-o2-hyo" secondAttribute="centerY" id="j8f-NQ-CWw"/>
+                                                            <constraint firstAttribute="height" constant="60" id="qsy-V8-cSn"/>
+                                                            <constraint firstItem="bgr-Mg-PTO" firstAttribute="centerY" secondItem="Yq5-DP-DGk" secondAttribute="centerY" id="tLh-56-xbv"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="0.0" height="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" systemColor="systemGray4Color"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJ9-gH-cF9">
+                                                        <rect key="frame" x="0.0" y="150" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditCard" translatesAutoresizingMaskIntoConstraints="NO" id="395-Kn-Hc5">
                                                                 <rect key="frame" x="10" y="19" width="22" height="22"/>
-                                                                <color key="tintColor" name="buttonSelectedOrange"/>
+                                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.70038286423841056" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="22" id="4dj-pf-Uk1"/>
                                                                     <constraint firstAttribute="height" constant="22" id="Qmv-HO-hgg"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-GA-N8t">
-                                                                <rect key="frame" x="52" y="8.5" width="99.5" height="43.5"/>
+                                                                <rect key="frame" x="52" y="11.5" width="88.5" height="37"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay by Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-2M-HKh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="22.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select: **** 4444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96w-8B-zXM">
-                                                                        <rect key="frame" x="0.0" y="26.5" width="99.5" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="23" width="87.5" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                         <color key="textColor" red="0.1333333333" green="0.16862745100000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -6790,7 +6850,7 @@ Please begin trip within 5 minutes.</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwJ-mo-NrX">
-                                                                <rect key="frame" x="166.5" y="26" width="60" height="35"/>
+                                                                <rect key="frame" x="155.5" y="24" width="60" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="cSP-hM-UeQ"/>
                                                                     <constraint firstAttribute="width" constant="60" id="rqw-ia-ns9"/>
@@ -6838,7 +6898,7 @@ Please begin trip within 5 minutes.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-TC-Qoe">
-                                                <rect key="frame" x="49.5" y="1379.5" width="276.5" height="48"/>
+                                                <rect key="frame" x="49.5" y="1454.5" width="276.5" height="48"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$123.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQR-as-jvp">
                                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="48"/>
@@ -6855,7 +6915,7 @@ Please begin trip within 5 minutes.</string>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y55-SU-tO9">
-                                                <rect key="frame" x="49.5" y="1401" width="128.5" height="5"/>
+                                                <rect key="frame" x="49.5" y="1476" width="128.5" height="5"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="5" id="qNA-kr-aM1"/>
@@ -6865,7 +6925,7 @@ Please begin trip within 5 minutes.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAt-yz-IEA">
-                                                <rect key="frame" x="20" y="1467.5" width="335" height="60"/>
+                                                <rect key="frame" x="20" y="1542.5" width="335" height="60"/>
                                                 <subviews>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9k-rD-hCr">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -7009,6 +7069,7 @@ Please begin trip within 5 minutes.</string>
                         <outlet property="btnDelivery" destination="cma-QL-Wof" id="9ob-oD-2bB"/>
                         <outlet property="btnPackage" destination="r01-EE-Fll" id="kr5-SG-GMY"/>
                         <outlet property="btnRadio" destination="m5M-Kz-Ts6" id="8ZF-ek-d62"/>
+                        <outlet property="btnRadioMobileMoney" destination="DXT-md-t49" id="AHZ-vr-fld"/>
                         <outlet property="btnRadioPayByCard" destination="406-n1-bOx" id="dYh-hM-NCx"/>
                         <outlet property="etaLbl" destination="kTy-EF-p7y" id="b5a-LF-e5v"/>
                         <outlet property="heightConstant" destination="XG4-Gj-BLr" id="j7e-O3-Xns"/>
@@ -7032,6 +7093,7 @@ Please begin trip within 5 minutes.</string>
                         <outlet property="vehicleImg" destination="LrW-aC-Lyd" id="SQN-Xk-WvW"/>
                         <outlet property="viewDelivery" destination="e3X-Fe-79r" id="BQS-kY-OE1"/>
                         <outlet property="viewDeliveryDetail" destination="xev-zL-VoG" id="ogn-O7-8iQ"/>
+                        <outlet property="viewMobileMoney" destination="Yq5-DP-DGk" id="reS-JP-8c4"/>
                         <outlet property="viewNotes" destination="FeO-v6-IlX" id="I7E-Jt-2QZ"/>
                         <outlet property="viewPackageDetail" destination="k4b-aW-DTW" id="BXu-Sr-6HS"/>
                         <outlet property="viewPayByCard" destination="eJ9-gH-cF9" id="WG5-kN-GQl"/>
@@ -8340,7 +8402,7 @@ Soon</string>
                     <size key="customSize" width="364" height="149"/>
                 </collectionViewCell>
             </objects>
-            <point key="canvasLocation" x="1607" y="-124"/>
+            <point key="canvasLocation" x="1605.5999999999999" y="-124.13793103448276"/>
         </scene>
         <!--Track Order Vc-->
         <scene sceneID="zRy-dn-CeV">
@@ -10079,7 +10141,7 @@ Soon</string>
         <image name="locBlue" width="117" height="117"/>
         <image name="locMar" width="36" height="36"/>
         <image name="location" width="24" height="24"/>
-        <image name="locationMarker" width="35" height="56.5"/>
+        <image name="locationMarker" width="60" height="97"/>
         <image name="locationMarket" width="13.5" height="18"/>
         <image name="loud" width="520" height="528"/>
         <image name="mastercard" width="48" height="30"/>
@@ -10106,7 +10168,7 @@ Soon</string>
         <image name="whiteWatch" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="buttonSelectedOrange">
-            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.81176470588235294" green="0.035294117647058823" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="notification">
             <color red="0.91399997472763062" green="0.94099998474121094" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -10130,22 +10192,22 @@ Soon</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

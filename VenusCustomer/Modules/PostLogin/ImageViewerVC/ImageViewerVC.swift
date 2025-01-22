@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageViewerVC: UIViewController {
 
@@ -14,7 +15,7 @@ class ImageViewerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.imgView.setImage(url)
+        self.imgView.sd_setImage(with: URL(string: url) , placeholderImage: nil, options: [.refreshCached, .highPriority], completed: nil)
     }
     
     @IBAction func btnImageAction(_ sender: Any) {

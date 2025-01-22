@@ -79,7 +79,7 @@ class CardsVC: UIViewController {
     }
     
     @IBAction func btnBackAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true)
     }
     
@@ -165,8 +165,13 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
         
         if comesFromAccount == true{
             cell.imgViewRadio.isHidden = true
+            cell.btnDelete.isHidden = false
+            cell.imgDelete.isHidden = false
         }else{
             cell.imgViewRadio.isHidden = false
+            cell.btnDelete.isHidden = true
+            cell.imgDelete.isHidden = true
+
         }
         
         if emptyObj?.id == obj?.id{
@@ -182,7 +187,7 @@ extension CardsVC: UITableViewDelegate,UITableViewDataSource{
                     self.dismiss(animated: true) {
                         self.didPressSelecrCard!(obj!)
                     }
-                    self.navigationController?.popViewController(animated: true)
+//                    self.navigationController?.popViewController(animated: true)
                     
                    
                 }
