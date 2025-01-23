@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class VCRideVehicleCell: UITableViewCell {
 
     @IBOutlet weak var imgViewIcon: UIImageView!
@@ -69,6 +69,8 @@ class VCRideVehicleCell: UITableViewCell {
 
         if let urlStr = region.images?.ride_now_normal_2x {
             self.iconImg.setImage(urlStr, showIndicator: true)
+            iconImg.sd_setImage(with: URL(string: urlStr) , placeholderImage: UIImage(named: "Ujeff Customers"), options: [.refreshCached, .highPriority], completed: nil)
+
         }
         var sum = 0.0
         

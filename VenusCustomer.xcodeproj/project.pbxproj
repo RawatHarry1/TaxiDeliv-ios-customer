@@ -223,6 +223,7 @@
 		BDAF83FE2D3E37B0001CB7FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAF83FD2D3E37B0001CB7FF /* GoogleService-Info.plist */; };
 		BDBC3D982D40ED9F006AF6E0 /* VCLogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC3D972D40ED9E006AF6E0 /* VCLogoutVC.swift */; };
 		BDBC3D9A2D40EDDA006AF6E0 /* VCThemeAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC3D992D40EDD9006AF6E0 /* VCThemeAlertVC.swift */; };
+		BDCA89512D42560A00B4DAE3 /* DashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCA89502D42560A00B4DAE3 /* DashedView.swift */; };
 		BDCF83BB2D2D27B400A253F2 /* VCPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */; };
 		BDCF83BD2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */; };
 		BDCF83BF2D2D2F8400A253F2 /* ImagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */; };
@@ -510,6 +511,7 @@
 		BDAF83FD2D3E37B0001CB7FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDBC3D972D40ED9E006AF6E0 /* VCLogoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLogoutVC.swift; sourceTree = "<group>"; };
 		BDBC3D992D40EDD9006AF6E0 /* VCThemeAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCThemeAlertVC.swift; sourceTree = "<group>"; };
+		BDCA89502D42560A00B4DAE3 /* DashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedView.swift; sourceTree = "<group>"; };
 		BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPackageDetailVC.swift; sourceTree = "<group>"; };
 		BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailViewTblCell.swift; sourceTree = "<group>"; };
 		BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionCell.swift; sourceTree = "<group>"; };
@@ -1916,6 +1918,7 @@
 			isa = PBXGroup;
 			children = (
 				CF56AEFE2CD9EFBE00AEF540 /* PackageListVc.swift */,
+				BDCA89502D42560A00B4DAE3 /* DashedView.swift */,
 			);
 			path = PackageListVC;
 			sourceTree = "<group>";
@@ -2260,6 +2263,7 @@
 				201C9D6F2B02005400C9F99D /* Drivers.swift in Sources */,
 				CFFC45942C60998B008F5121 /* CardsVC.swift in Sources */,
 				0CC958452B82C2C600717A92 /* LogHelper.swift in Sources */,
+				BDCA89512D42560A00B4DAE3 /* DashedView.swift in Sources */,
 				0C583FB52B0575210097813A /* VCTripHistoryViewModel.swift in Sources */,
 				CF7BBA782D08241800790443 /* RaiseTicketVM.swift in Sources */,
 				20E481952AE1A4B700C317B5 /* VCAPIKeys.swift in Sources */,

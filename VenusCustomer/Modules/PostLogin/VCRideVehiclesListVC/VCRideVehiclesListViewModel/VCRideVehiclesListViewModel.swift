@@ -15,6 +15,7 @@ class VCRideVehiclesListViewModel: NSObject{
     var callbackRequestRideData : ((RequestRideData) -> ()) = {_ in }
     var callbackScheduleRequestRideData : ((ScheduleRequestRideResponse) -> ()) = {_ in }
     var callbackMobileMoneyData : ((MobileMoneyModel) -> ()) = {_ in }
+    var callbackVerifyMobileMoneyData : ((VerifyMobileMoneyModel) -> ()) = {_ in }
 
     var objPromoModal: PromoModal?
     var error: CustomError? {
@@ -38,6 +39,11 @@ class VCRideVehiclesListViewModel: NSObject{
     private(set) var mobileMoneyData : MobileMoneyModel! {
         didSet {
             self.callbackMobileMoneyData(mobileMoneyData)
+        }
+    }
+    private(set) var verifyMobileMoneyData : VerifyMobileMoneyModel! {
+        didSet {
+            self.callbackVerifyMobileMoneyData(verifyMobileMoneyData)
         }
     }
     override init() {
@@ -94,8 +100,8 @@ extension VCRideVehiclesListViewModel {
             switch result {
             case .success(let data):
                 printDebug(data)
-                guard let obj = data as? MobileMoneyModel else {return}
-                self?.mobileMoneyData = obj
+                guard let obj = data as? VerifyMobileMoneyModel else {return}
+                self?.verifyMobileMoneyData = obj
             case .failure(let error):
                 printDebug(error.localizedDescription)
                 SKToast.show(withMessage: error.localizedDescription)

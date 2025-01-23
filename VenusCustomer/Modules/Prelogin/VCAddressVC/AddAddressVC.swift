@@ -36,6 +36,11 @@ class AddAddressVC: UIViewController,UITextFieldDelegate {
         vwTxtFldOther.isHidden = true
         lblAddress.text = address
         txtFldNickName.text = nickName
+        selectedButton(vw: vwHome)
+        unSelectedButton(vw: vwWork)
+        unSelectedButton(vw: vwOther)
+        vwTxtFldOther.isHidden = true
+        self.type = "Home"
         objAddressViewModel.successCallBack = {  result in
             self.dismiss(animated: true) {
                 self.delegate?.dismiss()

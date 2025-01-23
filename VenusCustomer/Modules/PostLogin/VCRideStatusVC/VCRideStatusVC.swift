@@ -23,6 +23,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
     @IBOutlet weak var awayShadowView: UIView!
 
     @IBOutlet weak var cancelRideSV: UIStackView!
+    @IBOutlet weak var btnPhone: UIButton!
     
     @IBOutlet weak var descLbl: UILabel!
 
@@ -83,7 +84,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
     }
 
     override func initialSetup() {
-        
+        iconLocation.image = iconLocation.image?.withRenderingMode(.alwaysTemplate)
         // Create an NSAttributedString with an underline
         let attributes: [NSAttributedString.Key: Any] = [
             .underlineStyle: NSUnderlineStyle.single.rawValue
@@ -110,6 +111,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             VCSocketServices.shared.listenForDriverEvents()
             NotificationCenter.default.post(name: .updateLocationListenerOnConnect, object: nil)
         }
+        btnPhone.setImage(UIImage(named: "callIcon")?.withRenderingMode(.alwaysTemplate), for: .normal)
         guard let trips = ongoingTrips else { return }
         updateRideStatus(trips)
         callbacks()
@@ -535,7 +537,7 @@ class VCRideStatusVC: VCBaseVC,navigateToEndRideFromChat {
             // Check if currentMarker exists
             if self.currentMarker.map == nil {
                 self.currentMarker = GMSMarker(position: source)
-                self.currentMarker.icon = VCImageAsset.locationMarker.asset?.withRenderingMode(.alwaysOriginal)
+                self.currentMarker.icon = VCImageAsset.new_location_placeholder.asset?.withRenderingMode(.alwaysOriginal)
                 self.currentMarker.map = self.mapView
             } else {
                 self.currentMarker.position = source

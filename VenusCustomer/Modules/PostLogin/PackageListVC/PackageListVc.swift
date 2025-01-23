@@ -10,14 +10,18 @@ import UIKit
 class PackageListVc: VCBaseVC {
     @IBOutlet weak var viewImg: UIView!
     
+    @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var heightConstant: NSLayoutConstraint!
     @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var packageText: UILabel!
     @IBOutlet weak var btnContinueOutlet: UIButton!
+    @IBOutlet weak var dashedView: RectangularDashedView!
     
     @IBOutlet weak var img: UIImageView!
     var arrLoadedPackageDetails: [PackageDetail] = []
     var pickUpLocation : GeometryFromPlaceID?
     var dropLocation : GeometryFromPlaceID?
+    @IBOutlet weak var dashedBorder: UIView!
     var objOperator_availablity : operator_availablityy?
     var lat = 0.0
     var long = 0.0
@@ -33,9 +37,12 @@ class PackageListVc: VCBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        btnBack.setImage(UIImage(named: "backWhite")?.withRenderingMode(.alwaysTemplate), for: .normal)
         tblView.rowHeight = 200
-        
+        packageText.text = "Start adding your \n package"
+//        dashedBorder.appendDashedBorder()
+        dashedView.cornerRadius = 20
+        dashedView.dashWidth = 3
         refreshData()
         
         
@@ -116,17 +123,17 @@ class PackageListVc: VCBaseVC {
             cancelPopupVC.rideRequestDetails = rideDetails
             cancelPopupVC.modalPresentationStyle = .overFullScreen
             cancelPopupVC.onConfirm = { value in
-                let vc = VCCancelRideVC.create()
-                vc.modalPresentationStyle = .overFullScreen
-                vc.onConfirm = { value in
-                    if value == 1  {
+//                let vc = VCCancelRideVC.create()
+//                vc.modalPresentationStyle = .overFullScreen
+//                vc.onConfirm = { value in
+//                    if value == 1  {
                         let cancelReasonVC = VCCancelReasonVC.create()
                        
                         cancelReasonVC.rideRequestDetails = cancelPopupVC.rideRequestDetails
                         self.navigationController?.pushViewController(cancelReasonVC, animated: true)
-                    }
-                }
-                self.navigationController?.present(vc, animated: true)
+//                    }
+//                }
+//                self.navigationController?.present(vc, animated: true)
 
             }
             //self.backView.isHidden = true

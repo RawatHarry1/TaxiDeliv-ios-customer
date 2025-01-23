@@ -720,11 +720,11 @@ extension UIView {
 
 
 extension UIView {
-        func addDashedBorder() {
+    func addDashedBorder(themeColor : Bool? = true) {
             //Create a CAShapeLayer
             let shapeLayer = CAShapeLayer()
             shapeLayer.frame = self.bounds
-            shapeLayer.strokeColor = VCColors.textColor.color.cgColor
+        shapeLayer.strokeColor = themeColor == true ? VCColors.buttonSelectedOrange.color.cgColor :  VCColors.textColor.color.cgColor
             shapeLayer.lineWidth = 2
             // passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment
             shapeLayer.lineDashPattern = [6,7]
@@ -740,7 +740,24 @@ extension UIView {
             shapeLayer.path = path
             layer.addSublayer(shapeLayer)
         }
+    func appendDashedBorder() {
+      let color =  VCColors.buttonSelectedOrange.color.cgColor
 
+      let shapeLayer:CAShapeLayer = CAShapeLayer()
+      let frameSize = self.frame.size
+      let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
+
+      shapeLayer.bounds = shapeRect
+      shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
+      shapeLayer.fillColor = UIColor.clear.cgColor
+      shapeLayer.strokeColor = color
+      shapeLayer.lineWidth = 2
+      shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+      shapeLayer.lineDashPattern = [6,3]
+      shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: 20).cgPath
+
+      self.layer.addSublayer(shapeLayer)
+      }
     func addDashedSmallBorder() {
         //Create a CAShapeLayer
         let shapeLayer = CAShapeLayer()

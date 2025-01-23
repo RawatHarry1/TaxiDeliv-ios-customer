@@ -432,7 +432,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "226"
             endingLineNumber = "226"
-            landmarkName = "promoApi()"
+            landmarkName = "mtSlideToOpenDelegateDidFinish(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -446,8 +446,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "labelTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -462,8 +462,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "fetchOngoingApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,40 +478,10 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "fetchOngoingApi()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "80E1CC4D-4F83-42F8-8FDD-F5D333C93784 - d7dd9cfc6f7e43e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VenusCustomer.VCRideStatusVC.fetchOngoingApi() -&gt; ()"
-                  moduleName = "VenusCustomer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techbuilder/Desktop/Param/Ujeff/TaxiDeliv-ios-customer/VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135">
-               </Location>
-               <Location
-                  uuid = "80E1CC4D-4F83-42F8-8FDD-F5D333C93784 - fa225e5d736c7914"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in VenusCustomer.VCRideStatusVC.fetchOngoingApi() -&gt; ()"
-                  moduleName = "VenusCustomer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techbuilder/Desktop/Param/Ujeff/TaxiDeliv-ios-customer/VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -540,8 +510,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "startListeningDriverUpdates(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -556,8 +526,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "583"
-            endingLineNumber = "583"
+            startingLineNumber = "585"
+            endingLineNumber = "585"
             landmarkName = "updateRideStatus(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -684,8 +654,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "startListeningDriverUpdates(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -700,8 +670,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
             landmarkName = "driverLocationUpdated(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -716,8 +686,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "driverLocationUpdated(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -726,6 +696,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "12CD1048-DA0A-4889-A391-630A57AA3A13"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "driverLocationUpdated(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47840CCD-0F9B-4974-A178-BFD382BE3A88"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -741,22 +727,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "47840CCD-0F9B-4974-A178-BFD382BE3A88"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "driverLocationUpdated(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "ED1FB4AE-A023-401A-8CE2-5FBEAE342E93"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -764,8 +734,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "driverLocationUpdated(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -780,8 +750,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1295"
-            endingLineNumber = "1295"
+            startingLineNumber = "1297"
+            endingLineNumber = "1297"
             landmarkName = "getPolylineRoute(from:to:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -796,40 +766,10 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "startListeningDriverUpdates(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "15B02D91-08B9-48EA-93B9-B4FE0C93790B - 68a6c8cd3548397a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VenusCustomer.VCRideStatusVC.startListeningDriverUpdates(VenusCustomer.OngoingTripModel) -&gt; ()"
-                  moduleName = "VenusCustomer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techbuilder/Desktop/Param/Ujeff/TaxiDeliv-ios-customer/VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "226"
-                  endingLineNumber = "226">
-               </Location>
-               <Location
-                  uuid = "15B02D91-08B9-48EA-93B9-B4FE0C93790B - 960fab459bf160ae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "param.getter : Swift.Dictionary&lt;Swift.String, Any&gt;"
-                  moduleName = "VenusCustomer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techbuilder/Desktop/Param/Ujeff/TaxiDeliv-ios-customer/VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "226"
-                  endingLineNumber = "226">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -837,38 +777,6 @@
          <BreakpointContent
             uuid = "F9B75CBB-7D38-4756-B89B-8DE4D662E80C"
             shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "871"
-            endingLineNumber = "871"
-            landmarkName = "updateMarkersPositionForRide(_:_:_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A5F1B824-2A52-42B3-9AEA-2084123D55CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1304"
-            endingLineNumber = "1304"
-            landmarkName = "getPolylineRoute(from:to:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E2571DB6-6389-4F3D-B96C-2E33671A8A86"
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
@@ -883,6 +791,38 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A5F1B824-2A52-42B3-9AEA-2084123D55CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1306"
+            endingLineNumber = "1306"
+            landmarkName = "getPolylineRoute(from:to:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2571DB6-6389-4F3D-B96C-2E33671A8A86"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "875"
+            endingLineNumber = "875"
+            landmarkName = "updateMarkersPositionForRide(_:_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "0AE24F93-B4B5-4DE7-98E2-1A22255C08BB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -890,8 +830,8 @@
             filePath = "VenusCustomer/Modules/PostLogin/VCRideStatusVC/VCRideStatusVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "fetchOngoingApi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -956,7 +896,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
             endingLineNumber = "219"
-            landmarkName = "mtSlideToOpenDelegateDidFinish(_:)"
+            landmarkName = "btnRadioMobileMoneyAct(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1037,6 +977,70 @@
             startingLineNumber = "180"
             endingLineNumber = "180"
             landmarkName = "handleNotification(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBF57F4E-5429-44CC-B263-4BEDEDB88AE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/Prelogin/VCAddressVC/VCAddressVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "getAddressFromLatLon(pdblLatitude:withLongitude:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AB14CD9-6001-4CDE-9D7C-894CCA38F3AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/Prelogin/VCAddressVC/VCAddressVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "getAddressFromLatLon(pdblLatitude:withLongitude:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3717F5FB-7BFE-4825-A26A-686886F56BEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/Prelogin/VCAddressVC/VCAddressVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "getAddressFromLatLon(pdblLatitude:withLongitude:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B058231-4896-42F8-B5DF-3A08567246C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VenusCustomer/Modules/Prelogin/VCAddressVC/VCAddressVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "getAddressFromLatLon(pdblLatitude:withLongitude:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

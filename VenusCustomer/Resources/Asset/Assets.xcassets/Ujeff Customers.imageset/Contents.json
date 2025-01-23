@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Super App Common.png",
+      "filename" : "output-onlinepngtools-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Super App Common 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Super App Common 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

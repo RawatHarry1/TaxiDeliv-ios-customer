@@ -171,7 +171,7 @@ extension WebServices {
             case .success(let json):
                 printDebug(json)
                 let data = try! json.rawData()
-                let model = try! JSONDecoder().decode(MobileMoneyModel.self, from: data)
+                let model = try! JSONDecoder().decode(VerifyMobileMoneyModel.self, from: data)
                 response(.success(model))
             case .failure(let error):
                 response(.failure(error))

@@ -101,6 +101,7 @@ class VCAddressVC: VCBaseVC, UITextFieldDelegate,addressAdded {
     }
 
     @IBAction func btnConfrim(_ sender: Any) {
+        self.nickName = (tfAddress.text ?? "").components(separatedBy: ", ")[0]
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAddressVC") as! AddAddressVC
         vc.address = tfAddress.text ?? ""
         vc.nickName = self.nickName
@@ -289,7 +290,7 @@ extension VCAddressVC:GMSMapViewDelegate{
 //                let placeId: GeometryFromPlaceID? = GeometryFromPlaceID(location: location)
 //                self.selectedLocationFromPlaceID = placeId
 //                self.locationsTableView.reloadData()
-                
+               
                 self.tfAddress.text = addressString.description
                 self.fetchPlaceID(for: addressString.description)
                 self.lat = Double(pdblLatitude) ?? 0.0

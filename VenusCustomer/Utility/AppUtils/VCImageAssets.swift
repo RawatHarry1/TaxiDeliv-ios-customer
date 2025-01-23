@@ -113,6 +113,7 @@ enum VCImageAsset: String {
     case skipBtn
     case starDisable
     case locationMarker
+    case new_location_placeholder
     case vehicleMarker
     case reffral
     case delete

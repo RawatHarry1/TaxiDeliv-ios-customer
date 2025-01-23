@@ -345,6 +345,48 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
             
             
         }
+        
+        viewModel.callbackVerifyMobileMoneyData = { verifyMobileMoneyModel in
+            if let status = verifyMobileMoneyModel.data?.paymentStatus as? Int
+            {
+                if status == 1
+                {
+                    SKToast.show(withMessage: "Please wait confirming booking for you.")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1)
+                    {
+                        self.requestRide()
+                    }
+                
+                    
+                }
+                else if status == -1
+                {
+                    SKToast.show(withMessage: "Payment failed.")
+
+                }
+                else if status == 2
+                {
+                    SKToast.show(withMessage: "Payment Cancelled.")
+
+                }
+                else if status == 3
+                {
+                    SKToast.show(withMessage: "Payment is Pending.")
+                }
+                else if status == 0
+                {
+                    SKToast.show(withMessage: "Not able to fetch details")
+                }
+                else
+                {
+                    SKToast.show(withMessage: "Invalid response")
+
+                }
+               
+            }
+            
+            
+        }
     }
     
     func scheduleAlert(){

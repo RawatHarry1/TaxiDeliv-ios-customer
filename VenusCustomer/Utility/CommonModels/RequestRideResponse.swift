@@ -24,7 +24,18 @@ struct MobileMoneyModel: Codable {
         }
     }
 }
-
+struct VerifyMobileMoneyModel: Codable {
+    let flag: Int?
+    let data: VerifyDataResponse?
+    
+    struct VerifyDataResponse: Codable {
+        let paymentStatus: Int?
+        
+        enum CodingKeys: String, CodingKey {
+            case paymentStatus = "payment_status"
+        }
+    }
+}
 
 struct ScheduleRequestRideResponse : Codable {
     let error : String?
