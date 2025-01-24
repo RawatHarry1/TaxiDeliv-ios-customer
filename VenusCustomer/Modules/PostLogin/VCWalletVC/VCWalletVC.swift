@@ -45,11 +45,12 @@ class VCWalletVC: VCBaseVC {
             self.amount = amount
             let vc = CardsVC.create()
             vc.comesFromAccount = false
+            vc.modalPresentationStyle = .overFullScreen
             vc.didPressSelecrCard = { selectedCardData in
                 self.ohjGetCardData = selectedCardData
                 self.addMoneyAlert(cardNo: selectedCardData.last_4 ?? "")
             }
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true)
         }
         self.navigationController?.present(vc, animated: true)
     }

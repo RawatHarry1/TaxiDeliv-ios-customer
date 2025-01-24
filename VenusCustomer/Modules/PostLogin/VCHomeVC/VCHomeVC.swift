@@ -28,7 +28,8 @@ class VCHomeVC: VCBaseVC {
     @IBOutlet weak var txtFldLoc: UITextField!
     var timer: Timer?
     var timerBanner: Timer?
-
+    @IBOutlet weak var btnRental: UIButton!
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var promotionCollView: UICollectionView!
     @IBOutlet weak var lblRide: UILabel!
@@ -270,7 +271,18 @@ class VCHomeVC: VCBaseVC {
         viewModel.findnearbyDriver(id: self.objOperator_availablity?.id ?? 0)
     }
     
-  
+    @IBAction func btnRentalAct(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RentalVC") as! RentalVC
+        vc.didPressSubmit = { utcDate in
+            print(utcDate)
+            self.utcDate = utcDate
+            self.isSechdule = true
+            self.presentScreen()
+        }
+        self.navigationController?.present(vc, animated: true)
+
+    }
+    
 
     // TODO: -> Home TabbarItem
     func setHomeVC(){

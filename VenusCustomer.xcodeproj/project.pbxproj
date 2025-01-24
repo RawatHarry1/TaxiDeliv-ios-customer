@@ -220,6 +220,7 @@
 		20F5513E2AE50F55000180A7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5513D2AE50F55000180A7 /* Date+Extensions.swift */; };
 		20F551412AE51986000180A7 /* VCRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F551402AE51986000180A7 /* VCRouters.swift */; };
 		ADDBAA657D1C1FAAD71AE765 /* Pods_VenusCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */; };
+		BD704B562D4379C0005D03A2 /* RentalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD704B552D4379C0005D03A2 /* RentalVC.swift */; };
 		BDCF83BB2D2D27B400A253F2 /* VCPackageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */; };
 		BDCF83BD2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */; };
 		BDCF83BF2D2D2F8400A253F2 /* ImagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */; };
@@ -505,6 +506,7 @@
 		20F551402AE51986000180A7 /* VCRouters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRouters.swift; sourceTree = "<group>"; };
 		6CC4E873175BC6CD297503EA /* Pods-VenusCustomer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenusCustomer.debug.xcconfig"; path = "Target Support Files/Pods-VenusCustomer/Pods-VenusCustomer.debug.xcconfig"; sourceTree = "<group>"; };
 		8ACAA2A750BA8F25EBCF12F8 /* Pods_VenusCustomer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenusCustomer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD704B552D4379C0005D03A2 /* RentalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalVC.swift; sourceTree = "<group>"; };
 		BDCF83BA2D2D27B400A253F2 /* VCPackageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPackageDetailVC.swift; sourceTree = "<group>"; };
 		BDCF83BC2D2D2E9A00A253F2 /* PackageDetailViewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailViewTblCell.swift; sourceTree = "<group>"; };
 		BDCF83BE2D2D2F8400A253F2 /* ImagesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionCell.swift; sourceTree = "<group>"; };
@@ -1322,6 +1324,7 @@
 		0C9CC28B2A4DD1BB007CD755 /* PostLogin */ = {
 			isa = PBXGroup;
 			children = (
+				BD704B542D4377DE005D03A2 /* Rental VC */,
 				BDCF83B92D2D277500A253F2 /* Package Detail VC */,
 				CF7BBA792D083B6400790443 /* Ticket List VC */,
 				CF120DA42D08100700505440 /* Raise Ticket VC */,
@@ -1821,6 +1824,14 @@
 				20F551402AE51986000180A7 /* VCRouters.swift */,
 			);
 			path = VCRouters;
+			sourceTree = "<group>";
+		};
+		BD704B542D4377DE005D03A2 /* Rental VC */ = {
+			isa = PBXGroup;
+			children = (
+				BD704B552D4379C0005D03A2 /* RentalVC.swift */,
+			);
+			path = "Rental VC";
 			sourceTree = "<group>";
 		};
 		BDCF83B92D2D277500A253F2 /* Package Detail VC */ = {
@@ -2423,6 +2434,7 @@
 				0C0E72EC2BAD501B003E268F /* NotificationModel.swift in Sources */,
 				0C620CD72A57D9060081673C /* VCFAQCell.swift in Sources */,
 				20F5512F2AE43648000180A7 /* CountryCodeVC.swift in Sources */,
+				BD704B562D4379C0005D03A2 /* RentalVC.swift in Sources */,
 				CF56AF0D2CDB2A3E00AEF540 /* AddPackageVC.swift in Sources */,
 				20576F622AE70E2E0047D199 /* UserProfileModel.swift in Sources */,
 				CFC7FDDA2C9AEA6F0026A5EA /* ChooseAppCollectionCell.swift in Sources */,
@@ -2606,7 +2618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VenusCustomer/VenusCustomer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 9R3NLR89HG;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -2647,7 +2659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VenusCustomer/VenusCustomer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 9R3NLR89HG;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
