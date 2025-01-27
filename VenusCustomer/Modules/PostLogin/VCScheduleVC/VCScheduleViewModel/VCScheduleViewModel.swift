@@ -36,8 +36,8 @@ class VCScheduleViewModel : NSObject {
 
 // MARK: -> APIs
 extension VCScheduleViewModel {
-    func findDriver(_ pickupLocation: GeometryFromPlaceID? , _ dropLocation: GeometryFromPlaceID?,typeID : Int) {
-        var params : JSONDictionary  {
+    func findDriver(_ pickupLocation: GeometryFromPlaceID? , _ dropLocation: GeometryFromPlaceID?,typeID : Int, isForRental : Bool? = false,start_date : String? = "",drop_date : String? = "") {
+        
             var attribute = [String : Any]()
             attribute["latitude"] = pickupLocation?.location?.lat
             attribute["longitude"] = pickupLocation?.location?.lng
@@ -45,8 +45,17 @@ extension VCScheduleViewModel {
             attribute["op_drop_longitude"] = dropLocation?.location?.lng
             attribute["promo_to_apply"] = "\(promoCodeID)"
             attribute["request_ride_type"] = typeID
-            return attribute
+        if isForRental == true{
+            attribute["is_for_rental"] = 1
+            attribute["start_date"] = start_date
+            attribute["drop_date"] = drop_date
         }
+        var params : JSONDictionary  = attribute
+        
+      
+//        if    "is_for_rental": 1,
+//              "drop_date": ""
+
         WebServices.findDriver(parameters: params) { [weak self] (result) in
             switch result {
             case .success(let data):

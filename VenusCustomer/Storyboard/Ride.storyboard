@@ -2724,7 +2724,7 @@ time for booking</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0b-hk-fPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671" y="104"/>
+            <point key="canvasLocation" x="2669.5999999999999" y="103.44827586206897"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="c7c-kL-R4d">
@@ -10069,16 +10069,27 @@ Soon</string>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
                                                                                     </textField>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjx-gh-Tm2">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                        <connections>
+                                                                                            <action selector="onPickUpAct:" destination="w2u-gC-5tQ" eventType="touchUpInside" id="Fnv-4O-brH"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="f85-k2-OSm" firstAttribute="leading" secondItem="ej4-Xw-tEq" secondAttribute="leading" constant="10" id="5O7-fb-uFk"/>
+                                                                                    <constraint firstItem="sjx-gh-Tm2" firstAttribute="leading" secondItem="ej4-Xw-tEq" secondAttribute="leading" id="6Km-n9-20a"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="lRs-rL-oee" secondAttribute="bottom" id="80f-SC-RrB"/>
                                                                                     <constraint firstItem="f85-k2-OSm" firstAttribute="centerY" secondItem="lRs-rL-oee" secondAttribute="centerY" id="DLL-bb-Bpx"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="lRs-rL-oee" secondAttribute="trailing" id="GfZ-t8-wHk"/>
                                                                                     <constraint firstAttribute="height" constant="50" id="L0s-5W-oZ9"/>
+                                                                                    <constraint firstItem="sjx-gh-Tm2" firstAttribute="top" secondItem="ej4-Xw-tEq" secondAttribute="top" id="Q8G-f1-dsL"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="sjx-gh-Tm2" secondAttribute="trailing" id="Vdj-ZZ-KGz"/>
                                                                                     <constraint firstItem="lRs-rL-oee" firstAttribute="leading" secondItem="ej4-Xw-tEq" secondAttribute="leading" constant="40" id="bTH-9Q-kD0"/>
                                                                                     <constraint firstItem="lRs-rL-oee" firstAttribute="top" secondItem="ej4-Xw-tEq" secondAttribute="top" id="ejh-hy-fe5"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="sjx-gh-Tm2" secondAttribute="bottom" id="fHb-7k-sGy"/>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -10139,14 +10150,25 @@ Soon</string>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
                                                                                     </textField>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAk-Wg-cMl">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                        <connections>
+                                                                                            <action selector="onDropAct:" destination="w2u-gC-5tQ" eventType="touchUpInside" id="yhR-TK-2Ky"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="k3R-MB-WaN" firstAttribute="leading" secondItem="LBY-PT-EUW" secondAttribute="leading" constant="10" id="O61-tF-Ulm"/>
+                                                                                    <constraint firstItem="KAk-Wg-cMl" firstAttribute="leading" secondItem="LBY-PT-EUW" secondAttribute="leading" id="P3Z-FL-euZ"/>
                                                                                     <constraint firstItem="k3R-MB-WaN" firstAttribute="centerY" secondItem="3jy-Sf-RDl" secondAttribute="centerY" id="Rb4-L7-FLB"/>
+                                                                                    <constraint firstItem="KAk-Wg-cMl" firstAttribute="top" secondItem="LBY-PT-EUW" secondAttribute="top" id="cEl-BT-AWF"/>
                                                                                     <constraint firstItem="3jy-Sf-RDl" firstAttribute="top" secondItem="LBY-PT-EUW" secondAttribute="top" id="kZ5-LA-pdr"/>
                                                                                     <constraint firstAttribute="height" constant="50" id="la9-hV-sjX"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="KAk-Wg-cMl" secondAttribute="bottom" id="oR3-Zc-9rP"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="3jy-Sf-RDl" secondAttribute="trailing" id="qVU-GJ-SqP"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="KAk-Wg-cMl" secondAttribute="trailing" id="r6C-hS-j4f"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="3jy-Sf-RDl" secondAttribute="bottom" id="rze-cg-uFT"/>
                                                                                     <constraint firstItem="3jy-Sf-RDl" firstAttribute="leading" secondItem="LBY-PT-EUW" secondAttribute="leading" constant="40" id="vQd-I2-sks"/>
                                                                                 </constraints>
@@ -10188,6 +10210,24 @@ Soon</string>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-ei-5GX">
                                                                                 <rect key="frame" x="0.0" y="35" width="156" height="50"/>
                                                                                 <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iee-WZ-MUT">
+                                                                                        <rect key="frame" x="15" y="15" width="141" height="20"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="QbV-YW-3NZ">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="J0Z-d1-TBE"/>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="LGS-FF-GlL"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvC-8H-8lb">
+                                                                                                <rect key="frame" x="36" y="0.0" width="105" height="20"/>
+                                                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                                                                                <nil key="textColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGs-B7-NVC">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
                                                                                         <state key="normal" title="Button"/>
@@ -10207,6 +10247,9 @@ Soon</string>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
+                                                                                    <constraint firstItem="iee-WZ-MUT" firstAttribute="centerY" secondItem="bZf-ei-5GX" secondAttribute="centerY" id="0UR-i5-EjT"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="iee-WZ-MUT" secondAttribute="trailing" id="MJv-ef-yYa"/>
+                                                                                    <constraint firstItem="iee-WZ-MUT" firstAttribute="leading" secondItem="bZf-ei-5GX" secondAttribute="leading" constant="15" id="PIb-FX-Ewo"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="4fr-pN-voX" secondAttribute="trailing" id="bem-7h-G6U"/>
                                                                                     <constraint firstAttribute="height" constant="50" id="lOF-Gj-KEL"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="4fr-pN-voX" secondAttribute="bottom" id="ldr-Gj-yR5"/>
@@ -10229,24 +10272,6 @@ Soon</string>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iee-WZ-MUT">
-                                                                                <rect key="frame" x="15" y="50" width="78" height="20"/>
-                                                                                <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="QbV-YW-3NZ">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="height" constant="20" id="J0Z-d1-TBE"/>
-                                                                                            <constraint firstAttribute="width" constant="20" id="LGS-FF-GlL"/>
-                                                                                        </constraints>
-                                                                                    </imageView>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvC-8H-8lb">
-                                                                                        <rect key="frame" x="36" y="0.0" width="42" height="20"/>
-                                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                                                                        <nil key="textColor"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                </subviews>
-                                                                            </stackView>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mJ-OM-JSg">
                                                                                 <rect key="frame" x="169" y="35" width="156" height="50"/>
                                                                                 <subviews>
@@ -10314,7 +10339,6 @@ Soon</string>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="iee-WZ-MUT" firstAttribute="leading" secondItem="Lm4-5L-wAt" secondAttribute="leading" constant="15" id="1KA-at-34x"/>
                                                                             <constraint firstItem="hGq-x2-uke" firstAttribute="leading" secondItem="Lm4-5L-wAt" secondAttribute="leading" id="3O8-hn-kDN"/>
                                                                             <constraint firstItem="bZf-ei-5GX" firstAttribute="leading" secondItem="Lm4-5L-wAt" secondAttribute="leading" id="BM4-eD-R9M"/>
                                                                             <constraint firstItem="hGq-x2-uke" firstAttribute="top" secondItem="Lm4-5L-wAt" secondAttribute="top" id="FgX-6j-noE"/>
@@ -10323,7 +10347,6 @@ Soon</string>
                                                                             <constraint firstAttribute="height" constant="95" id="KWe-GS-ejW"/>
                                                                             <constraint firstItem="1mJ-OM-JSg" firstAttribute="width" secondItem="bZf-ei-5GX" secondAttribute="width" id="VjS-Xg-w68"/>
                                                                             <constraint firstItem="bZf-ei-5GX" firstAttribute="width" secondItem="Lm4-5L-wAt" secondAttribute="width" multiplier="0.48" id="WsG-7c-MRD"/>
-                                                                            <constraint firstItem="iee-WZ-MUT" firstAttribute="centerY" secondItem="bZf-ei-5GX" secondAttribute="centerY" id="Y0H-Do-nqw"/>
                                                                             <constraint firstAttribute="bottom" secondItem="1mJ-OM-JSg" secondAttribute="bottom" constant="10" id="kh5-eh-9oD"/>
                                                                             <constraint firstItem="bZf-ei-5GX" firstAttribute="top" secondItem="hGq-x2-uke" secondAttribute="bottom" constant="15" id="z2u-9i-XoT"/>
                                                                         </constraints>
@@ -10343,14 +10366,24 @@ Soon</string>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-3E-JiK">
                                                                                 <rect key="frame" x="0.0" y="35" width="156" height="50"/>
                                                                                 <subviews>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-1d-wwV">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
-                                                                                        <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="plain"/>
-                                                                                        <connections>
-                                                                                            <action selector="btnEndDateAct:" destination="w2u-gC-5tQ" eventType="touchUpInside" id="3NE-BK-dZ4"/>
-                                                                                        </connections>
-                                                                                    </button>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-IT-fpd">
+                                                                                        <rect key="frame" x="15" y="15" width="141" height="20"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-By-as1">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="20" id="P8s-a0-8aa"/>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="uXz-jk-VEt"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-ft-aQp">
+                                                                                                <rect key="frame" x="36" y="0.0" width="105" height="20"/>
+                                                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                                                                                <nil key="textColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5s-gL-h5t">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -10363,13 +10396,12 @@ Soon</string>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="F5s-gL-h5t" firstAttribute="leading" secondItem="mZP-3E-JiK" secondAttribute="leading" id="0YW-4e-jei"/>
+                                                                                    <constraint firstItem="3Gh-IT-fpd" firstAttribute="centerY" secondItem="mZP-3E-JiK" secondAttribute="centerY" id="8CR-IY-QPt"/>
                                                                                     <constraint firstAttribute="height" constant="50" id="GRJ-Yv-paV"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="F5s-gL-h5t" secondAttribute="bottom" id="H9w-ch-kHe"/>
-                                                                                    <constraint firstItem="Naj-1d-wwV" firstAttribute="leading" secondItem="mZP-3E-JiK" secondAttribute="leading" id="HKk-8X-d69"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="Naj-1d-wwV" secondAttribute="trailing" id="YRi-7B-Dl1"/>
-                                                                                    <constraint firstAttribute="bottom" secondItem="Naj-1d-wwV" secondAttribute="bottom" id="ZcJ-XI-1eS"/>
+                                                                                    <constraint firstItem="3Gh-IT-fpd" firstAttribute="leading" secondItem="mZP-3E-JiK" secondAttribute="leading" constant="15" id="K0Q-OB-Afg"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="3Gh-IT-fpd" secondAttribute="trailing" id="Tzr-bg-n0n"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="F5s-gL-h5t" secondAttribute="trailing" id="bMJ-nc-X8j"/>
-                                                                                    <constraint firstItem="Naj-1d-wwV" firstAttribute="top" secondItem="mZP-3E-JiK" secondAttribute="top" id="nsj-NP-dUO"/>
                                                                                     <constraint firstItem="F5s-gL-h5t" firstAttribute="top" secondItem="mZP-3E-JiK" secondAttribute="top" id="sUW-r0-Teg"/>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
@@ -10384,24 +10416,6 @@ Soon</string>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3Gh-IT-fpd">
-                                                                                <rect key="frame" x="15" y="50" width="78" height="20"/>
-                                                                                <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-By-as1">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="20" id="P8s-a0-8aa"/>
-                                                                                            <constraint firstAttribute="height" constant="20" id="uXz-jk-VEt"/>
-                                                                                        </constraints>
-                                                                                    </imageView>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-ft-aQp">
-                                                                                        <rect key="frame" x="36" y="0.0" width="42" height="20"/>
-                                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                                                                        <nil key="textColor"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                </subviews>
-                                                                            </stackView>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHX-Pe-BU4">
                                                                                 <rect key="frame" x="169" y="35" width="156" height="50"/>
                                                                                 <subviews>
@@ -10423,14 +10437,6 @@ Soon</string>
                                                                                             </label>
                                                                                         </subviews>
                                                                                     </stackView>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="633-Ih-Sbb">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
-                                                                                        <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="plain"/>
-                                                                                        <connections>
-                                                                                            <action selector="btnEndTimeAct:" destination="w2u-gC-5tQ" eventType="touchUpInside" id="GUF-b9-5hc"/>
-                                                                                        </connections>
-                                                                                    </button>
                                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-6w-zDP">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -10446,12 +10452,8 @@ Soon</string>
                                                                                     <constraint firstAttribute="height" constant="50" id="JT8-8o-siK"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="T9C-6w-zDP" secondAttribute="bottom" id="OE1-1r-buK"/>
                                                                                     <constraint firstItem="T9C-6w-zDP" firstAttribute="leading" secondItem="iHX-Pe-BU4" secondAttribute="leading" id="Pht-Hl-ZcH"/>
-                                                                                    <constraint firstAttribute="trailing" secondItem="633-Ih-Sbb" secondAttribute="trailing" id="SBd-ro-o77"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="T9C-6w-zDP" secondAttribute="trailing" id="U2H-UX-QTY"/>
-                                                                                    <constraint firstItem="633-Ih-Sbb" firstAttribute="leading" secondItem="iHX-Pe-BU4" secondAttribute="leading" id="Yaz-ww-Hnj"/>
                                                                                     <constraint firstItem="RQA-tW-d9z" firstAttribute="leading" secondItem="iHX-Pe-BU4" secondAttribute="leading" constant="15" id="a3s-aS-EG6"/>
-                                                                                    <constraint firstAttribute="bottom" secondItem="633-Ih-Sbb" secondAttribute="bottom" id="bY4-ay-xUw"/>
-                                                                                    <constraint firstItem="633-Ih-Sbb" firstAttribute="top" secondItem="iHX-Pe-BU4" secondAttribute="top" id="dUY-ZL-Phu"/>
                                                                                     <constraint firstItem="RQA-tW-d9z" firstAttribute="centerY" secondItem="iHX-Pe-BU4" secondAttribute="centerY" id="tiA-IM-Ctr"/>
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
@@ -10471,8 +10473,6 @@ Soon</string>
                                                                         <constraints>
                                                                             <constraint firstItem="hpl-ZI-xEZ" firstAttribute="leading" secondItem="HZD-JT-QVF" secondAttribute="leading" id="Bse-iS-1NZ"/>
                                                                             <constraint firstItem="hpl-ZI-xEZ" firstAttribute="top" secondItem="HZD-JT-QVF" secondAttribute="top" id="O1f-Il-W7K"/>
-                                                                            <constraint firstItem="3Gh-IT-fpd" firstAttribute="centerY" secondItem="mZP-3E-JiK" secondAttribute="centerY" id="RN6-TX-qGi"/>
-                                                                            <constraint firstItem="3Gh-IT-fpd" firstAttribute="leading" secondItem="HZD-JT-QVF" secondAttribute="leading" constant="15" id="SZO-d9-5Ty"/>
                                                                             <constraint firstAttribute="bottom" secondItem="iHX-Pe-BU4" secondAttribute="bottom" constant="10" id="SkC-oK-XHd"/>
                                                                             <constraint firstItem="iHX-Pe-BU4" firstAttribute="top" secondItem="HZD-JT-QVF" secondAttribute="top" constant="35" id="XF4-kq-BLo"/>
                                                                             <constraint firstAttribute="trailing" secondItem="iHX-Pe-BU4" secondAttribute="trailing" id="cCe-dI-hpY"/>
@@ -10839,8 +10839,7 @@ Soon</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnEndDate" destination="Naj-1d-wwV" id="v8E-I4-bjz"/>
-                        <outlet property="btnEndTime" destination="633-Ih-Sbb" id="MeN-oO-txe"/>
+                        <outlet property="baseView" destination="wOH-BU-PRw" id="4lM-xV-0li"/>
                         <outlet property="btnNow" destination="D5U-in-Yu4" id="MJi-LM-lQi"/>
                         <outlet property="btnSchedule" destination="sIh-H5-YmJ" id="qH9-QS-nEt"/>
                         <outlet property="btnStartDate" destination="sGs-B7-NVC" id="INu-lh-0Hr"/>
@@ -10849,7 +10848,7 @@ Soon</string>
                         <outlet property="iconNow" destination="Zgz-nG-jfB" id="7J7-Js-BJ5"/>
                         <outlet property="iconScedule" destination="PNs-Dy-YRG" id="GOn-P4-fjo"/>
                         <outlet property="lblDate" destination="gye-51-ecq" id="BJi-FU-l8t"/>
-                        <outlet property="lblEndDate" destination="qYK-ft-aQp" id="jFO-vA-mNH"/>
+                        <outlet property="lblEndDate" destination="qYK-ft-aQp" id="yne-pv-mTg"/>
                         <outlet property="lblEndTime" destination="snE-PE-bfF" id="Mu0-pi-Gnd"/>
                         <outlet property="lblStartDate" destination="BvC-8H-8lb" id="YFi-t7-E8j"/>
                         <outlet property="lblStartTime" destination="9Yb-cz-OjO" id="a8O-e1-I7J"/>

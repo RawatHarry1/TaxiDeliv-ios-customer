@@ -31,7 +31,7 @@ class VCRideVehiclesListVC: VCBaseVC {
     var dropLocation : GeometryFromPlaceID?
     var customerETA : etaData?
     var apiTimer: Timer?
-    
+    var isSechdule = false
     var objOperator_availablity : operator_availablityy?
    // var loadedPackageDetails: [PackageDetail]?
     private var viewModel = VCRideVehiclesListViewModel()
@@ -40,6 +40,7 @@ class VCRideVehiclesListVC: VCBaseVC {
     private var driverMarker = GMSMarker()
     private var currentMarker = GMSMarker()
     private var popupOffset = CGFloat()
+    var is_for_rental = false
     //  To create ViewModel
     static func create() -> VCRideVehiclesListVC {
         let obj = VCRideVehiclesListVC.instantiate(fromAppStoryboard: .ride)
@@ -288,8 +289,9 @@ extension VCRideVehiclesListVC: UITableViewDelegate, UITableViewDataSource {
         cell.customerETA = self.customerETA
         if let regionarr = regions {
             cell.objOperator_availablity = self.objOperator_availablity
-            cell.setUpVehicleUI(regionarr[indexPath.row], (regionarr[indexPath.row].region_id  == self.selectedRegions?.region_id ?? -1))
+            cell.setUpVehicleUI(regionarr[indexPath.row], (regionarr[indexPath.row].region_id  == self.selectedRegions?.region_id ?? -1),isSchedule: self.isSechdule)
         }
+      
         return cell
     }
 
@@ -303,7 +305,12 @@ extension VCRideVehiclesListVC: UITableViewDelegate, UITableViewDataSource {
             selectedRegions = region[indexPath.row]
             self.rideTableView.reloadData()
         } else {
-           
+           if self.isSechdule == true
+            {
+               selectedRegions = region[indexPath.row]
+               self.rideTableView.reloadData()
+
+}
         }
         
     }

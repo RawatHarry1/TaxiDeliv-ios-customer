@@ -131,13 +131,14 @@ class VCHomeVC: VCBaseVC {
                 self.lblRide.text = "Ride"
                 imgViewRide.image = UIImage(named: "NowRide")
                 imgViewSchedule.image = UIImage(named: "calRide")
+                self.lblRentals.text = "Rental"
                 self.tabBarController?.tabBar.items?[1].title = "Trips"
             }else{
                 
                 imgViewRide.image = UIImage(named: "NowDel")
                 imgViewSchedule.image = UIImage(named: "calDel")
                 self.lblRide.text = "Now"
-                self.lblRentals.text = "Truck"
+                self.lblRentals.text = "Rental"
                 imgOutStation.image = UIImage(named: "outDel")
                 imgRentals.image = UIImage(named: "NowDel")
                 self.tabBarController?.tabBar.items?[1].title = "Deliveries"
@@ -149,7 +150,7 @@ class VCHomeVC: VCBaseVC {
             imgViewRide.image = UIImage(named: "NowDel")
             imgViewSchedule.image = UIImage(named: "calDel")
             self.lblRide.text = "Now"
-            self.lblRentals.text = "Truck"
+            self.lblRentals.text = "Rental"
             imgOutStation.image = UIImage(named: "outDel")
             imgRentals.image = UIImage(named: "NowDel")
             self.tabBarController?.tabBar.items?[2].title = "Deliveries"
@@ -157,6 +158,8 @@ class VCHomeVC: VCBaseVC {
         }else{
             requestRideType = 1
             self.lblRide.text = "Ride"
+            self.lblRentals.text = "Rental"
+
             imgViewRide.image = UIImage(named: "NowRide")
             imgViewSchedule.image = UIImage(named: "calRide")
             self.tabBarController?.tabBar.items?[2].title = "Trips"
@@ -272,14 +275,103 @@ class VCHomeVC: VCBaseVC {
     }
     
     @IBAction func btnRentalAct(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RentalVC") as! RentalVC
-        vc.didPressSubmit = { utcDate in
+        
+        let rentalVC = RentalVC.create(2)
+        rentalVC.didPressSubmit = { utcDate,utcDateEnd in
             print(utcDate)
-            self.utcDate = utcDate
-            self.isSechdule = true
-            self.presentScreen()
+            
         }
-        self.navigationController?.present(vc, animated: true)
+        rentalVC.onConfirm = { (findDriverData,placeId,loc: String,objOperator_availablity,utcStartDate,utcEndDate,scheduleRide) in
+            // Need to call distance api here
+            if self.pickUpLocation == nil{
+                self.pickUpLocation = placeId
+            }
+            
+          //  if self.objOperator_availablity?.id == 1{
+                let vc = VCOnGoingRideVC.create()
+                vc.dropPlace = self.dropPlace
+                vc.drop_date = utcEndDate
+                vc.is_for_rental = true
+                vc.dropLocation = self.dropLocation
+                vc.pickUpPlace = self.pickUpPlace
+                vc.pickUpLocation = self.pickUpLocation
+                vc.regions = findDriverData.regions
+                vc.pickupLoc = loc
+                vc.start_date = utcStartDate
+                vc.dropoffLoc = self.dropOffLoc
+                vc.isSechdule = scheduleRide
+                vc.utcDate = self.utcDate
+                vc.customerETA = findDriverData.customerETA
+                vc.objOperator_availablity = objOperator_availablity
+              
+                self.navigationController?.pushViewController(vc, animated: true)
+//            }else{
+//
+//                let vc = self.storyboard?.instantiateViewController(identifier: "TrackOrderVc") as! TrackOrderVc
+//                vc.dropPlace = self.dropPlace
+//                vc.dropLocation = self.dropLocation
+//                vc.pickUpPlace = self.pickUpPlace
+//                vc.pickUpLocation = self.pickUpLocation
+//                vc.regions = findDriverData.regions
+//                vc.pickupLoc = loc
+//                vc.dropoffLoc = self.dropOffLoc
+//                vc.isSechdule = self.isSechdule
+//                vc.utcDate = self.utcDate
+//                vc.customerETA = findDriverData.customerETA
+//                vc.objOperator_availablity = objOperator_availablity
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
+            
+            
+            
+            
+            
+           
+        }
+        rentalVC.onPickUpClicked = { (pickup: Int, loc: String,placeId) in
+            let vc = VCPickUpDropVC.create(0)
+            vc.selectedPlaceDetails = {place, placeLocation in
+                // self.pickUpPlace = placeDetail
+                self.pickUpLocation = placeLocation
+                
+                if rentalVC.pickUpPlace?.description == nil{
+                    rentalVC.pickUpPlace?.description = ""
+                }
+                self.pickUpLoc = place
+               // scheduleVC.pickUpPlace?.description
+               // scheduleVC.pickUpTF.text = loc
+                //scheduleVC.pickUpPlace?.description = "\(desc!)"
+                rentalVC.setPickUpLocation = place
+                rentalVC.pickUpLocation = placeLocation
+                
+            }
+            vc.modalPresentationStyle = .overFullScreen
+            rentalVC.setPickUpLocation = loc
+            rentalVC.pickUpLocation = placeId
+           
+            self.navigationController?.present(vc, animated: true)
+        }
+        rentalVC.objOperator_availablity = self.objOperator_availablity
+        rentalVC.onDropClicked = { (drop: Int, loc: String) in
+            let vc = VCPickUpDropVC.create(1)
+            vc.selectedPlaceDetails = { place,placeLocation in
+               // self.dropPlace = placeDetail
+                self.dropLocation = placeLocation
+                rentalVC.dropPlace?.description = place
+                rentalVC.setDropLocation = place
+                rentalVC.dropLocation = placeLocation
+                self.dropOffLoc = place
+            }
+            vc.modalPresentationStyle = .overFullScreen
+           // scheduleVC.setDropLocation = loc
+            self.navigationController?.present(vc, animated: true)
+        }
+        rentalVC.utcDate = self.utcDate
+        rentalVC.view.frame = self.view.bounds
+        self.tabBarController?.tabBar.isHidden = true
+        self.view.addSubview(rentalVC.view)
+        self.addChild(rentalVC)
+        rentalVC.didMove(toParent: self)
 
     }
     

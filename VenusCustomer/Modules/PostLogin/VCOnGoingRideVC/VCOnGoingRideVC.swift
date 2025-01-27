@@ -29,6 +29,10 @@ class VCOnGoingRideVC: VCBaseVC {
     var customerETA : etaData?
     var objOperator_availablity : operator_availablityy?
     var loadedPackageDetails: [PackageDetail]?
+    var is_for_rental = false
+    var drop_date = ""
+    var start_date = ""
+
     //  To create ViewModel
     static func create() -> VCOnGoingRideVC {
         let obj = VCOnGoingRideVC.instantiate(fromAppStoryboard: .ride)
@@ -45,12 +49,14 @@ class VCOnGoingRideVC: VCBaseVC {
     override func initialSetup() {
         let vc = VCRideVehiclesListVC.create()
         self.backView.isHidden = false
+        vc.isSechdule = self.isSechdule
         vc.regions = regions
         vc.dropPlace = self.dropPlace
         vc.dropLocation = self.dropLocation
         vc.pickUpPlace = self.pickUpPlace
         vc.pickUpLocation = self.pickUpLocation
         vc.customerETA = self.customerETA
+        vc.is_for_rental = self.is_for_rental
         vc.objOperator_availablity = self.objOperator_availablity
        // vc.loadedPackageDetails = self.loadedPackageDetails
         vc.onConfirm = { value,selectedRegions,customerEta,obj_perator_availablityy, str in
@@ -60,6 +66,9 @@ class VCOnGoingRideVC: VCBaseVC {
                 
                 let confirmVC = ReviewDetailsVC.create()
                 confirmVC.selectedRegions = vc.selectedRegions
+                confirmVC.is_for_rental = self.is_for_rental
+                confirmVC.drop_date = self.drop_date
+                confirmVC.start_date = self.start_date
                 confirmVC.dropPlace = self.dropPlace
                 confirmVC.dropLocation = self.dropLocation
                 confirmVC.pickUpPlace = self.pickUpPlace
@@ -102,6 +111,9 @@ class VCOnGoingRideVC: VCBaseVC {
                   self.addViewToSelf(confirmVC)
             }else{
                 let confirmVC = self.storyboard?.instantiateViewController(identifier: "PackageListVc") as! PackageListVc
+                confirmVC.is_for_rental = self.is_for_rental
+                confirmVC.drop_date = self.drop_date
+                confirmVC.start_date = self.start_date
                 confirmVC.selectedRegions = vc.selectedRegions
                 confirmVC.dropPlace = self.dropPlace
                 confirmVC.dropLocation = self.dropLocation

@@ -57,6 +57,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     var long = 0.0
     var isDeliveryHidden = false
     var isPackageHidden = false
+    var is_for_rental = true
     var selectedLocationFromPlaceID : GeometryFromPlaceID?
    // var onConfirm:((FindDriverData,GeometryFromPlaceID,String,operator_availablityy) -> Void)?
     var dismissController:(()->Void)?
@@ -72,7 +73,8 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
     var objSelecrCard : GetCardData?
     var onConfirm:((Int , RequestRideData) -> Void)?
     var promoApply = false
-    
+    var drop_date = ""
+    var start_date = ""
     private var viewModell = VCRideVehiclesListViewModel()
     private var viewModel = VCRideVehiclesListViewModel()
    
@@ -455,7 +457,12 @@ extension ReviewDetailsVC{
             "customer_base_fare": "\(selectedRegions?.region_fare?.original_fare ?? 0.0)",
             "request_ride_type": self.objOperator_availablity?.id ?? 0
         ]
-        
+        if is_for_rental == true
+        {
+            att["is_for_rental"] = 1
+            att["drop_date"] = self.drop_date
+
+        }
         if ClientModel.currentClientData.enabled_service! == 3{
             att["request_ride_type"] = self.objOperator_availablity?.id ?? 0
         }else if ClientModel.currentClientData.enabled_service! == 2{
@@ -525,7 +532,14 @@ extension ReviewDetailsVC{
             "customer_base_fare": "\(selectedRegions?.region_fare?.original_fare ?? 0.0)",
             
         ]
-        
+        if is_for_rental == true
+        {
+            att["is_for_rental"] = 1
+            att["drop_date"] = self.drop_date
+            att["start_date"] = self.start_date
+
+        }
+      
         if ClientModel.currentClientData.enabled_service! == 3{
             att["request_ride_type"] = self.objOperator_availablity?.id ?? 0
         }else if ClientModel.currentClientData.enabled_service! == 2{

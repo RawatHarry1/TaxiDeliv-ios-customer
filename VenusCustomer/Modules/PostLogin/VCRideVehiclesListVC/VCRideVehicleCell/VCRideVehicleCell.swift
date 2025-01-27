@@ -50,11 +50,12 @@ class VCRideVehicleCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUpVehicleUI(_ region: Regions, _ isSelected: Bool) {
+    func setUpVehicleUI(_ region: Regions, _ isSelected: Bool,isSchedule : Bool? = false) {
         if let _ = region.eta {
             baseView.layer.opacity = 1.0
         } else {
-            baseView.layer.opacity = 0.5
+            
+            baseView.layer.opacity = isSchedule == true ? 1.0 : 0.5
         }
 
         if isSelected {

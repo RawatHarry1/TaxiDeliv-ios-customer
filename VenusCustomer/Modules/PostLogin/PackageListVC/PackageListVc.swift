@@ -30,7 +30,9 @@ class PackageListVc: VCBaseVC {
     var utcDate = ""
     var customerETA : etaData?
     var selectedRegions: Regions?
-    
+    var is_for_rental = false
+    var drop_date = ""
+    var start_date = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -96,6 +98,9 @@ class PackageListVc: VCBaseVC {
     @IBAction func btnContinue(_ sender: Any) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReviewDetailsVC") as! ReviewDetailsVC
+        vc.is_for_rental = self.is_for_rental
+        vc.drop_date = self.drop_date
+        vc.start_date = self.start_date
         vc.dropPlace = self.dropPlace
         vc.dropLocation = self.dropLocation
         vc.pickUpPlace = self.pickUpPlace
