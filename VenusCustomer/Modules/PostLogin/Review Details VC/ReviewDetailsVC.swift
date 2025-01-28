@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 extension Notification.Name {
     static let didUpdateData = Notification.Name("didUpdateDataNotification")
 }
@@ -131,7 +132,13 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         viewMobileMoney.addShadowView()
         viewPromoCode.addShadowView()
         if let urlStr = selectedRegions?.images?.ride_now_normal_2x {
-            self.vehicleImg.setImage(urlStr, showIndicator: true)
+            self.vehicleImg.sd_setImage(with: URL(string: urlStr) , placeholderImage: UIImage(named: "ImagePlaceholder"), options: [.refreshCached, .highPriority], completed: nil)
+
+        }
+        else
+        {
+            self.vehicleImg.layer.cornerRadius = self.vehicleImg.size.height / 2
+            self.vehicleImg.image = UIImage(named: "ImagePlaceholder")
         }
        if self.objOperator_availablity?.id == 1{
             self.viewDelivery.isHidden = true
@@ -231,12 +238,12 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
         var parmas = [String: Any]()
         parmas["code"] = txtFldPromocode.text ?? ""
         viewModell.promoCodeApi(parms: parmas) {
-            codeID = self.viewModel.objPromoModal?.data?.codeId ?? 0
-            codeTitle = self.viewModel.objPromoModal?.data?.promo_code ?? ""
+            codeID = self.viewModell.objPromoModal?.data?.codeId ?? 0
+            codeTitle = self.viewModell.objPromoModal?.data?.promo_code ?? ""
             self.btnApply.setTitle("Remove", for: .normal)
             self.btnApply.setTitleColor(.systemRed, for: .normal)
             self.promoApply = true
-                Proxy.shared.displayStatusCodeAlert(self.viewModel.objPromoModal?.data?.codeMessage ?? "", title: "Promo Code")
+            Proxy.shared.displayStatusCodeAlert(self.viewModell.objPromoModal?.data?.codeMessage ?? "", title: "Promo Code")
         }
     }
     
@@ -245,6 +252,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
 
         refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
           print("Handle Ok logic here")
+            self.txtFldPromocode.text = ""
             codeTitle = ""
             codeID = 0
             self.btnApply.setTitle("APPLY", for: .normal)
@@ -471,7 +479,7 @@ class ReviewDetailsVC: UIViewController, MTSlideToOpenDelegate {
                 promoApi()
             }
         }else{
-            txtFldPromocode.text = ""
+//            txtFldPromocode.text = ""
             removePromoCodeAlert()
         }
         

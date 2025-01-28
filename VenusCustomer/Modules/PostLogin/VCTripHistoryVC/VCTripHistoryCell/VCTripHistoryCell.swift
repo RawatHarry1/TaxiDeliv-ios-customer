@@ -62,8 +62,18 @@ class VCTripHistoryCell: UITableViewCell {
         pickUpLocationLbl.text = trip.pickup_location_address ?? ""
         dropLocationLbl.text = trip.drop_location_address ?? ""
         if trip.status == 0{
-            statusBtn.backgroundColor = .gray
-            statusBtn.setTitle("In Queue", for: .normal)
+           if ClientModel.currentClientData.enabled_service! != 1
+            {
+                statusBtn.backgroundColor = VCColors.buttonSelectedOrange.color
+                statusBtn.setTitle("Delivery In Queue", for: .normal)
+
+            }
+            else
+            {
+                statusBtn.backgroundColor = .gray
+                statusBtn.setTitle("In Queue", for: .normal)
+
+            }
         }else  if trip.status == 1{
             statusBtn.backgroundColor = .yellow
             statusBtn.setTitle("In Process", for: .normal)
@@ -78,6 +88,7 @@ class VCTripHistoryCell: UITableViewCell {
 //        if let hexColor = trip.autos_status_color {
 //            statusBtn.backgroundColor = hexStringToUIColor(hex: hexColor)
 //        }
+        
         datelbl.text = ConvertDateFormater(date: trip.pickup_time ?? "")
         pickUpTime.text = ConvertTimeFormater(date: "")
         dropTimeLbl.text = ConvertTimeFormater(date: "")

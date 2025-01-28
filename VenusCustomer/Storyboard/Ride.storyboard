@@ -5632,10 +5632,10 @@ Please begin trip within 5 minutes.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EOm-k9-zcO">
-                                                <rect key="frame" x="162.5" y="11" width="50.5" height="22"/>
+                                                <rect key="frame" x="157.5" y="11.5" width="60" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-ze-QYu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
                                                         <fontDescription key="fontDescription" name="FONTSPRINGDEMO-ProximaNovaCondSemiboldRegular" family="FONTSPRING DEMO - Proxima Nova Cond Semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

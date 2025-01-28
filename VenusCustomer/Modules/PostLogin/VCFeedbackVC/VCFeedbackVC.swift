@@ -34,6 +34,9 @@ class VCFeedbackVC: VCBaseVC {
    var driver_id = 0
   
     override func initialSetup() {
+        starOne.image = starOne.image?.withRenderingMode(.alwaysTemplate)
+        starTwo.image = starTwo.image?.withRenderingMode(.alwaysTemplate)
+        starThree.image = starThree.image?.withRenderingMode(.alwaysTemplate)
         feebackTV.textContainerInset = UIEdgeInsets.zero
         feebackTV.textContainer.lineFragmentPadding = 0
 //        feebackTV.backgroundColor = UIColor.lightGray
@@ -153,11 +156,11 @@ class VCFeedbackVC: VCBaseVC {
 
     func setStarImages(_ count: Int) {
 
-        starOne.image = VCImageAsset.star.asset
-        starTwo.image = VCImageAsset.star.asset
-        starThree.image = VCImageAsset.star.asset
-        starfour.image = VCImageAsset.star.asset
-        starFive.image = VCImageAsset.star.asset
+        starOne.image = VCImageAsset.star.asset?.withRenderingMode(.alwaysTemplate)
+        starTwo.image = VCImageAsset.star.asset?.withRenderingMode(.alwaysTemplate)
+        starThree.image = VCImageAsset.star.asset?.withRenderingMode(.alwaysTemplate)
+        starfour.image = VCImageAsset.star.asset?.withRenderingMode(.alwaysTemplate)
+        starFive.image = VCImageAsset.star.asset?.withRenderingMode(.alwaysTemplate)
 
 //        1 Star- Worst
 //        2 Star- Bad

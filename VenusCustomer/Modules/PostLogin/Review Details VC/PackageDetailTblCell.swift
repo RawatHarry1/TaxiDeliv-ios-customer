@@ -78,19 +78,22 @@ extension PackageDetailTblCell: UICollectionViewDelegate, UICollectionViewDataSo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellCustomer", for: indexPath) as! CollectionViewCellCustomer
             let urlStr = self.delivery_packages?.package_images_by_customer?[indexPath.row] ?? ""
             cell.imgViewCustomer.contentMode = .scaleAspectFill
-            cell.imgViewCustomer.layer.cornerRadius = 5
+            cell.imgViewCustomer.layer.cornerRadius = 10
+            cell.imgViewCustomer.clipsToBounds = true
             cell.imgViewCustomer.setImage(urlStr)
             return cell
         }else if collectionView == collectionViewPickup{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellPickup", for: indexPath) as! CollectionViewCellPickup
             let urlStr = self.delivery_packages?.package_image_while_pickup?[indexPath.row] ?? ""
-            cell.imgViewPickup.layer.cornerRadius = 5
+            cell.imgViewPickup.layer.cornerRadius = 10
+            cell.imgViewPickup.clipsToBounds = true
             cell.imgViewPickup.setImage(urlStr)
             cell.imgViewPickup.contentMode = .scaleAspectFill
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellDelivery", for: indexPath) as! CollectionViewCellDelivery
-            cell.imgViewDelivery.layer.cornerRadius = 5
+            cell.imgViewDelivery.layer.cornerRadius = 10
+            cell.imgViewDelivery.clipsToBounds = true
             let urlStr = self.delivery_packages?.package_image_while_drop_off?[indexPath.row] ?? ""
             cell.imgViewDelivery.contentMode = .scaleAspectFill
 
