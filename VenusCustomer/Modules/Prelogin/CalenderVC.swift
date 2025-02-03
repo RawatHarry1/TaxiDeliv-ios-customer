@@ -209,7 +209,7 @@ extension CalenderVC{
            if let combinedDate = calendar.date(from: combinedComponents) {
                let dateFormatter = DateFormatter()
                dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-               dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ssZ"
+               dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
                print("Selected DateTime (UTC): \(dateFormatter.string(from: combinedDate))")
                utcDate = dateFormatter.string(from: combinedDate)
                print("UTC is => " ,utcDate)
