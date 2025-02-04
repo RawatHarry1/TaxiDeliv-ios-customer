@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="width" secondItem="gM4-Wk-Tvr" secondAttribute="height" multiplier="1:0.714" id="zLB-w5-uvH"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP0-55-8T8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mars Delivery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP0-55-8T8">
                                 <rect key="frame" x="30" y="388" width="315" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
                                 <color key="textColor" name="textColor"/>
@@ -85,7 +85,7 @@
                                     <action selector="btnSignUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xaV-gD-mdo"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="a85-as-CBA">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="a85-as-CBA">
                                 <rect key="frame" x="137.66666666666666" y="443" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="EwN-IC-dq3"/>
@@ -856,7 +856,7 @@
                                                     <constraint firstItem="gEW-CU-RzV" firstAttribute="top" secondItem="6ro-j7-75F" secondAttribute="top" id="plk-np-401"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-x1-dQ5">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-x1-dQ5">
                                                 <rect key="frame" x="70" y="234" width="235" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="B4e-H7-986"/>
@@ -878,10 +878,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-xc-IUF">
                                         <rect key="frame" x="30" y="0.0" width="315" height="82.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-2z-CsX" userLabel="Welcome Back to UJEFF PRO!">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back to Mars Delivery!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-2z-CsX" userLabel="Welcome Back to Mars Delivery!">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="62.333333333333336"/>
-                                                <string key="text">Welcome Back
-to UJEFF!</string>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                                 <color key="textColor" red="0.10199999809265137" green="0.093999996781349182" blue="0.14100000262260437" alpha="0.81622516556291391" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1528,7 +1526,7 @@ to UJEFF!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ckQ-uS-u9F">
-                                <rect key="frame" x="116.33333333333333" y="305.33333333333331" width="142.33333333333337" height="201.33333333333331"/>
+                                <rect key="frame" x="116.33333333333333" y="305.33333333333331" width="142.33333333333343" height="201.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7I-mA-hZ8">
                                         <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="42"/>
@@ -2080,15 +2078,15 @@ to UJEFF!</string>
         <image name="googleLogo" width="20" height="20"/>
         <image name="imgPlaceholder" width="132" height="132"/>
         <image name="smallAppIcon" width="1202" height="512"/>
-        <image name="splashLogo" width="314" height="171"/>
+        <image name="splashLogo" width="341.33334350585938" height="341.33334350585938"/>
         <namedColor name="AppBackgroundColorYellow">
-            <color red="0.9882352941176471" green="0.82352941176470584" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonBorder">
             <color red="0.90200001001358032" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonSelectedOrange">
-            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85882352941176465" green="0.20784313725490197" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="textColor">
             <color red="0.10199999809265137" green="0.093999996781349182" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

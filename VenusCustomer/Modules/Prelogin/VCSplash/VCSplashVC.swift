@@ -59,7 +59,7 @@ extension VCSplashVC {
     private func apiClientConfigure() {
         var paramToModifyVehicleDetails: JSONDictionary {
             let param = [
-                "packageName": "com.ujeff.customerTaxi"//"com.venus.customer",
+                "packageName": "com.mars.delivery"//"com.venus.customer",
             ] as [String: Any]
             return param
         }

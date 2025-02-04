@@ -105,14 +105,14 @@
                                     <constraint firstAttribute="trailing" secondItem="GoZ-kO-R7m" secondAttribute="trailing" constant="15" id="hg1-jI-f0P"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-Za-PUn">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-Za-PUn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-jd-bOA">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-jd-bOA">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNt-zv-H4H">
-                                                <rect key="frame" x="30" y="30" width="315" height="67.5"/>
+                                                <rect key="frame" x="30" y="30" width="315" height="56"/>
                                                 <string key="text">How was your ride with
 Patrick</string>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
@@ -120,13 +120,13 @@ Patrick</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnD-mQ-lJU">
-                                                <rect key="frame" x="160" y="147.5" width="55" height="28"/>
+                                                <rect key="frame" x="162.5" y="136" width="50" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-fM-II6">
-                                                <rect key="frame" x="30" y="191.5" width="315" height="30"/>
+                                                <rect key="frame" x="30" y="175.5" width="315" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kvC-kf-WFu">
                                                         <rect key="frame" x="52.5" y="0.0" width="210" height="30"/>
@@ -297,17 +297,17 @@ Patrick</string>
                                                     <constraint firstItem="kvC-kf-WFu" firstAttribute="centerX" secondItem="rRx-fM-II6" secondAttribute="centerX" id="yQo-fn-oIf"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="if8-7v-n1N">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="if8-7v-n1N">
                                                 <rect key="frame" x="30" y="281.5" width="315" height="40.5"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8DG-JQ-CZG">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8DG-JQ-CZG">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="38.5"/>
                                                         <color key="tintColor" name="buttonSelectedOrange"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YND-qm-lyL">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YND-qm-lyL">
                                                         <rect key="frame" x="0.0" y="39.5" width="315" height="1"/>
                                                         <color key="backgroundColor" systemColor="darkTextColor"/>
                                                         <constraints>
@@ -329,7 +329,7 @@ Patrick</string>
                                                     <constraint firstItem="8DG-JQ-CZG" firstAttribute="leading" secondItem="if8-7v-n1N" secondAttribute="leading" id="zWY-XY-TkA"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-rv-fO4" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-rv-fO4" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="382" width="315" height="46"/>
                                                 <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                 <constraints>
@@ -349,7 +349,7 @@ Patrick</string>
                                                     <action selector="btnSubmit:" destination="aOb-Ip-nxw" eventType="touchUpInside" id="HPl-cb-pd2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-uA-sSl">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-uA-sSl">
                                                 <rect key="frame" x="30" y="444" width="315" height="46"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1022,13 +1022,13 @@ Patrick</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GS-7c-U6O">
-                                                <rect key="frame" x="30" y="16" width="277.5" height="42"/>
+                                                <rect key="frame" x="30" y="16" width="246" height="35"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-6u-8zc">
-                                                <rect key="frame" x="30" y="78" width="315" height="234"/>
+                                                <rect key="frame" x="30" y="71" width="315" height="234"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-rO-SNq">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="67"/>
@@ -1037,7 +1037,7 @@ Patrick</string>
                                                                 <rect key="frame" x="10" y="10" width="295" height="47"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpX-jB-VCb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                         <color key="textColor" name="buttonSelectedOrange"/>
                                                                         <nil key="highlightedColor"/>
@@ -1081,7 +1081,7 @@ Patrick</string>
                                                                 <rect key="frame" x="10" y="10" width="295" height="47"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmz-6A-H5B">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                         <color key="textColor" name="buttonSelectedOrange"/>
                                                                         <nil key="highlightedColor"/>
@@ -1125,7 +1125,7 @@ Patrick</string>
                                                                 <rect key="frame" x="10" y="10" width="295" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRo-3M-Rq0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                                                         <color key="textColor" name="buttonSelectedOrange"/>
                                                                         <nil key="highlightedColor"/>
@@ -3027,7 +3027,7 @@ Patrick</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel Ride" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bx-Xn-FA6">
-                                        <rect key="frame" x="127" y="8" width="121.5" height="28"/>
+                                        <rect key="frame" x="133" y="10.5" width="109" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3051,7 +3051,7 @@ Patrick</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to cancel my ride because" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvA-gH-tvC">
-                                        <rect key="frame" x="70" y="38" width="235" height="20"/>
+                                        <rect key="frame" x="84.5" y="40" width="206.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                                         <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3307,19 +3307,19 @@ Patrick</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmG-r1-adO">
-                                <rect key="frame" x="20" y="206.5" width="335" height="254"/>
+                                <rect key="frame" x="20" y="212" width="335" height="243.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Joa-Py-Ccn">
-                                        <rect key="frame" x="0.0" y="30" width="335" height="194"/>
+                                        <rect key="frame" x="0.0" y="30" width="335" height="183.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to log out?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sX1-X2-Had">
-                                                <rect key="frame" x="20" y="0.0" width="295" height="62"/>
+                                                <rect key="frame" x="20" y="0.0" width="295" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sQ7-3l-2r9">
-                                                <rect key="frame" x="0.0" y="92" width="335" height="102"/>
+                                                <rect key="frame" x="0.0" y="81.5" width="335" height="102"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-IS-a20" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="295" height="46"/>
@@ -3430,19 +3430,19 @@ Patrick</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWT-p3-rRJ">
-                                <rect key="frame" x="20" y="213.5" width="335" height="240"/>
+                                <rect key="frame" x="20" y="216" width="335" height="235.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cUE-Z2-jcQ">
-                                        <rect key="frame" x="0.0" y="40" width="335" height="160"/>
+                                        <rect key="frame" x="0.0" y="40" width="335" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel the ride Request?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP6-bF-iqV">
-                                                <rect key="frame" x="20" y="0.0" width="295" height="28"/>
+                                                <rect key="frame" x="20" y="0.0" width="295" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d0s-qC-8zG">
-                                                <rect key="frame" x="0.0" y="58" width="335" height="102"/>
+                                                <rect key="frame" x="0.0" y="53.5" width="335" height="102"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60R-Wp-3UG" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="295" height="46"/>
@@ -3808,7 +3808,7 @@ Patrick</string>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No cards found" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-6q-dku">
-                                <rect key="frame" x="0.0" y="171.5" width="375" height="24"/>
+                                <rect key="frame" x="0.0" y="173.5" width="375" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                 <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4489,19 +4489,19 @@ Patrick</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-bR-DAi">
-                                <rect key="frame" x="20" y="206.5" width="335" height="254"/>
+                                <rect key="frame" x="20" y="212" width="335" height="243.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZdN-wP-t4g">
-                                        <rect key="frame" x="0.0" y="30" width="335" height="194"/>
+                                        <rect key="frame" x="0.0" y="30" width="335" height="183.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to log out?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-Sh-L40">
-                                                <rect key="frame" x="20" y="0.0" width="295" height="62"/>
+                                                <rect key="frame" x="20" y="0.0" width="295" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IIX-Qj-CPH">
-                                                <rect key="frame" x="0.0" y="92" width="335" height="102"/>
+                                                <rect key="frame" x="0.0" y="81.5" width="335" height="102"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ac8-pl-Ofw" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="295" height="46"/>
@@ -4599,31 +4599,31 @@ Patrick</string>
     </scenes>
     <designables>
         <designable name="60R-Wp-3UG">
-            <size key="intrinsicContentSize" width="30" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="Gsu-go-5sM">
-            <size key="intrinsicContentSize" width="80" height="35"/>
+            <size key="intrinsicContentSize" width="76" height="31"/>
         </designable>
         <designable name="LCS-rv-fO4">
-            <size key="intrinsicContentSize" width="57" height="35"/>
+            <size key="intrinsicContentSize" width="51" height="31"/>
         </designable>
         <designable name="MgI-2h-Olv">
-            <size key="intrinsicContentSize" width="40" height="35"/>
+            <size key="intrinsicContentSize" width="36" height="31"/>
         </designable>
         <designable name="Uln-RB-EMh">
             <size key="intrinsicContentSize" width="57" height="34"/>
         </designable>
         <designable name="a6M-IS-a20">
-            <size key="intrinsicContentSize" width="30" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="ac8-pl-Ofw">
-            <size key="intrinsicContentSize" width="30" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="adn-Tj-Lkk">
-            <size key="intrinsicContentSize" width="30" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="29"/>
         </designable>
         <designable name="hPK-G8-QnL">
-            <size key="intrinsicContentSize" width="127" height="38"/>
+            <size key="intrinsicContentSize" width="113" height="33"/>
         </designable>
     </designables>
     <resources>
@@ -4647,7 +4647,7 @@ Patrick</string>
             <color red="0.90200001001358032" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.81176470588235294" green="0.035294117647058823" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85882352941176465" green="0.20784313725490197" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="notification">
             <color red="0.91399997472763062" green="0.94099998474121094" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
