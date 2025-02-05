@@ -29,20 +29,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gM4-Wk-Tvr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chooselogin" translatesAutoresizingMaskIntoConstraints="NO" id="gM4-Wk-Tvr">
                                 <rect key="frame" x="70" y="200.33333333333337" width="235" height="167.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gM4-Wk-Tvr" secondAttribute="height" multiplier="1:0.714" id="zLB-w5-uvH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mars Delivery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP0-55-8T8">
-                                <rect key="frame" x="30" y="388" width="315" height="33.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venus Taxi!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vP0-55-8T8">
+                                <rect key="frame" x="30" y="408" width="315" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
                                 <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean Air Rideshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hme-Jm-YEK">
-                                <rect key="frame" x="30" y="441.66666666666669" width="315" height="22.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean Air Rideshare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hme-Jm-YEK">
+                                <rect key="frame" x="30" y="461.66666666666669" width="315" height="22.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.36078431370000003" green="0.40000000000000002" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                     <constraint firstAttribute="width" constant="100" id="hLc-zq-NuB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fastest delivery in the area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOS-9Y-qof">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fastest delivery in the area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOS-9Y-qof">
                                 <rect key="frame" x="30" y="543" width="315" height="24"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 <color key="textColor" name="textColor"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i8X-I3-RDy" secondAttribute="trailing" constant="30" id="6ch-HU-G4f"/>
                             <constraint firstItem="gM4-Wk-Tvr" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.7" id="9vA-rc-J7L"/>
                             <constraint firstItem="vP0-55-8T8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="B5u-c8-oaH"/>
-                            <constraint firstItem="vP0-55-8T8" firstAttribute="top" secondItem="gM4-Wk-Tvr" secondAttribute="bottom" constant="20" id="GMD-vL-LQI"/>
+                            <constraint firstItem="vP0-55-8T8" firstAttribute="top" secondItem="gM4-Wk-Tvr" secondAttribute="bottom" constant="40" id="GMD-vL-LQI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gM4-Wk-Tvr" secondAttribute="trailing" constant="70" id="NLw-YS-a6v"/>
                             <constraint firstItem="hme-Jm-YEK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QIX-y3-3Jp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tOS-9Y-qof" secondAttribute="trailing" constant="30" id="R3K-9D-2Qd"/>
@@ -219,7 +219,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="658"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMB-eE-PIX">
-                                        <rect key="frame" x="15" y="82.333333333333343" width="170" height="46"/>
+                                        <rect key="frame" x="15" y="0.0" width="170" height="46"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rH-83-TU9">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="46"/>
@@ -316,7 +316,7 @@
                                         </subviews>
                                     </stackView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70W-WR-wxP">
-                                        <rect key="frame" x="0.0" y="128.33333333333331" width="375" height="529.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="46" width="375" height="612"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-j7-75F">
                                                 <rect key="frame" x="0.0" y="0.0" width="793" height="521"/>
@@ -328,7 +328,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="396.66666666666669" height="521"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NFY-va-RqH">
-                                                                        <rect key="frame" x="30" y="15.999999999999972" width="336.66666666666669" height="69.666666666666671"/>
+                                                                        <rect key="frame" x="30" y="16" width="336.66666666666669" height="69.666666666666671"/>
                                                                         <subviews>
                                                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oZd-2U-EcZ">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.66666666666669" height="70"/>
@@ -388,7 +388,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIa-PB-OkF">
-                                                                                        <rect key="frame" x="0.0" y="27.666666666666686" width="336.66666666666669" height="42"/>
+                                                                                        <rect key="frame" x="0.0" y="27.666666666666657" width="336.66666666666669" height="42"/>
                                                                                         <subviews>
                                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZj-eA-gI9" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.66666666666669" height="42"/>
@@ -422,7 +422,7 @@
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0We-Js-JHE">
-                                                                                                        <rect key="frame" x="39" y="12.333333333333316" width="26" height="17.666666666666671"/>
+                                                                                                        <rect key="frame" x="39" y="12.333333333333345" width="26" height="17.666666666666671"/>
                                                                                                         <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
                                                                                                         <color key="textColor" name="textColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -472,7 +472,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRw-Qz-aCV">
-                                                                        <rect key="frame" x="30" y="101.66666666666666" width="128" height="14"/>
+                                                                        <rect key="frame" x="30" y="101.66666666666669" width="128" height="14"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="128" id="ITH-Jc-GN7"/>
                                                                             <constraint firstAttribute="height" constant="14" id="nMM-wW-wtw"/>
@@ -484,7 +484,7 @@
                                                                         </state>
                                                                     </button>
                                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-7n-Huz">
-                                                                        <rect key="frame" x="296.66666666666669" y="101.66666666666666" width="70" height="20"/>
+                                                                        <rect key="frame" x="296.66666666666669" y="101.66666666666669" width="70" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="ap9-9C-bhW"/>
                                                                         </constraints>
@@ -494,7 +494,7 @@
                                                                         </state>
                                                                     </button>
                                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9d-5z-a5C">
-                                                                        <rect key="frame" x="252.66666666666663" y="181.66666666666666" width="114" height="20"/>
+                                                                        <rect key="frame" x="252.66666666666663" y="181.66666666666669" width="114" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="6eP-Dn-IVN"/>
                                                                         </constraints>
@@ -507,7 +507,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcO-dl-GbF" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
-                                                                        <rect key="frame" x="30" y="120.66666666666666" width="336.66666666666669" height="46"/>
+                                                                        <rect key="frame" x="30" y="120.66666666666669" width="336.66666666666669" height="46"/>
                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="46" id="Be5-Mi-7ci"/>
@@ -527,7 +527,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ8-RJ-zMf">
-                                                                        <rect key="frame" x="188" y="206.66666666666666" width="20.333333333333343" height="5"/>
+                                                                        <rect key="frame" x="188" y="206.66666666666669" width="20.333333333333343" height="5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="5" id="IET-EC-eAg"/>
                                                                         </constraints>
@@ -536,7 +536,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JZ3-ma-zIT">
-                                                                        <rect key="frame" x="30" y="241.66666666666666" width="336.66666666666669" height="0.0"/>
+                                                                        <rect key="frame" x="30" y="241.66666666666669" width="336.66666666666669" height="0.0"/>
                                                                         <subviews>
                                                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxC-HK-4d4">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="189" height="46"/>
@@ -632,7 +632,7 @@
                                                                 <rect key="frame" x="396.66666666666674" y="0.0" width="396.33333333333326" height="521"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-55-gPX">
-                                                                        <rect key="frame" x="30" y="15.999999999999972" width="336.33333333333331" height="69.666666666666671"/>
+                                                                        <rect key="frame" x="30" y="16" width="336.33333333333331" height="69.666666666666671"/>
                                                                         <subviews>
                                                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ReR-5T-86A">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.33333333333331" height="70"/>
@@ -716,7 +716,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22x-pF-hkx">
-                                                                                        <rect key="frame" x="0.0" y="27.666666666666686" width="336.33333333333331" height="42"/>
+                                                                                        <rect key="frame" x="0.0" y="27.666666666666657" width="336.33333333333331" height="42"/>
                                                                                         <subviews>
                                                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woL-Xf-Yys" customClass="VCTextField" customModule="VenusCustomer" customModuleProvider="target">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="336.33333333333331" height="42"/>
@@ -750,7 +750,7 @@
                                                                                                         </constraints>
                                                                                                     </imageView>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50G-PP-W3Q">
-                                                                                                        <rect key="frame" x="39" y="12.333333333333316" width="26" height="17.666666666666671"/>
+                                                                                                        <rect key="frame" x="39" y="12.333333333333345" width="26" height="17.666666666666671"/>
                                                                                                         <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
                                                                                                         <color key="textColor" name="textColor"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -800,7 +800,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neW-He-N7F">
-                                                                        <rect key="frame" x="302.33333333333331" y="101.66666666666666" width="64" height="20"/>
+                                                                        <rect key="frame" x="302.33333333333331" y="101.66666666666669" width="64" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="fHJ-L3-PRO"/>
                                                                         </constraints>
@@ -810,7 +810,7 @@
                                                                         </state>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-1c-HX0" customClass="VDButton" customModule="VenusCustomer" customModuleProvider="target">
-                                                                        <rect key="frame" x="30" y="120.66666666666666" width="336.33333333333331" height="46"/>
+                                                                        <rect key="frame" x="30" y="120.66666666666669" width="336.33333333333331" height="46"/>
                                                                         <color key="backgroundColor" name="buttonSelectedOrange"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="46" id="ul2-ov-ghU"/>
@@ -876,16 +876,16 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="9zd-NI-K1b"/>
                                     </scrollView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-xc-IUF">
-                                        <rect key="frame" x="30" y="0.0" width="315" height="82.333333333333329"/>
+                                        <rect key="frame" x="30" y="0.0" width="315" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back to Mars Delivery!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-2z-CsX" userLabel="Welcome Back to Mars Delivery!">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="62.333333333333336"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back to Venus Taxi!!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-2z-CsX" userLabel="Welcome Back to Venus Taxi!!">
+                                                <rect key="frame" x="0.0" y="0.0" width="350.33333333333331" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                                 <color key="textColor" red="0.10199999809265137" green="0.093999996781349182" blue="0.14100000262260437" alpha="0.81622516556291391" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-0M-9Uf">
-                                                <rect key="frame" x="0.0" y="62.333333333333343" width="315" height="20"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-0M-9Uf">
+                                                <rect key="frame" x="0.0" y="0.0" width="350.33333333333331" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ef4-od-X80"/>
@@ -1526,7 +1526,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ckQ-uS-u9F">
-                                <rect key="frame" x="116.33333333333333" y="305.33333333333331" width="142.33333333333343" height="201.33333333333331"/>
+                                <rect key="frame" x="116.33333333333333" y="305.33333333333331" width="142.33333333333337" height="201.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7I-mA-hZ8">
                                         <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="42"/>
@@ -2072,6 +2072,7 @@
         <image name="check" width="124.33333587646484" height="124.33333587646484"/>
         <image name="checkBoxOrange" width="12" height="12"/>
         <image name="checkEmail" width="162" height="116.66666412353516"/>
+        <image name="chooselogin" width="375" height="288"/>
         <image name="countryFlag" width="20" height="12"/>
         <image name="cross" width="46" height="46"/>
         <image name="facebook" width="24" height="24"/>
@@ -2086,7 +2087,7 @@
             <color red="0.90200001001358032" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonSelectedOrange">
-            <color red="0.85882352941176465" green="0.20784313725490197" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.32941176470588235" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="textColor">
             <color red="0.10199999809265137" green="0.093999996781349182" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

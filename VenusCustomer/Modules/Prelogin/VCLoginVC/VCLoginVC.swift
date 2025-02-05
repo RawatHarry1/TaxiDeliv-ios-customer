@@ -238,9 +238,9 @@ class VCLoginVC: VCBaseVC {
         isLogin = true
         phoneSignupTF.text = ""
         loginScrollView.contentOffset = CGPoint(x: 0, y: 0)
-        topStackView.isHidden = true
-        welcomeText.isHidden = false
-        welcomeSpaceText.isHidden = false
+        topStackView.isHidden = false
+        welcomeText.isHidden = true
+        welcomeSpaceText.isHidden = true
 
     }
 
